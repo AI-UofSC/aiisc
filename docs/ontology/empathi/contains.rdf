@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gn="http://www.geonames.org/ontology#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
+<gn:Feature rdf:about="http://sws.geonames.org/11071620/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/11071620/about.rdf"/>
+<gn:name>Nouvelle-Aquitaine</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/11071622/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/11071622/about.rdf"/>
+<gn:name>Grand-Est</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/11071623/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/11071623/about.rdf"/>
+<gn:name>Occitanie</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/11071625/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/11071625/about.rdf"/>
+<gn:name>Auvergne-Rhône-Alpes</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/3027939/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/3027939/about.rdf"/>
+<gn:name>Centre-Val de Loire</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/3030293/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/3030293/about.rdf"/>
+<gn:name>Brittany</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/2985244/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/2985244/about.rdf"/>
+<gn:name>Provence-Alpes-Côte d'Azur</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/2988289/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/2988289/about.rdf"/>
+<gn:name>Pays de la Loire</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/11071619/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/11071619/about.rdf"/>
+<gn:name>Bourgogne-Franche-Comté</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/11071621/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/11071621/about.rdf"/>
+<gn:name>Normandy</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/11071624/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/11071624/about.rdf"/>
+<gn:name>Hauts-de-France</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/3023519/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/3023519/about.rdf"/>
+<gn:name>Corsica</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/3012874/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/3012874/about.rdf"/>
+<gn:name>Île-de-France</gn:name>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/3017382/"/>
+</gn:Feature>
+</rdf:RDF>

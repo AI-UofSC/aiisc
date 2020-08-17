@@ -1,0 +1,458 @@
+# filename: question.ttl
+
+@prefix kAO: <http://knoesis.org/khealthAsthmaOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#>.
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix AO: <http://purl.bioontology.org/ontology/AO> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+###########################################options###############################################################
+kAO:optionYes		rdf:type		kAO:Option;
+                    rdfs:comment   ".he user choose 'yes' for a particular question on questionnaire".
+kAO:optionNo		rdf:type		kAO:Option;
+                    rdfs:comment   ".he user choose 'no' for a particular question on questionnaire".
+kAO:option0     rdf:type        kAO:Option.
+kAO:option1		rdf:type		kAO:Option.
+kAO:option2		rdf:type		kAO:Option.
+kAO:option3		rdf:type		kAO:Option.
+kAO:option4		rdf:type		kAO:Option.
+kAO:option5		rdf:type		kAO:Option.
+kAO:option6orMore	rdf:type		kAO:Option.
+kAO:optionNone		rdf:type		kAO:Option.
+kAO:optionLittle	rdf:type		kAO:Option.
+kAO:optionAtLeastHalf	rdf:type	kAO:Option.
+kAO:optionMostOfDay	rdf:type		kAO:Option.
+kAO:optionCough		rdf:type		kAO:Option.
+kAO:optionWheeze	rdf:type		kAO:Option.
+kAO:optionChestTightness	rdf:type		kAO:Option.
+kAO:optionHardAndFastBreathing	rdf:type		kAO:Option.
+kAO:optionNoseOpensWide	rdf:type		kAO:Option.
+kAO:optionCantTalkFullSentence	rdf:type		kAO:Option.
+
+###########################################options###############################################################
+
+
+
+###########################################question&options###############################################################
+
+
+kAO:question1		rdf:type			kAO:question.
+kAO:question1		kAO:asks		"Did you take albuterol last night due to cough or wheeze?" .
+kAO:question1		kAO:hasOption		kAO:optionYes.
+kAO:question1		kAO:hasOption		kAO:optionNo.
+
+kAO:question2		rdf:type			kAO:Question;
+			kAO:asks		"Did you wake up with cough or wheezing last night?" ;
+			kAO:hasOption		kAO:optionYes;
+			kAO:hasOption		kAO:optionNo.
+
+kAO:question3		rdf:type			kAO:Question;
+			kAO:asks		"How many times did you take albuterol inhaler today because of asthma symptoms?";
+			kAO:hasOption       kAO:option0;
+			kAO:hasOption		kAO:option1;
+			kAO:hasOption		kAO:option2;
+			kAO:hasOption		kAO:option3;
+			kAO:hasOption		kAO:option4;
+			kAO:hasOption		kAO:option5;
+			kAO:hasOption		kAO:option6orMore.
+
+kAO:question4		rdf:type		kAO:Question;
+			kAO:asks		"Had wheeze, chest tightness, or asthma related cough today?";
+			kAO:hasOption		kAO:optionYes;
+			kAO:hasOption		kAO:optionNo.
+
+kAO:question5		rdf:type			kAO:Question;
+			kAO:asks		"How much did asthma or asthma symptoms limit your activity today?";
+			kAO:hasOption		kAO:optionNone;
+			kAO:hasOption		kAO:optionLittle;
+			kAO:hasOption		kAO:optionAtLeastHalf;
+			kAO:hasOption		kAO:optionMostOfDay.
+
+kAO:question6		rdf:type			kAO:Question;
+			kAO:asks		"What symptoms are you having now?";
+			kAO:hasOption		kAO:optionCough;
+			kAO:hasOption		kAO:optionWheeze;
+			kAO:hasOption		kAO:optionChestTightness;
+			kAO:hasOption		kAO:optionHardAndFastBreathing;
+			kAO:hasOption		kAO:optionNoseOpensWide;
+			kAO:hasOption		kAO:optionCantTalkFullSentence.
+
+###########################################question&options###############################################################
+
+
+###########################################questionnairedata##############################################################
+
+
+kAO:obs101      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question1;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/11/2016".
+kAO:question1    ssn:madeObservation	    kAO:obs101.
+
+kAO:obs102      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question1;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionYes;
+                ssn:observationResultTime	"4/11/2016".
+kAO:question1    ssn:madeObservation	    kAO:obs102.
+
+kAO:obs103      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question1;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/12/2016".
+kAO:question1    ssn:madeObservation	    kAO:obs103.
+
+kAO:obs104      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question1;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionYes;
+                ssn:observationResultTime	"4/12/2016".
+kAO:question1    ssn:madeObservation	    kAO:obs104.
+
+kAO:obs105      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question1;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/13/2016".
+kAO:question1    ssn:madeObservation	    kAO:obs105.
+
+kAO:obs106      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question1;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/16/2016".
+kAO:question1    ssn:madeObservation	    kAO:obs106.
+
+kAO:obs107      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question1;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionYes;
+                ssn:observationResultTime	"4/17/2016".
+kAO:question1    ssn:madeObservation	    kAO:obs107.
+
+kAO:obs108      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question1;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/18/2016".
+kAO:question1    ssn:madeObservation	    kAO:obs108.
+
+kAO:obs109      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question1;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/19/2016".
+kAO:question1    ssn:madeObservation	    kAO:obs109.
+
+kAO:obs110      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question1;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/20/2016".
+kAO:question1    ssn:madeObservation	    kAO:obs110.
+
+
+kAO:obs111      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question2;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/11/2016".
+kAO:question2    ssn:madeObservation	    kAO:obs111.
+
+kAO:obs112      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question2;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionYes;
+                ssn:observationResultTime	"4/11/2016".
+kAO:question2    ssn:madeObservation	    kAO:obs112.
+
+kAO:obs113      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question2;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/12/2016".
+kAO:question2    ssn:madeObservation	    kAO:obs113.
+
+kAO:obs114      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question2;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionYes;
+                ssn:observationResultTime	"4/12/2016".
+kAO:question2    ssn:madeObservation	    kAO:obs114.
+
+kAO:obs115      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question2;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/13/2016".
+kAO:question2    ssn:madeObservation	    kAO:obs115.
+
+kAO:obs116      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question2;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/16/2016".
+kAO:question2    ssn:madeObservation	    kAO:obs116.
+
+kAO:obs117      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question2;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/17/2016".
+kAO:question2    ssn:madeObservation	    kAO:obs117.
+
+kAO:obs118      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question2;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/18/2016".
+kAO:question2    ssn:madeObservation	    kAO:obs118.
+
+kAO:obs119      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question2;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionYes;
+                ssn:observationResultTime	"4/19/2016".
+kAO:question2    ssn:madeObservation	    kAO:obs1109.
+
+kAO:obs120      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question2;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo    ;
+                ssn:observationResultTime	"4/20/2016".
+kAO:question2    ssn:madeObservation	    kAO:obs120  .
+
+
+kAO:obs121      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question3;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:option0;
+                ssn:observationResultTime	"4/12/2016".
+kAO:question3    ssn:madeObservation	    kAO:obs121.
+
+kAO:obs122      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question3;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:option0;
+                ssn:observationResultTime	"4/14/2016".
+kAO:question3    ssn:madeObservation	    kAO:obs122.
+
+kAO:obs123      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question3;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:option1;
+                ssn:observationResultTime	"4/15/2016".
+kAO:question3    ssn:madeObservation	    kAO:obs123.
+
+kAO:obs124      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question3;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:option3;
+                ssn:observationResultTime	"4/11/2016".
+kAO:question3    ssn:madeObservation	    kAO:obs124.
+
+kAO:obs125      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question3;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:option4;
+                ssn:observationResultTime	"4/17/2016".
+kAO:question3    ssn:madeObservation	    kAO:obs125.
+
+kAO:obs126      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question3;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:option2;
+                ssn:observationResultTime	"4/18/2016".
+kAO:question3    ssn:madeObservation	    kAO:obs126.
+
+
+kAO:obs127      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question4;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/12/2016".
+kAO:question4    ssn:madeObservation	    kAO:obs127.
+
+kAO:obs128      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question4;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionYes;
+                ssn:observationResultTime	"4/14/2016".
+kAO:question4    ssn:madeObservation	    kAO:obs128.
+
+kAO:obs129      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question4;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/15/2016".
+kAO:question4    ssn:madeObservation	    kAO:obs129.
+
+kAO:obs130      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question4;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/16/2016".
+kAO:question4    ssn:madeObservation	    kAO:obs130.
+
+kAO:obs131      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question4;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionYes;
+                ssn:observationResultTime	"4/17/2016".
+kAO:question4    ssn:madeObservation	    kAO:obs131.
+
+kAO:obs132      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question4;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNo;
+                ssn:observationResultTime	"4/18/2016".
+kAO:question4    ssn:madeObservation	    kAO:obs132.
+
+
+kAO:obs133      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question5;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNone;
+                ssn:observationResultTime	"4/12/2016".
+kAO:question5    ssn:madeObservation	    kAO:obs133.
+
+kAO:obs134      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question5;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNone;
+                ssn:observationResultTime	"4/14/2016".
+kAO:question5    ssn:madeObservation	    kAO:obs134.
+
+kAO:obs135      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question5;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionLittle;
+                ssn:observationResultTime	"4/15/2016".
+kAO:question5    ssn:madeObservation	    kAO:obs135.
+
+kAO:obs136      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question5;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionAtleastHalf;
+                ssn:observationResultTime	"4/16/2016".
+kAO:question5    ssn:madeObservation	    kAO:obs136.
+
+kAO:obs137      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question5;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionMostOfDay;
+                ssn:observationResultTime	"4/17/2016".
+kAO:question5    ssn:madeObservation	    kAO:obs137.
+
+kAO:obs138      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question5;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResult	kAO:optionNone;
+                ssn:observationResultTime	"4/18/2016".
+kAO:question5    ssn:madeObservation	    kAO:obs138.
+
+
+kAO:obs139      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/11/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs139.
+
+kAO:obs140      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/11/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs140  .
+
+kAO:obs141      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/12/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs141.
+
+kAO:obs142      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/12/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs142.
+
+kAO:obs143      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/12/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs143.
+
+kAO:obs144      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/13/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs144.
+
+kAO:obs145      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/14/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs145.
+
+kAO:obs146      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/15/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs146.
+
+kAO:obs147      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/16/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs147.
+
+kAO:obs148      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/16/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs148.
+
+kAO:obs149      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/17/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs149.
+
+kAO:obs150      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/17/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs150.
+
+kAO:obs151      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/18/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs151.
+
+kAO:obs152      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/18/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs152.
+
+kAO:obs153      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/19/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs153.
+
+kAO:obs154      rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:question6;
+                ssn:featureOfInterest	kAO:userA;
+                ssn:observationResultTime	"4/20/2016".
+kAO:question6   ssn:madeObservation	    kAO:obs154.
+
+
+
+

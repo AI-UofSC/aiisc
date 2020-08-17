@@ -1,0 +1,88 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:admin="http://webns.net/mvcb/">
+<foaf:PersonalProfileDocument rdf:about="">
+ <foaf:maker rdf:resource="#me"/>
+ <foaf:primaryTopic rdf:resource="#me"/>
+ <admin:generatorAgent rdf:resource="http://www.ldodds.com/foaf/foaf-a-matic"/>
+ <admin:errorReportsTo rdf:resource="mailto:leigh@ldodds.com"/>
+</foaf:PersonalProfileDocument>
+<foaf:Person rdf:ID="me">
+<foaf:name>Amit Sheth</foaf:name>
+<foaf:title>Prof</foaf:title>
+<foaf:givenname>Amit</foaf:givenname>
+<foaf:family_name>Sheth</foaf:family_name>
+<foaf:nick>Amit</foaf:nick>
+<foaf:mbox_sha1sum>e2a9cf83171c0a1299db16f2842e6152459b6493</foaf:mbox_sha1sum>
+<foaf:workplaceHomepage rdf:resource="http://knoesis.wright.edu/amit"/>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Ramesh Jain</foaf:name>
+<foaf:mbox_sha1sum>b6cd572cc64345e7c2d17ab58ab5f7e01eefcf2b</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Hector Garcia-Molina</foaf:name>
+<foaf:mbox_sha1sum>de8860e1428ad84ca1eb99f3e8b6095d66f814d8</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Gerhard Weikum</foaf:name>
+<foaf:mbox_sha1sum>01890832a114c2c21ff2218ccf7ba8cf45e23ff8</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Rick Hull</foaf:name>
+<foaf:mbox_sha1sum>f03cc0bfe997be31262678c9ac42fcc2254c019c</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Hank Korth</foaf:name>
+<foaf:mbox_sha1sum>7fdced39b649e172d4129912595fb054c291bed1</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>H. V. Jagadish</foaf:name>
+<foaf:mbox_sha1sum>2a5ce94e7dc99d2196a56c40b00bca2119af5fa4</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Hans-Joerg Sheth</foaf:name>
+<foaf:mbox_sha1sum>3ea604a8e639b6ee6ae6316edaa0faf0d35c8f3b</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Daniel Menasce</foaf:name>
+<foaf:mbox_sha1sum>af13681f5cbc337bdc6fab63b1ba7b268e825634</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Marianne Winslet</foaf:name>
+<foaf:mbox_sha1sum>df5d6fd45d6ed3868f4310ec0c03857c84691cb9</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Georg Gottlob</foaf:name>
+<foaf:mbox_sha1sum>0a1b55476b57ee5b9ea992dc7ab63a14da152d39</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Krithi Ramamritham</foaf:name>
+<foaf:mbox_sha1sum>e20e46e4fa4e01319e4a5ce6a610975271171aad</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Lee Giles</foaf:name>
+<foaf:mbox_sha1sum>9a03b1ad0292512f1986fa4fd68867978962c5ac</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Ahmed Elmagarmid</foaf:name>
+<foaf:mbox_sha1sum>a081eab12757fa6cc975c160eeeb798abea8ab3c</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Tim Finin</foaf:name>
+<foaf:mbox_sha1sum>9da08e2b4dc670d9254ab4a4b4d61637fed3b18f</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Steffen Staab</foaf:name>
+<foaf:mbox_sha1sum>ae8f32f31b69df2872d4c5d2e3bf21cf09cadf90</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Peter Mika</foaf:name>
+<foaf:mbox_sha1sum>c0d6551197a0295bfc604841a994d544e0091665</foaf:mbox_sha1sum></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person>
+<foaf:name>Carole Goble</foaf:name>
+<foaf:mbox_sha1sum>4699824a3759895701ccaaa26c2ba7aaa5397b80</foaf:mbox_sha1sum></foaf:Person></foaf:knows></foaf:Person>
+</rdf:RDF>

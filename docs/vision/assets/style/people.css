@@ -1,0 +1,48 @@
+.people {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.people-main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+    margin-left: 15vh;
+}
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15em;
+    height: 20em;
+    background-color: white;
+    border-radius: 2%;
+    margin: 1em;
+    border: 1px solid;
+    box-shadow: 2px 2px 2px 2px #888888;
+}
+.profile-picture {
+	width: 15em;
+	height: 15em;
+	min-width: 15em;
+	min-height: 15em;
+	background-size: cover;
+	box-sizing: border-box;
+}
+.person-name {
+    font-size: medium;
+    font-weight: bold;
+    color: #1F414D;
+    margin: 0.5em
+}
+.person-title {
+    font-size: medium;
+    color:  #466A9F;
+}
+p {
+    margin: 0;
+}

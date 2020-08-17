@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>In this position paper, we attempt to show real-world driven need for data integrity, and how implicit assumptions </TITLE>
+<!-- Changed by: Kshitij Shah, 12-Sep-1997 -->
+</HEAD>
+<BODY>
+
+<FONT SIZE=4><P ALIGN="CENTER">Managing with Less than Absolute Integrity</P>
+</FONT><P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">Amit Sheth</P>
+<P ALIGN="CENTER">Large Scale Distributed Information Systems Lab</P>
+<P ALIGN="CENTER">University of Georgia</P>
+<P ALIGN="CENTER">http://lsdis.cs.uga.edu</P>
+<FONT SIZE=3><P>&nbsp;</P>
+<P>&#9;&#9;&#9;&#9;Abstract of the Invited Talk</P>
+<P>&nbsp;</P>
+<P ALIGN="JUSTIFY">Our key position is that for less then perfect real-world information systems the standard notions of data correctness or integrity used in research literature are inappropriate and inadequate.  Hence we call upon the researchers and practitioners to pay more attention to understanding less than absolute data integrity requirements of the users and the applications, and to developing techniques to support such requirements.  We will discuss this position and the need to develop criteria and techniques to support &quot;weaker&quot; or application specific data integrity requirements with the help of following four situations facing information systems management:</P>
+
+<UL TYPE="SQUARE">
+<P ALIGN="JUSTIFY"><LI>data quality in multidatabase systems</LI></P>
+<P ALIGN="JUSTIFY"><LI>consistency of related (interdependent) data in multidatabase systems</LI></P>
+<P ALIGN="JUSTIFY"><LI>data integrity in process-centric environments (utilizing  workflow process automation), and</LI></P>
+<P ALIGN="JUSTIFY"><LI>data integrity involving heterogeneous digital media data, such as those increasingly found in Internet and intranets. </LI></P></UL>
+
+<P ALIGN="JUSTIFY">&nbsp;</P>
+</FONT><FONT SIZE=2><P ALIGN="JUSTIFY">T</FONT><FONT SIZE=3>he important dimensions of data integrity that the above requirements address are:</P>
+
+<UL TYPE="SQUARE">
+<P ALIGN="JUSTIFY"><LI>accuracy or correctness, </LI></P>
+<P ALIGN="JUSTIFY"><LI>completeness, </LI></P>
+<P ALIGN="JUSTIFY"><LI>consistency, and </LI></P>
+<P ALIGN="JUSTIFY"><LI>currentness.</LI></P></UL>
+
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">This position paper gives the outline of my talk.</P>
+</FONT><B><FONT FACE="Arial"><P ALIGN="JUSTIFY">1.  Introduction</P>
+</B></FONT><FONT SIZE=3><P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">A </FONT><FONT SIZE=3 COLOR="#ff0000">significant</FONT><FONT SIZE=3> amount of the database literature to date has focused on correctness and consistency of centralized or distributed databases involving structured data.  We will discuss some real-world driven requirements for data integrity, in the context of data integrity (specifically correctness or consistency of data) in four key situations that arise in information systems management in the real world industrial environments.  The first two are quality of data and consistency of data in multidatabase systems mainly involving structured data. The third issue is  going beyond the database-centric views of information system (IS) management in 1980s, and discuss the challenges  in  managing data integrity in the context of process automation.  Finally, we discuss the new problems faced in managing data integrity in the context of heterogeneous digital media data, access to which is increasingly enabled by Internet and Web related technologies.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">We respond to the critical question of why traditional solutions to management of data integrity often fall short in meeting these requirements, as follows.  In many real-world information systems, very general data integrity solutions cannot be devised, and we need to focus on meeting application specific requirements.  Furthermore, we believe that there is much more to gain by understanding what level of data integrity is necessary, and how can we support adequate data integrity needs that are less stringent than the traditional criteria for data integrity in our imperfect world.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">In Section 2, we discuss a couple of characteristics of the real-world computing environments that critically limit the applicability of the majority of research on data integrity. In section 3, we briefly discuss three of the four issues we have mentioned above.  This discussion is based on  [SRK92, SWK94] , which may be referred to for significant additional details including relevant literature.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+</FONT><B><FONT FACE="Arial"><P ALIGN="JUSTIFY">2.  Some challenges of the complex real-world to the IS management</P>
+</B></FONT><FONT SIZE=3><P ALIGN="JUSTIFY">&nbsp;</P>
+</FONT><B><P ALIGN="JUSTIFY">Static Databases versus Ever Changing Applications and Environments</P>
+</B><FONT SIZE=3><P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">A vast majority of database research has implicitly assumed static databases (that is databases whose definitions, descriptions or schemas do not change).  Additionally, in practice, most databases were defined to serve a single application or a set of applications identified to be the user of the database prior to designing the databases (leading to the well known stove-pipe phenomena). However, in reality databases need to evolve for numerous reasons. Some of the recent work on schema evolution has addressed issues related to structural components, but the issue of how such an evolution affects integrity constraints associated with the schemas, remain largely unexplored.  Another related issue is that of new applications that are developed to utilize the databases that already exist. However, while a new application can use or share the databases as structured currently, many additional complexities may be introduced because of subtle semantic differences in interpretation and use of stored data, or due to additional, fewer or incompatible semantic integrity constraints imposed by the new application.  One relatively simple consequence of sharing of data by multiple applications can be translated into the well- known view update problem.  For example, if one application uses 4 out of 5 fields of an address table, the missing attribute value would pose a problem when this application updates the relation.   Given that most view update algorithms have limited their attention to the Select-Project-Join view, database application developers and administrators are on there own when dealing with more complex relationships.  The view update problem is probably among the better studied problems.  There are hardly any methodologies, tools and techniques that address the problems of database and application evolution in the context of distributed, heterogeneous, and autonomous databases and distributed, multiple applications utilizing different databases.  Two such issues are discussed briefly in Section 3.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+</FONT><B><P ALIGN="JUSTIFY">Database (is not) at the Center of Universe</P>
+</B><FONT SIZE=3><P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">Much of the database research literature assumes the database management system (DBMS), or multiple DBMSs, to be solely responsibility for managing the integrity of data (for example, consider the literature on multidatabases and federated databases).  However, in a vast majority of real-world computing environments, a DBMS is just one of many tools or system components.  Of particular relevance to data integrity issues are  various system components that support persistence and/or transactions.  These components include persistent queues and persistent data stores (including those supported by communications infrastructure such as persistence service of CORBA, or associated with programming languages such as persistence supported by some Java implementations), and systems that support transactions such as Object Transaction Service of CORBA or Transaction Processing monitors, either as an independent component or increasingly as integrated with a Web server.  Two observations are pertinent here: </P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>Many applications involve the use of multiple databases or information resources, and the corresponding distributed information processing involving participation of multiple system components of the types mentioned above.</LI></P>
+<P ALIGN="JUSTIFY"><LI>In 1990s, the IS management is increasingly taking an operation-centric or process-centric view as opposed to data-centric view that was prevalent in 1980s.  Increasingly popular workflow management for business process automation support an application-oriented form of IS integration as opposed to data-oriented integration afforded by federated or multidatabase systems.  For supporting data integrity, both so-called application-centric and data-centric components of information processing need to symbiotically participate.  In this context, the concepts and techniques that evolve from data-centric perspective, such as the advanced transaction models, do not sufficient support the data integrity needs of ISs [WS97].</LI></P></UL>
+
+</FONT><B><P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">Absolute Integrity - Is it possible? Is it needed?</P>
+</B><FONT SIZE=3><P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">Much of the attention of database researchers involved with data integrity has focused on defining what we will term <I>absolute integrity</I>—that is the issue of data correctness and consistency as presented in terms of yes or no, with no middle ground.  This involves various notions of consistency of data and use of the serializability criteria for centralized and distributed database transactions, and one-copy serializability criteria for replicated data.  The issue here has centered around transforming databases from one correct state into another. Although these concepts and the corresponding techniques remain important within the context of a single database or several tightly-coupled databases, we feel that these are incapable of capturing the true complexity of IS management in the real world.  More attention needs to paid to developing the solutions that reflect different degrees of gray rather than pure black and white, by answering the questions 1) when is data acceptably consistent or correct, and 1) how  inconsistent is the data.  We will discuss some examples along this line, but much more remains to be done.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+</FONT><B><P ALIGN="JUSTIFY">Beyond Structured Databases</P>
+</B><FONT SIZE=3><P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">The vast majority of new data and applications in the increasingly Web-centric IS environments involve unstructured or new media (audio, image, video) data that are usually not managed by traditional databases.  Semantically related information, for example about an entity such as a person, customer or a product, may be stored in various digital media in various independently managed resources.  Early work on representing semantic correlation among heterogeneous media data has been proposed.  One example is the proposed metadata reference link &lt;MREF&gt; as a logical complement to existing physical-level links in &lt;A HREF&gt;) and corresponding modular extensions to the Web-based infrastructure [SK96]. The hard questions related to the degree of consistency needed among these related data managed by heterogeneous and independent information resources, and the techniques for enforcing such consistency requirements, remain to be answered.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">Metadata integrity itself is an important aspect of modern information systems. Metadata is representative of the information artifacts themselves with which integrity needs to be maintained. In many information systems metadata is the link between the users and the information and in such cases metadata integrity becomes more important. An interesting example would be the Web indexes where the full text index is the metadata. In most indexes we notice that maintaining consistency with the real world is becoming a non-trivial problem as the size of Web content continues to explode. Absolute integrity would be impossible to expect in such an environment and issues that need to be considered are how frequently to synchronize the metadata with the real world and to device methods for determining what are the relevance limits for integrity and then detecting these conditions. </P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+</FONT><B><FONT FACE="Arial"><P ALIGN="JUSTIFY">3.  Three Example Areas of IS Integrity Challenges</P>
+</B></FONT><FONT SIZE=3><P ALIGN="JUSTIFY">&nbsp;</P>
+</FONT><P ALIGN="JUSTIFY">We now use three of many challenging areas in IS integrity management where this is significant gap between researchers and real-world realities, and which point to the need for weak, application-specific forms of data integrity requirements.</P>
+</FONT><B><P ALIGN="JUSTIFY">Data Quality </P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+</B><FONT SIZE=3><P ALIGN="JUSTIFY">Before we can apply any solutions for keeping data consistent, the current data needs to be of good quality.  Unfortunately, that is not the case in most operational environments, as we learned through our study of and experiences with several client companies of Bellcore [KS93].</FONT><FONT SIZE=2> </FONT><FONT SIZE=3>Examples of poor data quality include 1) errors in input data (e.g., a partial or nonexistent address), 2) data inconsistencies (e.g., different customer billing addresses for the same customer or incorrect Zip code for the location), and 3) unintended redundancy (e.g., multiple customer records because of different representations of the same customer such as DEC, Digital Equip. Corp., and Digital Equipment Corporation).  These are often contributed to by duplicate data produced by different processes and organizations.  Poor data quality is a result of a variety of factors, including flawed data acquisition and data creation processes, flawed data update processes, inability to enforce constraints among related data in multiple databases, duplicate data produced by different methods, organizations and processes, process re-engineering, and company reorganizations. </P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">There are two aspects of addressing data quality management: data validation and data clean-up.  <I>Data validation</I> refers to identification of data quality problems, for example, by identifying inconsistent or incomplete data in inputs from users or in the existing databases.  <I>Data cleanup</I> (or purification) is the process of improving data quality (usually after the data validation identifies poor quality data) for example, by removing inconsistent data or making data more complete. </P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">Not all aspects of data quality can be determined or enforced by computerized systems.  However, any technology that can assist in addressing this problem needs to support:</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>capturing business rules, practices and constraints that define data validation and cleanup rules, and</LI></P></UL>
+
+<P ALIGN="JUSTIFY">&nbsp;</P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>integrating  those rules with access to databases where a significant portion of corporate data reside.</LI></P></UL>
+
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">Examples based on real applications, and one approach to addressing data quality problems using deductive database technology, are discussed in [SWK94].  While some clean-up operations can be performed automatically in a batch mode of operation, others may involve interactive human participation.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+</FONT><B><P ALIGN="JUSTIFY">Management of Interdependent Data or Multidatabase Consistency</P>
+</B><FONT SIZE=3><P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">Many large companies use multiple databases to serve the needs of various application systems.  One of the significant problems in managing these databases is maintaining the consistency of inter-related data in an environment consisting of multiple semi-autonomous and heterogeneous systems.  We use the term <I>interdependent data</I> to imply that two or more data items stored in different databases are related through an integrity constraint that specifies the data dependency and the consistency requirements between these data items.  Management of such data implies that a certain degree of mutual consistency among the interdependent data is maintained.  Therefore, the manipulation (including concurrent updates) of the interdependent data must be controlled.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">In the majority of existing applications, the mutual consistency requirements among multiple databases are either ignored, or the consistency of data is maintained by the application programs that perform related updates to all relevant databases.  This can be accomplished using various techniques.  For example, a message may be sent to another database system managing related data, so that a complementary transaction will be submitted there, or a replica of the data is sent to another system, either electronically or physically (e.g., a tape).  However, these approaches have several disadvantages.  First, they rely on the application programmer to enforce integrity constraints and to maintain mutual consistency of data, which is not acceptable if the programmer has incomplete knowledge of constraints to be enforced.  Secondly, a modification of a part of an application requires changing of other parts of the same or another application to maintain integrity and consistency.  Since integrity requirements are specified within an application, they are not written in a declarative way.  If we need to identify these requirements, we must extract them from the code, which is a tedious and error prone task.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">Alternative approaches to the problem are based on system supported maintenance of mutual consistency.  A possible solution is to enhance the techniques of preserving integrity that were proposed for distributed databases.  The main limitation of these techniques is that they assume that the consistency between the related data must be restored immediately.  Such an <I>immediate consistency</I> criterion requires that as soon as a transaction completes, all related data are also mutual consistent.  In the case of replicated data, one-copy serializability criterion has been usually used.  However, in loosely-coupled environments we may need to temporarily tolerate inconsistencies among related data.  </P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">Several weaker consistency criteria that appear in literature include mutual consistency requirements using timing constraints, and the specification of coherency condition used to define &quot;how far&quot; primary copy and quasi-copies can diverge based on time, versions, and arithmetic conditions (please see [SRK92 for details).  A mutual consistency criterion called <I>eventual consistency</I> states that related database objects are made consistent at certain points of time specified by a condition, although they may not be consistent in the interim intervals.  The condition is specified as a combination of time and data state (including events/operation).  Eventual consistency allows the related objects to diverge during some period, as long as they will be made consistent periodically.  Lagging consistency assumes that the data in one database may be most current while in the other ones the data may not be up-to-date.  Updates applied to the first database are always propagated to the related databases.  Hence, if all external updates are stopped, the databases will become consistent.  Eventual consistency does imply that at some point in time, all databases will be consistent, while lagging consistency does not imply this, because some databases may always lag behind others.  Some of the early approaches on enforcement of weaker consistency criteria appear in [KRS93, GKG97, SK97]. These, however, remain quite limited in the context of supporting real-world applications and IS environments.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+</FONT><B><P>Workflow Process Automation</P>
+</B><FONT FACE="Courier New" SIZE=2><P>&nbsp;</P>
+</FONT><P ALIGN="JUSTIFY">Increasingly, organizations are using workflow technology to support business process automation and reengineering leading to improvements in resource utilization and time of service and/or cost of operations. Researchers have only begun to conceptualize and understand the IS integrity issues in the context of (a) interactions and interdependencies among the tasks (activities) of workflow processes, and (b) their retrieval and update operation involving multiple existing and new information systems (including databases, legacy applications, etc).  For brevity, we discuss one example to illustrate types of issues faced.  Consider support for clinical process in patient care in a healthcare organization.  Further consider that a workflow supporting clinical process of patient treatment with respect the initial diagnosis has been initiated. During this workflow, a blood test reveals comorbidity (which indicated is the presence of another diseases) which also needs to be managed.  To manage the second disease, another workflow is initiated.  Now how do we support constraints such that the two workflows for clinical support of the same patient do not schedule the same patient at the same time at two different locations (e.g., for different lab tests or for specialist review)?  Should this constraint be supported in the form of controlling workflow executions or by modeling this issue as a conflict on a data item managed in a database that represents patient's appointments?  In this context, it may desirable to consider proposals for more comprehensive information models that advocate integrated modeling of data, operations and constraints (e.g., [SK92]), but is the additional complexity of modeling worth the cost and practical?  These issues will continue to provide interesting problems and challenge to the IS researchers and practitioners.</P>
+<FONT SIZE=3><P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<B><P ALIGN="JUSTIFY">Partial Bibliography</P>
+</B></FONT><P ALIGN="JUSTIFY">&nbsp;</P>
+<FONT SIZE=2><P ALIGN="JUSTIFY">Among the publications that have begun to address some of the issues outlined in this position paper, the following is a small subset.  Citations in the following publications can however lead to other relevant work.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">[GKG97] D. Georgakopoulos, G. Karabatis and S. Gantimahapatruni, &quot;Specification and Management of <BR>
+       Interdependent Data in Operational Systems and Data Warehouses,&quot; Distributed and Parallel <BR>
+       Databases, 5 (2), April 1997.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">[KRS93] G. Karabatis, M. Rusinkiewicz, and A. Sheth, "Correctness and Enforcement of Multidatabase   <BR>
+        Interdependencies" in Lecture Notes in Computer Sciences #759: Advanced Database Systems, <BR>
+        N. Adam and B. Bhargava, Eds., Springer-Verlag, 1993.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">[KS93] G. Karabatis and A. Sheth, "Specifying Interdependent Data: A Case Study at Bellcore", the <BR>
+        Proceedings of the SIGMOD,  Washington DC, June 1993.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+
+<P>[SK92] A. Sheth and L. Kalinechenko, "Information Modeling in Multidatabase Systems: Beyond Data Modeling," (invited paper) Proc. of the 1st Intl. Conf. on Information and Knowledge Management (CIKM), Baltimore, November 1992 .</P>
+</FONT><FONT FACE="Courier New" SIZE=2><P>&nbsp;</P>
+</FONT><FONT SIZE=2><P ALIGN="JUSTIFY">&nbsp;</P>
+
+<P ALIGN="JUSTIFY">[SRK92]  A. Sheth, M. Rusinkiewicz, and G. Karabatis, " Using Polytransactions to Manage</P>
+<P ALIGN="JUSTIFY">        Interdependent Data" in Transaction Models for Advanced Database Applications, <BR>
+        A. Elmagarmid, Ed., Morgan-Kaufmann, 1992.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">[SWK94]  A. Sheth, C. Wood, and V. Kashyap, "Q-Data: using deductive database technology </P>
+<P ALIGN="JUSTIFY">        to improve data quality", in Applications of Deductive Databases, R. Ramakrishnan, Ed., </P>
+<P ALIGN="JUSTIFY">        Kluwer Academic Press, 1994.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">[SK96] A. Sheth and V. Kashyap, "Media-independent Correlation of Information: What? How?"    <BR>
+        Proceedings of the First IEEE Metadata Conference, April 1996.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">[SK97] L. Seligman and L. Kerschberg, &quot;A Mediator for Approximating Consistency: supporting <BR>
+        &quot;Good Enough&quot; Materialized Views,&quot; Journal of Intelligent Information Systems, Vol. 8, 1997.</P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">[WS97] D. Worah and A. Sheth, &quot;Transactions in Transactional Workflows in Advanced Transaction <BR>
+         Models and Architectures, &quot;S. Jajodia and L. Kerschberg, Eds., Kluwer Academic Publishers, 1997</P></FONT></BODY>
+</HTML>

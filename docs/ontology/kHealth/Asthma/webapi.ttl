@@ -1,0 +1,220 @@
+# filename: webapi.ttl
+
+@prefix kAO: <http://knoesis.org/khealthAsthmaOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#>.
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix AO: <http://purl.bioontology.org/ontology/AO> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+
+#####################postalcode########################################
+kAO:userA	    vcard:hasAddress	kAO:address1.
+kAO:address1	rdf:type		vcard:Address;
+		        kAO:hasPostal-code	kAO:postalcode45324.
+kAO:postalcode45324	rdf:type		kAO:Postal-code;
+		            vcard:postal-code	45324.
+#####################postalcode########################################
+
+
+###############################Outdoor Environment##################################
+
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate1.
+kAO:weatherstate1   rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/11/2016";
+                    kAO:hasHumidity         100;
+                    kAO:hasTemperature      50;
+                    kAO:hasAirQuality       77;
+                    kAO:hasPollen           kAO:pollen1.
+kAO:pollen1         rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      2;
+                    kAO:hasPollenLevel      "low";
+                    kAO:hasPollenType       "ragweed".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate2.
+kAO:weatherstate2   rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/11/2016";
+                    kAO:hasHumidity         100;
+                    kAO:hasTemperature      50;
+                    kAO:hasAirQuality       31;
+                    kAO:hasPollen           kAO:pollen2.
+kAO:pollen2         rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      3;
+                    kAO:hasPollenLevel      "low-medium";
+                    kAO:hasPollenType       "nettle".
+                    
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate3.
+kAO:weatherstate3   rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/12/2016";
+                    kAO:hasHumidity         64;
+                    kAO:hasTemperature      38;
+                    kAO:hasAirQuality       31;
+                    kAO:hasPollen           kAO:pollen3.
+kAO:pollen3         rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      5;
+                    kAO:hasPollenLevel      "medium";
+                    kAO:hasPollenType       "nettle".
+                    
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate4.
+kAO:weatherstate4   rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/12/2016";
+                    kAO:hasHumidity         54;
+                    kAO:hasTemperature      43;
+                    kAO:hasAirQuality       29;
+                    kAO:hasPollen           kAO:pollen4.
+kAO:pollen4         rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      5;
+                    kAO:hasPollenLevel      "medium";
+                    kAO:hasPollenType       "ragweed".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate5.
+kAO:weatherstate5   rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/12/2016";
+                    kAO:hasHumidity         57;
+                    kAO:hasTemperature      56;
+                    kAO:hasAirQuality       70;
+                    kAO:hasPollen           kAO:pollen5.
+kAO:pollen5         rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      3;
+                    kAO:hasPollenLevel      "low-medium";
+                    kAO:hasPollenType       "nettle".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate6.
+kAO:weatherstate6   rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/13/2016";
+                    kAO:hasHumidity         31;
+                    kAO:hasTemperature      42;
+                    kAO:hasAirQuality       41;
+                    kAO:hasPollen           kAO:pollen6.
+kAO:pollen6         rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      8;
+                    kAO:hasPollenLevel      "medium-high";
+                    kAO:hasPollenType       "ragweed".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate7.
+kAO:weatherstate7   rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/14/2016";
+                    kAO:hasHumidity         63;
+                    kAO:hasTemperature      66;
+                    kAO:hasAirQuality       44;
+                    kAO:hasPollen           kAO:pollen7.
+kAO:pollen7         rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      10;
+                    kAO:hasPollenLevel      "high";
+                    kAO:hasPollenType       "nettle".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate8.
+kAO:weatherstate8   rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/14/2016";
+                    kAO:hasHumidity         25;
+                    kAO:hasTemperature      67;
+                    kAO:hasAirQuality       39;
+                    kAO:hasPollen           kAO:pollen8.
+kAO:pollen8         rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      11;
+                    kAO:hasPollenLevel      "high";
+                    kAO:hasPollenType       "ragweed".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate9.
+kAO:weatherstate9   rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/20/2016";
+                    kAO:hasHumidity         26;
+                    kAO:hasTemperature      70;
+                    kAO:hasAirQuality       54;
+                    kAO:hasPollen           kAO:pollen9.
+kAO:pollen9         rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      11;
+                    kAO:hasPollenLevel      "high";
+                    kAO:hasPollenType       "ragweed".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate10.
+kAO:weatherstate10  rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/16/2016";
+                    kAO:hasHumidity         36;
+                    kAO:hasTemperature      66;
+                    kAO:hasAirQuality       71;
+                    kAO:hasPollen           kAO:pollen10.
+kAO:pollen10        rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      8.9;
+                    kAO:hasPollenLevel      "medium-high";
+                    kAO:hasPollenType       "nettle".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate11.
+kAO:weatherstate11  rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/16/2016";
+                    kAO:hasHumidity         34;
+                    kAO:hasTemperature      80;
+                    kAO:hasAirQuality       44;
+                    kAO:hasPollen           kAO:pollen11.
+kAO:pollen11        rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      2;
+                    kAO:hasPollenLevel      "low";
+                    kAO:hasPollenType       "nettle".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate12.
+kAO:weatherstate12  rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/17/2016";
+                    kAO:hasHumidity         21;
+                    kAO:hasTemperature      67;
+                    kAO:hasAirQuality       50;
+                    kAO:hasPollen           kAO:pollen12.
+kAO:pollen12        rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      3;
+                    kAO:hasPollenLevel      "low-medium";
+                    kAO:hasPollenType       "nettle".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate13.
+kAO:weatherstate13  rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/17/2016";
+                    kAO:hasHumidity         65;
+                    kAO:hasTemperature      80;
+                    kAO:hasAirQuality       70;
+                    kAO:hasPollen           kAO:pollen13.
+kAO:pollen13        rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      3;
+                    kAO:hasPollenLevel      "low-medium";
+                    kAO:hasPollenType       "ragweed".
+
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate14.
+kAO:weatherstate14  rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/18/2016";
+                    kAO:hasHumidity         71;
+                    kAO:hasTemperature      56;
+                    kAO:hasAirQuality       93;
+                    kAO:hasPollen           kAO:pollen14.
+kAO:pollen14        rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      3.5;
+                    kAO:hasPollenLevel      "low-medium";
+                    kAO:hasPollenType       "ragweed".
+                    
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate15.
+kAO:weatherstate15  rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/19/2016";
+                    kAO:hasHumidity         80;
+                    kAO:hasTemperature      58;
+                    kAO:hasAirQuality       46;
+                    kAO:hasPollen           kAO:pollen15.
+kAO:pollen15        rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      4;
+                    kAO:hasPollenLevel      "low-medium";
+                    kAO:hasPollenType       "ragweed".
+ 
+kAO:postalcode45324 kAO:hasWeatherState     kAO:weatherstate16.
+kAO:weatherstate16  rdf:type                kAO:WeatherState;
+                    kAO:hasTime             "4/19/2016";
+                    kAO:hasHumidity         80;
+                    kAO:hasTemperature      59;
+                    kAO:hasAirQuality       69;
+                    kAO:hasPollen           kAO:pollen16.
+kAO:pollen16        rdf:type                kAO:Pollen;
+                    kAO:hasPollenValue      5;
+                    kAO:hasPollenLevel      "medium";
+                    kAO:hasPollenType       "nettle".
+                    
+
+                    
+
+

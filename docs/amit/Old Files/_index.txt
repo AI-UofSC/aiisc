@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (X11; I; SunOS 5.4 sun4m) [Netscape]">
+   <TITLE>Home Page for Amit Sheth</TITLE>
+<!-- Changed by: Kshitij Shah, 12-Sep-1997 -->
+</HEAD>
+<BODY BACKGROUND="http://ra.cs.uga.edu/lsdis_bkg.gif">
+
+<H1>
+<IMG SRC="amit.gif" > Amit P. Sheth</H1>
+
+<HR><B>Amit Sheth directs the Large Scale Distributed Research Lab at the
+University of Georgia (UGA). He is an associate professor of Computer Science
+at UGA, and an adjunct associate professor in the College of Computing
+at the Georgia Tech.</B>
+<H2>
+<B>Research Interests</B></H2>
+
+<UL>
+<LI>
+<B>Interoperable Information Systems (esp. Transactional Workflow Management),
+Global Information Systems (esp. Management of Heterogeneous Digital Media,
+Information Brokering, the Logical/Semantic view of the Web through use
+of broad variety metadata and ontologies).</B></LI>
+
+<LI>
+<B>Other interests: Evolving collaboration technologies (through merger
+of Web, multimedua database, A/V and network computing technologies), Electronic/Information
+Commerce, Ontology/Context/Semantics, Schematic Heterogeneity, Federated
+Database Systems, Multidatabase Consistency/Interdependent Data, Data Quality,
+Schema Integration</B></LI>
+</UL>
+<B>Visit <A HREF="http://lsdis.cs.uga.edu/">LSDIS lab </A>for additional
+details.</B>
+
+<P>Recent Book: <A HREF="http://www.informatik.uni-ulm.de/dbis/MMBook/">Multimedia
+Data Management: Using Metadata to Integrate and Apply Digital Media, Amit
+Sheth and Wolfgang Klas, Eds.</A>
+<H3>
+<B>Recent conference/workshop keynote/invited talks:</B></H3>
+
+<UL>
+<LI>
+<B><A HREF="http://www.ncgia.ucsb.edu/conf/interop97/program/papers/sheth.html">"Semantic
+Interoperability in Infocosm: Moving Beyond Infrastructural and Data Interoperability
+in Federated Information Systems"</A>, <A HREF="http://www.ncgia.ucsb.edu/conf/interop97/program/">Interop'97</A>,
+Santa Barbara, December 3-5, 1997.</B></LI>
+
+<LI>
+<B><A HREF="http://lsdis.cs.uga.edu/~amit/89-IFIP97.html">"Pragmatics Driven
+Research Issues in Data and Process Integrity in Enterprises" </A>, <A HREF="http://www.ifip.tu-graz.ac.at/TC11/CONF/zuerich1997/index.html">IFIP
+WG 11.5 Conference on Integrity and Control in Information Systems</A>,
+Zurich, Switzerland, December 4--5, 1997.</B></LI>
+
+<LI>
+<B><A HREF="http://lsdis.cs.uga.edu/download/88-dexa.ps">"From
+Contemporary Workflow Process Automation to Adaptive and Dynamic Work Activity
+Coordination and Collaboration"</A>, Workshop on Workflows in Scientific
+and Engineering Applications, Toulouse, France, September 1997.</B></LI>
+
+<LI>
+<B><A HREF="http://lsdis.cs.uga.edu/~amit/infocosm-talk.html">Infocosm</A></B></LI>
+
+<LI>
+<B><A HREF="http://lsdis.cs.uga.edu/~amit/workflow-talk.html">Workflow</A></B></LI>
+</UL>
+
+<H3>
+<B><A HREF="http://lsdis.cs.uga.edu/~amit/short-vita.html">short-vita</A>, <A HREF="http://ra.cs.uga.edu/~amit/vita.html">academic-vita
+as of 9/97</A></B></H3>
+
+<H3>
+<B><A HREF="http://ra.cs.uga.edu/publications/pub_ALL.html">Partial
+Publication List</A></B></H3>
+
+<H2>
+<B>Personal</B></H2>
+
+<UL>
+<LI>
+<B><A HREF="http://ra.cs.uga.edu/~amit/times-of-india.gif">Times of
+India Interview, Jan. 3, 1996</A>, <A HREF="http://ra.cs.uga.edu/~amit/economic-times1.gif">Economic
+Times Interview, Jan. 23, 1995</A>, <A HREF="http://ra.cs.uga.edu/~amit/economic-times2.html">Ecomonic
+Times Interview, Jan. 22, 1995</A></B></LI>
+</UL>
+
+<UL>
+<LI>
+<B><A HREF="http://ra.cs.uga.edu/~amit/.plan">my .plan</A></B></LI>
+</UL>
+
+<UL>
+<LI>
+<B><A HREF="http://ra.cs.uga.edu/~amit/surili.tif">Surili (6 yrs) and
+Kajri (less than 1 month old) [11/95]</A></B></LI>
+</UL>
+
+<UL>
+<LI>
+<B><A HREF="http://www.cs.uga.edu/~warke/amit.html">Surili's Dance and
+Sheth Family [04/97]</A></B></LI>
+</UL>
+
+<UL>
+<LI>
+<B><A HREF="http://ra.cs.uga.edu/~amit/home-directions">Directions to
+my house</A></B></LI>
+</UL>
+
+<H2>
+<B>Address</B></H2>
+
+<PRE><B>Prof. Amit Sheth
+Large Scale Distr. Info. Sys. Lab
+Department of Computer Science
+University of Georgia
+415 Graduate Studies Research Center
+Athens&nbsp; GA&nbsp; 30602-7404
+706-542-2310 (direct) 706-542-2911 (dept) 706-542-2966 (fax) 706-769-1661 (home fax)</B></PRE>
+
+<ADDRESS>
+<B>To send me email: <I><A HREF="mailto:amit@cs.uga.edu">amit@cs.uga.edu</A></I></B></ADDRESS>
+
+<ADDRESS>
+<B>To send email to my secretary: <I><A HREF="mailto:secretary@om.cs.uga.edu">secretary@om.cs.uga.edu</A></I></B></ADDRESS>
+
+<ADDRESS>
+<B>To send email to the department secretary: <I><A HREF="mailto:mjp@cs.uga.edu">mjp@cs.uga.edu</A></I></B></ADDRESS>
+
+
+<P><B><A HREF="http://www.cs.uga.edu/LSDIS">Large Scale Distributed Information
+Systems Lab</A></B>
+<BR><B><A HREF="http://www.cs.uga.edu/">UGA CS home page</A></B>
+<BR><B><A HREF="http://www.uga.edu">University of Georgia</A></B>
+</BODY>
+</HTML>

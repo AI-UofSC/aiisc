@@ -1,0 +1,320 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<base href="http://lsdis.cs.uga.edu/lib/">
+<link rel=File-List
+href="file:///C:\Documents%20and%20Settings\Administrator\My%20Documents\Talks\Abstracts\NASA-Workshop-Sem-Viz_files\filelist.xml">
+<title>Semantic Visualization: Interfaces for exploring and exploiting
+ontology, knowledgebase, heterogeneous content and complex relationships</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="date"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="State"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Amit Sheth</o:Author>
+  <o:Keywords>semantic visualization, ontology visualization, knowledgebase visualization, semantic relationship visualiation</o:Keywords>
+  <o:Description>NASA Virtual Iron Bird Workshop, Montery, CA, April 2, 2004.</o:Description>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor> Amit</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>126</o:TotalTime>
+  <o:LastPrinted>2003-07-16T13:15:00Z</o:LastPrinted>
+  <o:Created>2004-11-04T20:54:00Z</o:Created>
+  <o:LastSaved>2004-11-04T20:54:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>545</o:Words>
+  <o:Characters>3108</o:Characters>
+  <o:Company>LSIDS Lab, UGA; Semagix</o:Company>
+  <o:Lines>25</o:Lines>
+  <o:Paragraphs>7</o:Paragraphs>
+  <o:CharactersWithSpaces>3646</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>125</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:gray;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1102185613;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1700668660 1499779444 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1676806098;
+	mso-list-template-ids:-1960403432;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=gray vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:Arial;mso-fareast-font-family:
+"MS Mincho";color:#FF6600'>Semantic Visualization:</span><span
+style='font-size:14.0pt;mso-fareast-font-family:"MS Mincho";color:#FF6600'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:Arial;mso-fareast-font-family:
+"MS Mincho";color:#FF6600'>Interfaces for exploring and exploiting ontology,
+knowledgebase, heterogeneous content and complex relationships</span><span
+style='font-size:14.0pt;mso-fareast-font-family:"MS Mincho";color:#FF6600'><o:p></o:p></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='font-size:11.0pt;color:gray'>Amit Sheth, <a
+href="http://lsdis.cs.uga.edu/">LSDIS Lab</a>, <span class=GramE>The</span> </span><st1:place><st1:PlaceType><span
+  style='font-size:11.0pt;color:gray'>University</span></st1:PlaceType><span
+ style='font-size:11.0pt;color:gray'> of </span><st1:PlaceName><span
+  style='font-size:11.0pt;color:gray'>Georgia</span></st1:PlaceName></st1:place><span
+style='font-size:11.0pt;color:gray'>, and <a href="http://www.semagix.com/">Semagix</a>,
+Ltd.<span style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:11.0pt;color:gray'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='color:gray'>NASA Virtual Iron Bird Workshop, </span><st1:place><st1:City><span
+  class=SpellE><span style='color:gray'>Montery</span></span></st1:City><span
+ style='color:gray'>, </span><st1:State><span style='color:gray'><st1:date year="2004" day="2" month="4">CA</span></st1:State></st1:place><span
+style='color:gray'>, </span><st1:date Year="2004" Day="2" Month="4"><span
+ style='color:gray'>April 2, 2004</span></st1:date><span style='color:gray'></st1:date>.</span><span
+style='font-size:11.0pt;color:gray'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:gray'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><span
+style='font-size:10.0pt;color:gray'>A lifecycle spanning development and use of
+a real-world semantic application often involves interactions will broad
+variety of data, information and knowledge.<span style='mso-spacerun:yes'>  
+</span>Based on experiences and results from academic research (at the LSDIS
+lab) to deployed commercial semantic applications (by Semagix, Inc.), and from
+academic tools to commercial products, this talk will provide an extensive walk
+through (examples) of interactive and graphical interfaces developed in context
+of defining, interacting with, and utilizing data, metadata, and ontologies
+represented or stored as unstructured text and media content, XML, RDF, and OWL
+documents, databases and repositories.<span style='mso-spacerun:yes'> 
+</span>Some of the issues we will cover include: <o:p></o:p></span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='color:gray;text-align:justify;text-justify:inter-ideograph;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in'><span style='font-size:10.0pt'>ontology
+     definition/representation at the schema or description level, which
+     typically involve tens of classes and relationships for a targeted domain
+     or task ontology such as anti-money laundering, terrorism, pharmaceutical
+     drug discovery, <span class=SpellE>Glycan</span> structure, etc. (an
+     average domain or task ontology has tens of classes and relationship
+     types, although some may be larger, depending on representation language,
+     etc.)<o:p></o:p></span></li>
+ <li class=MsoNormal style='color:gray;text-align:justify;text-justify:inter-ideograph;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in'><span style='font-size:10.0pt'>ontology
+     at the knowledgebase (i.e., ontology description base or population) level
+     (the median ontology we have developed has more than million objects and
+     more than a million relationship instances)<o:p></o:p></span></li>
+ <li class=MsoNormal style='color:gray;text-align:justify;text-justify:inter-ideograph;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in'><span style='font-size:10.0pt'>metadata
+     or semantic annotations of heterogeneous (unstructured, semi-structured,
+     and structured) content, and annotated documents<o:p></o:p></span></li>
+ <li class=MsoNormal style='color:gray;text-align:justify;text-justify:inter-ideograph;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in'><span style='font-size:10.0pt'>semantic
+     search/querying and browsing, creation of context-driven query interfaces,
+     display of contextually related results of text, audio and video data<o:p></o:p></span></li>
+ <li class=MsoNormal style='color:gray;text-align:justify;text-justify:inter-ideograph;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in'><span style='font-size:10.0pt'>specification
+     of complex analytical queries and display of complex relationships in the
+     result sets<o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph'><span style='font-size:10.0pt;color:gray'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:gray'>Selected
+background information for this talk can be found at:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:gray'>Article in Data
+Engineering special issue on Making the Semantic Web Real (Dec. 2003) <a
+href="http://wwwt.semagix.com/documents/SemanticWebTechinAction.pdf">http://wwwt.semagix.com/documents/SemanticWebTechinAction.pdf</a><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='font-size:10.0pt;color:gray;mso-ansi-language:
+FR'>Commercial <span class=SpellE>Technology</span>: </span><span
+style='font-size:10.0pt;color:gray'><a
+href="http://www.semagix.com/download.html"><span lang=FR style='mso-ansi-language:
+FR'>http://www.semagix.com/download.html</span></a></span><span lang=FR
+style='font-size:10.0pt;color:gray;mso-ansi-language:FR'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:gray'>Publications and
+Presentations: <a href="http://lsdis.cs.uga.edu/lib/lib.html">http://lsdis.cs.uga.edu/lib/lib.html</a>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:gray'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:gray'>Speaker Biography<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:gray'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;color:gray'>Amit Sheth is a <a
+href="http://lsdis.cs.uga.edu/~amit">professor</a> at The University of Georgia
+(UGA) and <a href="http://www.semagix.com/company_team.html">CTO</a> and
+co-founder of Semagix, Ltd.<span style='mso-spacerun:yes'>  </span>He started
+the LSDIS lab at UGA in 1994. For nine years before, he served in R&amp;D
+groups at Bellcore, Unisys, and Honeywell.&nbsp; In August 1999, Dr. Sheth
+founded Taalee, Inc., based on the technology developed at the LSDIS lab, and
+managed it as CEO until June 2001. Following acquisition/merger of Taalee and
+its follow-on Voquette resulting in Semagix, he currently serves as its
+CTO.&nbsp; His research has led to companies, three significant commercial
+products, several deployed applications, two patents, and over 150
+publications. He has given 19 keynotes and over 125 invited talks/colloquia.&nbsp;He
+is a co-editor of a new book series on Semantic Web, is on five journal
+editorial board, and has organized 10+ international conferences/workshops
+including several in the area of semantic interoperability and the Semantic
+Web.<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

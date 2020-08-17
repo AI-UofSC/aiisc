@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gn="http://www.geonames.org/ontology#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
+<gn:Feature rdf:about="http://sws.geonames.org/9409938/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/9409938/about.rdf"/>
+<gn:name>Palais des Arts libéraux (Historical, 1889-1897)</gn:name>
+<gn:nearby rdf:resource="http://sws.geonames.org/6254976/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/8286635/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/8286635/about.rdf"/>
+<gn:name>Champ de Mars Tour Eiffel Railway Station</gn:name>
+<gn:nearby rdf:resource="http://sws.geonames.org/6254976/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/8426612/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/8426612/about.rdf"/>
+<gn:name>Pont d'Iéna</gn:name>
+<gn:nearby rdf:resource="http://sws.geonames.org/6254976/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/6474284/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/6474284/about.rdf"/>
+<gn:name>Hilton</gn:name>
+<gn:nearby rdf:resource="http://sws.geonames.org/6254976/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/9178543/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/9178543/about.rdf"/>
+<gn:name>Pullman Paris Tour Eiffel</gn:name>
+<gn:nearby rdf:resource="http://sws.geonames.org/6254976/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/6466513/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/6466513/about.rdf"/>
+<gn:name>Hilton Paris</gn:name>
+<gn:nearby rdf:resource="http://sws.geonames.org/6254976/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/10279068/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/10279068/about.rdf"/>
+<gn:name>Centre sportif Emile Anthoine</gn:name>
+<gn:nearby rdf:resource="http://sws.geonames.org/6254976/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/10283491/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/10283491/about.rdf"/>
+<gn:name>Pullman Paris Tour Eiffel Hotel Non Refundable Room</gn:name>
+<gn:nearby rdf:resource="http://sws.geonames.org/6254976/"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/9176906/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/9176906/about.rdf"/>
+<gn:name>Hotel Mercure Paris Centre Tour Eiffel</gn:name>
+<gn:nearby rdf:resource="http://sws.geonames.org/6254976/"/>
+</gn:Feature>
+</rdf:RDF>

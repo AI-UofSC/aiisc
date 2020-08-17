@@ -1,0 +1,1730 @@
+# filename: sensorinput.ttl
+
+@prefix kAO: <http://knoesis.org/khealthAsthmaOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#>.
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix AO: <http://purl.bioontology.org/ontology/AO> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+#####################user,sensor########################################
+AO:exhaledNitricOxideFENO	rdf:type	AO:Investigation.
+
+kAO:NODE	rdf:type	ssn:Sensor;
+		    ssn:detects	AO:exhaledNitricOxideFENO.
+kAO:FOOBOT  rdf:type    ssn:Sensor;
+            ssn:detects kAO:CarbonDioxide;
+	        ssn:detects	kAO:ParticulateMatter;
+	        ssn:detects kAO:VolatileOrganicCompounds;
+	        ssn:detects kAO:Humidity;
+	        ssn:detects kAO:Temperature;
+	        ssn:detects kAO:GlobalPollutionIndex.
+kAO:userA	rdf:type	dbo:Person.
+
+#####################user,sensor########################################
+
+
+#######################NODE observation######################################
+
+
+kAO:obs1		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so1;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so1		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval1.
+kAO:obsval1	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so1;
+            rdf:value       0.1992956996 .
+kAO:NODE		ssn:madeObservation	kAO:obs1.
+
+kAO:obs2		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so2;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so2		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval2.
+kAO:obsval2	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so2;
+            rdf:value 0.2058311552 .
+kAO:NODE	ssn:madeObservation	kAO:obs2.
+
+kAO:obs3		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so3;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so3		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval3.
+kAO:obsval3	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so3;
+            rdf:value   0.2013443261 .
+kAO:NODE	ssn:madeObservation	kAO:obs3.
+
+kAO:obs4		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so4;
+		        ssn:observationResultTime	"4/12/2016";
+		        ssn:observationSamplingTime	"4/12/2016".
+kAO:so4		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval4.
+kAO:obsval4	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so4;
+            rdf:value 0.1992808878 .
+kAO:NODE	ssn:madeObservation	kAO:obs4.
+
+kAO:obs5		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so5;
+		        ssn:observationResultTime	"4/12/2016";
+		        ssn:observationSamplingTime	"4/12/2016".
+kAO:so5		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval5.
+kAO:obsval5	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so5;
+            rdf:value 0.1993149668 .
+kAO:NODE	ssn:madeObservation	kAO:obs5.
+
+kAO:obs6		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so6;
+		        ssn:observationResultTime	"4/12/2016";
+		        ssn:observationSamplingTime	"4/12/2016".
+kAO:so6		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval6.
+kAO:obsval6	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so6;
+            rdf:value 0.1992785186 .
+kAO:NODE	ssn:madeObservation	kAO:obs6.
+
+kAO:obs7		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so7;
+		        ssn:observationResultTime	"4/13/2016";
+		        ssn:observationSamplingTime	"4/13/2016".
+kAO:so7		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval7.
+kAO:obsval7	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so7;
+            rdf:value 0.1992785335 .
+kAO:NODE	ssn:madeObservation	kAO:obs7.
+
+kAO:obs8		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so8;
+		        ssn:observationResultTime	"4/14/2016";
+		        ssn:observationSamplingTime	"4/14/2016".
+kAO:so8		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval8.
+kAO:obsval8	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so8;
+            rdf:value 0.1992667019 .
+kAO:NODE	ssn:madeObservation	kAO:obs8.
+
+kAO:obs9		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so9;
+		        ssn:observationResultTime	"4/14/2016";
+		        ssn:observationSamplingTime	"4/14/2016".
+kAO:so9		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval9.
+kAO:obsval9	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so9;
+            rdf:value 0.1992581934 .
+kAO:NODE	ssn:madeObservation	kAO:obs9.
+
+kAO:obs10		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so10;
+		        ssn:observationResultTime	"4/15/2016";
+		       ssn:observationSamplingTime	"4/15/2016".
+kAO:so10		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:NODE;
+		        ssn:hasValue		kAO:obsval10.
+kAO:obsval10	rdf:type			ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so10;
+                rdf:value 0.1992715597 .
+kAO:NODE	    ssn:madeObservation	kAO:obs10.
+
+kAO:obs11		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so11;
+		        ssn:observationResultTime	"4/16/2016";
+		        ssn:observationSamplingTime	"4/16/2016".
+kAO:so11		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval11.
+kAO:obsval11	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so11;
+            rdf:value 0.199263081 .
+kAO:NODE	ssn:madeObservation	kAO:obs11.
+
+kAO:obs12		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so12;
+		        ssn:observationResultTime	"4/17/2016";
+		        ssn:observationSamplingTime	"4/17/2016".
+kAO:so12		rdf:type			ssn:SensorOutput;
+	    	ssn:isProducedBy	kAO:NODE;
+		    ssn:hasValue		kAO:obsval12.
+kAO:obsval12	rdf:type			ssn:ObservationValue;
+		    ssn:isValueOf		kAO:so12;
+            rdf:value 0.1992820501.
+kAO:NODE	ssn:madeObservation	kAO:obs12.
+
+kAO:obs13		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so13;
+		        ssn:observationResultTime	"4/17/2016";
+		        ssn:observationSamplingTime	"4/17/2016".
+kAO:so13		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:NODE;
+		        ssn:hasValue		kAO:obsval13.
+kAO:obsval13	rdf:type			ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so13;
+                rdf:value 0.1992733628.
+kAO:NODE	    ssn:madeObservation	kAO:obs13.
+
+kAO:obs14		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so14;
+		        ssn:observationResultTime	"4/18/2016";
+		        ssn:observationSamplingTime	"4/18/2016".
+kAO:so14		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:NODE;
+		        ssn:hasValue		kAO:obsval14.
+kAO:obsval14	rdf:type			ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so14;
+                rdf:value 0.1992805451.
+kAO:NODE	    ssn:madeObservation	kAO:obs14.
+
+kAO:obs15		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:NODE;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		AO:exhaledNitricOxideFENO;
+		        ssn:observationResult	kAO:so15;
+		        ssn:observationResultTime	"4/19/2016";
+		        ssn:observationSamplingTime	"4/19/2016".
+kAO:so15		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:NODE;
+		        ssn:hasValue		kAO:obsval15.
+kAO:obsval15	rdf:type			ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so15;
+                rdf:value 0.1992939562.
+kAO:NODE    	ssn:madeObservation	kAO:obs15.
+
+
+
+#######################Foobot observation: Particulate Matter######################################
+kAO:obs16		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so16;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so16		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval16.
+kAO:obsval16	rdf:type			ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so16;
+                rdf:value           119.71.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs16.
+
+kAO:obs17		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so17;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so17		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval17.
+kAO:obsval17	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so17;
+                rdf:value           125.96.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs17.
+
+kAO:obs18		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so18;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so18		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval18.
+kAO:obsval18	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so18;
+                rdf:value           119.39.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs18.
+
+kAO:obs19		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so19;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so19		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval19.
+kAO:obsval19	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so19;
+                rdf:value           121.76.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs19.
+
+kAO:obs20		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so20;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so20		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval20.
+kAO:obsval20	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so20;
+                rdf:value           119.39.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs20.
+
+
+kAO:obs21		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so21;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so21		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval21.
+kAO:obsval21	rdf:type		ssn:ObservationValue    ;
+		        ssn:isValueOf		kAO:so21    ;
+                rdf:value           113.14  .
+kAO:FOOBOT		ssn:madeObservation	kAO:obs21   .
+
+
+kAO:obs22		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so22;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so22		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval22.
+kAO:obsval22	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so22;
+                rdf:value           112.3.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs22.
+
+kAO:obs23		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so23;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so23		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval23.
+kAO:obsval23	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so23;
+                rdf:value           109.34.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs23.
+
+kAO:obs24		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so24;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so24		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval24.
+kAO:obsval24	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so24;
+                rdf:value           99.81.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs24.
+
+kAO:obs25		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so25;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so25		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval25.
+kAO:obsval25	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so25;
+                rdf:value           97.84.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs25.
+
+kAO:obs26		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so26;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so26		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval26.
+kAO:obsval26	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so26;
+                rdf:value           96.2.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs26.
+
+kAO:obs27		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so27;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so27		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval27.
+kAO:obsval27	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so27;
+                rdf:value           95.83.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs27.
+
+kAO:obs28		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so28;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so28		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval28.
+kAO:obsval28	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so28;
+                rdf:value           93.71.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs28.
+
+kAO:obs29		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so29;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so29		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval29.
+kAO:obsval29	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so29;
+                rdf:value           90.76.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs29.
+
+kAO:obs30		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so30;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so30		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval30.
+kAO:obsval30	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so30;
+                rdf:value           88.97.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs30.
+
+kAO:obs31		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so31;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so31		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval31.
+kAO:obsval31	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so31;
+                rdf:value           87.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs31.
+
+kAO:obs32		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:ParticulateMatter;
+		        ssn:observationResult	kAO:so32;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so32		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval32.
+kAO:obsval32	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so32;
+                rdf:value           85.79.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs32.
+
+#######################Foobot observation: Global Pollution Index######################################
+kAO:obs33		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so33;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so33		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval33.
+kAO:obsval33	rdf:type			ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so33;
+                rdf:value           157.6.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs33.
+
+kAO:obs34		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so34;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so34		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval34.
+kAO:obsval34	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so34;
+                rdf:value           166.34.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs34.
+
+kAO:obs35		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so35;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so35		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval35.
+kAO:obsval35	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so35;
+                rdf:value           154.14.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs35.
+
+kAO:obs36		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so36;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so36		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval36.
+kAO:obsval36	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so36;
+                rdf:value          158.06.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs36.
+
+kAO:obs37		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so37;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so37		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval37.
+kAO:obsval37	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so37;
+                rdf:value           157.14.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs37.
+
+
+kAO:obs38		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so38;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so38		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval38.
+kAO:obsval38	rdf:type		ssn:ObservationValue    ;
+		        ssn:isValueOf		kAO:so38    ;
+                rdf:value           148.4  .
+kAO:FOOBOT		ssn:madeObservation	kAO:obs38   .
+
+
+kAO:obs39		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so39;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so39		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval39.
+kAO:obsval39	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so39;
+                rdf:value           147.02.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs39.
+
+kAO:obs40		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so40;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so40		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval40.
+kAO:obsval40	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so40;
+                rdf:value           142.88.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs40.
+
+kAO:obs41		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so41;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so41		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval41.
+kAO:obsval41	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so41;
+                rdf:value           129.54.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs41.
+
+kAO:obs42		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so25;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so42		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval42.
+kAO:obsval42	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so42;
+                rdf:value           126.78.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs42.
+
+kAO:obs43		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so43;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so43		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval43.
+kAO:obsval43	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so43;
+                rdf:value           124.48.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs43.
+
+kAO:obs44		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so44;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so44		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval44.
+kAO:obsval44	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so44;
+                rdf:value           123.56.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs44.
+
+kAO:obs45		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so45;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so45		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval45.
+kAO:obsval45	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so45;
+                rdf:value           120.8.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs45.
+
+kAO:obs46		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so46;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so46		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval46.
+kAO:obsval46	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so46;
+                rdf:value           116.66.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs46.
+
+kAO:obs47		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so47;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so47		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval47.
+kAO:obsval47	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so47;
+                rdf:value           114.36.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs47.
+
+kAO:obs48		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:GlobalPollutionIndex;
+		        ssn:observationResult	kAO:so48;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so48		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval48.
+kAO:obsval48	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so48;
+                rdf:value           111.6.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs48.
+
+
+
+#######################Foobot observation: Volatile Organic Compound######################################
+
+kAO:obs49		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so49;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so49		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval49.
+kAO:obsval49	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so49;
+                rdf:value           125.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs49.
+
+kAO:obs50		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so50;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so50		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval50.
+kAO:obsval50	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so50;
+                rdf:value           125.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs50.
+
+kAO:obs51		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so51;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so51		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval51.
+kAO:obsval51	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so51;
+                rdf:value           125.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs51.
+
+kAO:obs52		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so52;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so52		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval52.
+kAO:obsval52	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so52;
+                rdf:value           137.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs52.
+
+kAO:obs53		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so53;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so53		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval53.
+kAO:obsval53	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so53;
+                rdf:value           125.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs53.
+
+kAO:obs54		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so54;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so54		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval54.
+kAO:obsval54	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so54;
+                rdf:value           125.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs54.
+
+kAO:obs55		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so55;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so55		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval55.
+kAO:obsval55	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so55;
+                rdf:value           126.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs55.
+
+kAO:obs56		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so56;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so56		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval56.
+kAO:obsval56	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so56;
+                rdf:value           126.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs56.
+
+kAO:obs57		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so57;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so57		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval57.
+kAO:obsval57	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so57;
+                rdf:value           126.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs57.
+
+kAO:obs58		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so58;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so58		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval58.
+kAO:obsval58	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so58;
+                rdf:value           126.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs58.
+
+kAO:obs59		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so59;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so59		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval59.
+kAO:obsval59	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so59;
+                rdf:value           126.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs59.
+
+kAO:obs60		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so60;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so60		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval60.
+kAO:obsval60	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so60;
+                rdf:value           128.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs60.
+
+kAO:obs61		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so61;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so61		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval61.
+kAO:obsval61	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so61;
+                rdf:value           127.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs61.
+
+kAO:obs62		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so62;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so62		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval62.
+kAO:obsval62	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so62;
+                rdf:value           127.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs62.
+
+kAO:obs63		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so63;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so63		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval63.
+kAO:obsval63	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so63;
+                rdf:value           126.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs63.
+
+kAO:obs64		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:VolatileOrganicCompounds;
+		        ssn:observationResult	kAO:so64;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so64		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval64.
+kAO:obsval64	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so64;
+                rdf:value           126.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs64.
+
+
+#######################Foobot observation: Carbon Dioxide######################################
+kAO:obs65		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so65;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so65		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval65.
+kAO:obsval65	rdf:type			ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so65;
+                rdf:value           450.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs65.
+
+kAO:obs66		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so66;
+		        ssn:observatioResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so66		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval36.
+kAO:obsval66	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so66;
+                rdf:value           450.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs66.
+
+kAO:obs67		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so67;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so67		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval67.
+kAO:obsval67	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so67;
+                rdf:value           450.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs67.
+
+kAO:obs68		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so668;
+		        ssn:observatinResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so68		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval68.
+kAO:obsval68	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so68;
+                rdf:value          493.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs68.
+
+kAO:obs69		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so69;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so69		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval69.
+kAO:obsval69	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so69;
+                rdf:value           452.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs69.
+
+
+kAO:obs70		rdf:type			    ssn:Observation;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so70;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so70		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval70.
+kAO:obsval70	rdf:type		ssn:ObservationValue    ;
+		        ssn:isValueOf		kAO:so70    ;
+                rdf:value           451  .
+kAO:FOOBOT		ssn:madeObservation	kAO:obs70  .
+
+
+kAO:obs71		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so71;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so71		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval71.
+kAO:obsval71	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so71;
+                rdf:value           454.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs71.
+
+kAO:obs72		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so72;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so72		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval72.
+kAO:obsval72	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so72;
+                rdf:value           453.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs72.
+
+kAO:obs73		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so73;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so73		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval73.
+kAO:obsval73	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so73;
+                rdf:value           455.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs73.
+
+kAO:obs74		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so74;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so74		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval74.
+kAO:obsval74	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so74;
+                rdf:value           455.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs74.
+
+kAO:obs75		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so75;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so75		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval75.
+kAO:obsval75	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so75;
+                rdf:value           455.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs75.
+
+kAO:obs76		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so76;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so76		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval76.
+kAO:obsval76	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so76;
+                rdf:value           459.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs76.
+
+kAO:obs77		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so77;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so77		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval77.
+kAO:obsval77	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so77;
+                rdf:value           456.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs77.
+
+kAO:obs78		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so78;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so78		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval78.
+kAO:obsval78	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so78;
+                rdf:value           456.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs78.
+
+kAO:obs79		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so79;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so79		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval79.
+kAO:obsval79	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so79;
+                rdf:value           453.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs79.
+
+kAO:obs80		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:CarbonDioxide;
+		        ssn:observationResult	kAO:so80;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so80		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval80.
+kAO:obsval80	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so80;
+                rdf:value           454.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs80.
+
+
+###################################Temperature####################################
+kAO:obs81		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so81;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so81		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval81.
+kAO:obsval81	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so81;
+                rdf:value           20.94 .
+kAO:FOOBOT		ssn:madeObservation	kAO:obs81.
+
+kAO:obs82		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so82;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so82		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval82.
+kAO:obsval82	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so82;
+                rdf:value           27.22.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs82.
+
+kAO:obs83		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so83;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so83		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval83.
+kAO:obsval83	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so83;
+                rdf:value           24.37.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs83.
+
+kAO:obs84		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so84;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so84		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval84.
+kAO:obsval84	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so84;
+                rdf:value           23.3.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs84.
+
+kAO:obs85		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so85;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so85		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval85.
+kAO:obsval85	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so85;
+                rdf:value           22.78.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs85.
+
+kAO:obs86		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so86;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so86		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval86.
+kAO:obsval86	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so86;
+                rdf:value           22.53.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs86.
+
+kAO:obs87		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so87;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so87		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval87.
+kAO:obsval87	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so87;
+                rdf:value           22.44.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs87.
+
+kAO:obs88		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so88;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so88		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval88.
+kAO:obsval88	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so88;
+                rdf:value           22.43.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs88.
+
+kAO:obs89		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so89;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so89		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval89.
+kAO:obsval89	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so89;
+                rdf:value           22.44 .
+kAO:FOOBOT		ssn:madeObservation	kAO:obs89.
+
+kAO:obs90		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so90;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:obs90		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval09.
+kAO:obsval90	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so90;
+                rdf:value           22.67 .
+kAO:FOOBOT		ssn:madeObservation	kAO:obs90.
+
+kAO:obs96		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so96;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so96		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval96.
+kAO:obsval96	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so96;
+                rdf:value           22.48.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs96.
+
+kAO:obs91		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so91;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so91		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval91.
+kAO:obsval91	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so91;
+                rdf:value           22.51.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs91.
+
+kAO:obs92		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so92;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so92		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval92.
+kAO:obsval92	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so92;
+                rdf:value           25 .
+kAO:FOOBOT		ssn:madeObservation	kAO:obs92.
+
+kAO:ob93		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so93;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so93		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval93.
+kAO:obsval93  rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so93;
+                rdf:value           22.54.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs93.
+
+kAO:obs94		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so94;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so94		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval94.
+kAO:obsval94	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so94;
+                rdf:value           22.58.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs94.
+
+kAO:obs95		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Temperature;
+		        ssn:observationResult	kAO:so95;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so95		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval95.
+kAO:obsval95	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so95;
+                rdf:value           22.6.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs95.
+
+
+########################################Humidity##############################
+kAO:obs97		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so97;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so97		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval97.
+kAO:obsval97	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so97;
+                rdf:value           64.08.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs97.
+
+kAO:obs98		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so98;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so98		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval98.
+kAO:obsval98	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so98;
+                rdf:value           51.54.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs98.
+
+kAO:obs99		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so99;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so99		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval99.
+kAO:obsval99	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so99;
+                rdf:value           56.03.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs99.
+
+kAO:obs155		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so155;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so155		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval155.
+kAO:obsval	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so155;
+                rdf:value           56.57.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs155.
+
+kAO:obs156		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so156;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so156		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval156.
+kAO:obsval156	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so156;
+                rdf:value           56.88.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs156.
+
+kAO:obs157		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so157;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so157		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval157.
+kAO:obsval157	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so157;
+                rdf:value           56.69.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs157.
+
+kAO:obs158		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so158;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so158		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval158.
+kAO:obsval158	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so158;
+                rdf:value           56.55.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs158.
+
+kAO:obs159		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so159;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so159		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval159.
+kAO:obsval159	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so159;
+                rdf:value           56.27.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs159.
+
+kAO:obs160		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so160;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so160		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval160.
+kAO:obsval160	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so160;
+                rdf:value           55.79.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs160.
+
+kAO:obs161	rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so161;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:s161		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval161.
+kAO:obsval161	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:s161;
+                rdf:value           55.61.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs161.
+
+kAO:obs162		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so162;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so162		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval162.
+kAO:obsval162	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so162;
+                rdf:value           55.32.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs162.
+
+kAO:obs163		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so163;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so163		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval163.
+kAO:obsval163	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so163;
+                rdf:value           55.3.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs163.
+
+kAO:obs164		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so164;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so164	rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval164.
+kAO:obsval164	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so164;
+                rdf:value           55.11.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs164.
+
+kAO:obs165		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so165;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so165		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval165.
+kAO:obsval165   rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so;
+                rdf:value           54.97.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs165.
+
+kAO:obs166		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so166;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so166		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval166.
+kAO:obsval166	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so166;
+                rdf:value           54.99.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs166.
+
+kAO:obs167		rdf:type			    ssn:Observation ;
+                ssn:observedBy		    kAO:FOOBOT;
+		        ssn:featureOfInterest	kAO:userA;
+		        ssn:fromStimulus		kAO:Humidity;
+		        ssn:observationResult	kAO:so167;
+		        ssn:observationResultTime	"4/11/2016";
+		        ssn:observationSamplingTime	"4/11/2016".
+kAO:so167		rdf:type			ssn:SensorOutput;
+	    	    ssn:isProducedBy	kAO:FOOBOT;
+		        ssn:hasValue		kAO:obsval167.
+kAO:obsval167	rdf:type		ssn:ObservationValue;
+		        ssn:isValueOf		kAO:so167;
+                rdf:value           54.94.
+kAO:FOOBOT		ssn:madeObservation	kAO:obs167.

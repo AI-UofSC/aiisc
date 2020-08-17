@@ -1,0 +1,111 @@
+# filename: schema.ttl
+
+@prefix kAO: <http://knoesis.org/khealthAsthmaOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#>.
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix AO: <http://purl.bioontology.org/ontology/AO> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+dbo:Person		rdf:type	owl:Class.
+AO:Investigation	rdf:type	owl:Class.
+
+#########################SSN########################################
+ssn:Observation		rdf:type	owl:Class.
+ssn:FeatureOfInterest	rdf:type	owl:Class.
+ssn:Property		rdf:type	owl:Class.
+ssn:Sensing		rdf:type	owl:Class.
+ssn:Sensor		rdf:type	owl:Class.
+ssn:SensorOutput	rdf:type	owl:Class.
+ssn:Stimulus		rdf:type	owl:Class.
+ssn:SensingDevice	rdf:type	owl:Class;
+			rdfs:subClassOf	ssn:Sensor;
+			rdfs:subClassOf	ssn:Device.
+ssn:ObservationValue	rdf:type	owl:Class.
+
+ssn:detects		    rdf:type	rdf:Property.
+ssn:featureOfInterest	rdf:type	rdf:Property.
+ssn:observationResult	rdf:type	rdf:Property.
+ssn:fromStimulus	rdf:type	rdf:Property.
+ssn:observedBy		rdf:type	rdf:Property.
+ssn:madeObservation	rdf:type	rdf:Property.
+ssn:isProducedBy	rdf:type	rdf:Property.
+ssn:hasValue		rdf:type	rdf:Property.
+ssn:isValueOf		rdf:type	rdf:Property.
+
+
+ssn:Sensor		    rdf:detects	        ssn:Stimulus.
+ssn:Observation		ssn:featureOfInterest	ssn:FeatureOfInterest.
+ssn:Observation		ssn:observationResult	ssn:SensorOutput.
+ssn:Observation		ssn:observationResult	ssn:Question.
+ssn:Observation		ssn:fromStimulus	ssn:Stimulus.
+ssn:Observation		ssn:observedBy		ssn:Sensor.
+ssn:Sensor		    ssn:madeObservation	ssn:Observation.
+ssn:SensorOutput	ssn:isProducedBy	ssn:Sensor.
+ssn:SensorOutput	ssn:hasValue		ssn:ObservationValue.
+ssn:ObservationValue	ssn:isValueOf		ssn:SensorOutput.
+
+#########################SSN##################################################
+
+
+#########################questionnaire########################################
+kAO:Question	rdf:type	owl:Class.
+kAO:Option		rdf:type	owl:Class.
+kAO:hasOption	rdf:type	rdf:Property.
+kAO:asks		rdf:type	rdf:Property.
+
+kAO:Question		kAO:asks	rdf:String.
+kAO:Question		kAO:hasOption	kAO:Option.
+ssn:Observation		ssn:observedBy		kAO:Question.
+kAO:Question		ssn:madeObservation	ssn:Observation.
+
+#########################questionnaire########################################
+
+
+#########################environment########################################
+vcard:Address       rdf:type	owl:Class.
+kAO:Postal-code     rdf:type    owl:Class.
+kAO:WeatherState    rdf:type    owl:Class.
+kAO:Pollen          rdf:type    owl:Class.
+
+vcard:hasAddress    rdf:type    rdf:Property.
+vcard:street-address    rdf:type    rdf:Property.
+vcard:locality      rdf:type    rdf:Property.
+vcard:region        rdf:type    rdf:Property.
+vcard:country-name  rdf:type    rdf:Property.
+kAO:hasPostal-code  rdf:type    rdf:Property.
+vcard:postal-code   rdf:type    rdf:Property.
+kAO:hasWeatherState rdf:type    rdf:Property.
+kAO:hasHumidity     rdf:type    rdf:Property.
+kAO:hasTime         rdf:type    rdf:Property.
+kAO:hasTemperature  rdf:type    rdf:Property.
+kAO:hasAirQuality   rdf:type    rdf:Property.
+kAO:hasPollen       rdf:type    rdf:Property.
+kAO:hasPollenValue  rdf:type    rdf:Property.
+kAO:hasPollenLevel  rdf:type    rdf:Property.
+kAO:hasPollenType   rdf:type    rdf:Property.
+
+dbo:Person      vcard:hasAddress    vcard:Address.
+vcard:Address   kAO:hasPostal-code  kAO:Postal-code.
+kAO:Postal-code vcard:postal-code   rdf:string.
+kAO:Postal-code kAO:hasWeatherState kAO:WeatherState.
+kAO:WeatherState    kAO:hasHumidity rdf:string.
+kAO:WeatherState    kAO:hasTime     rdf:string.
+kAO:WeatherState    kAO:hasTemperature  rdf:string.
+kAO:WeatherState    kAO:hasAirQuality   rdf:string.
+kAO:WeatherState    kAO:hasPollen       kAO:Pollen.
+kAO:Pollen          kAO:hasPollenValue  rdf:string.
+kAO:Pollen          kAO:hasPollenLevel  rdf:string.
+kAO:Pollen          kAO:hasPollenType   rdf:string.
+
+#########################environment########################################
+
+
+
+
+
+
+
+

@@ -1,0 +1,223 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.03 [en] (Win95; I) [Netscape]">
+   <TITLE>Department Overview</TITLE>
+</HEAD>
+<BODY>
+
+<HR WIDTH="100%">
+
+<P><B><FONT SIZE=+3>Logo&nbsp;&nbsp;&nbsp;&nbsp; </FONT><FONT SIZE=+4>METEOR<IMG SRC="hrule2.gif" ALT="Example HR" BORDER=0 HEIGHT=5 WIDTH=460></FONT></B>
+
+<P>Overview
+
+<P><IMG SRC="nsf_logo_small.gif" HEIGHT=126 WIDTH=159 ALIGN=RIGHT>Workflow
+management techniques developed in the METEOR (Managing End-To-End OpeRations)
+project at the LSDIS lab are intended to reliably support large-scale,
+complex and adaptive workflow applications in real-world multi-enterprise
+heterogeneous computing environments.&nbsp; An important aspect of this
+project is that the technology and system development effort at LSDIS has
+occurred in close collaboration with its industry partners.&nbsp; Our research
+builds upon earlier work in industry since 1990, and involves both vigorous
+research program as well as technology transfer resulting in a <A HREF="http://infocosm.com">commercially
+available product</A>.
+
+<P>A subset of key technical capabilities of METEOR include:
+<UL>
+<LI>
+Intuitive, comprehensive modeling&nbsp; supporting by METEOR's workflow
+model with its unique approach to specify human and automated tasks and
+intertask dependencies, and a comprehensive graphical designer</LI>
+
+<LI>
+Scalability and&nbsp; robustness, enabled by</LI>
+
+<UL>
+<LI>
+&nbsp;&nbsp;&nbsp; fully distributed architecture and scheduling</LI>
+
+<LI>
+&nbsp;&nbsp;&nbsp; support for both transactional and non-transactional
+tasks</LI>
+
+<LI>
+&nbsp;&nbsp;&nbsp; security, exception handling and recovery</LI>
+</UL>
+
+<LI>
+Rapid development of complex applications for dynamic businesses, enabled
+by</LI>
+
+<UL>
+<LI>
+&nbsp;&nbsp;&nbsp; automatic code generation from the specification provided
+graphically</LI>
+
+<LI>
+&nbsp;&nbsp;&nbsp; ability to dynamically change specifications</LI>
+</UL>
+
+<LI>
+Support for real-world, enterprise wide and multi-enterprise environments,
+with ease of integration with external applications and legacy data, and
+use of standards, including</LI>
+
+<UL>
+<LI>
+&nbsp;&nbsp;&nbsp; support for Windows NT and/or Sun/Solaris platforms</LI>
+
+<LI>
+&nbsp;&nbsp;&nbsp; full exploitation of Web or CORBA+Java based distributed
+computing infrastructures</LI>
+
+<LI>
+&nbsp;&nbsp;&nbsp; use of database middleware access of multiple workstation
+and mainframe-based databases</LI>
+</UL>
+</UL>
+Our current research focuses on
+<UL>
+<LI>
+seamless integration of coordination (as supported in METEOR) and collaboration
+(e.g., see CaTCH project) capabilities</LI>
+
+<LI>
+more comprehensive support for adaptive workflows</LI>
+
+<LI>
+multi-level security and survivability</LI>
+
+<LI>
+more advanced exception handling</LI>
+
+<LI>
+influencing and support for appropriate relevant standards from WfMC, OMG
+and SWAP</LI>
+</UL>
+<U>Funding and Team</U>
+<BR><IMG SRC="hrule5.gif" ALT="Example HR" BORDER=0 HEIGHT=5 WIDTH=468>
+
+<P><FONT SIZE=+2>Details</FONT>
+
+<P>Architecture Overview<FONT SIZE=-1></FONT>
+
+<P><FONT SIZE=-1>The METEOR workflow management system (WfMS) consists
+of the METEOR Designer/Builder (MTDes), a repository, and two workflow
+enactment systems (or workflow engines) - WebWork and ORBWork.</FONT>
+
+<P><FONT SIZE=-1>The METEOR designer (MTDes) is a tool kit to visually
+design and build workflows.&nbsp; The functionality of the METEOR workflow
+designer has been tailored so that it allows for almost-complete automatic
+code generation for a workflow application ready to execute in a distributed,
+heterogeneous environment.</FONT><FONT SIZE=-1></FONT>
+
+<P><FONT SIZE=-1>ORBWork is, we believe, the first CORBA+Java based fully
+distributed workflow enactment system. In addition to providing coordination
+capabilities in a heterogeneous and distributed environment, ORBWork supports
+scalable software architecture, access to heterogeneous databases, as well
+as an error detection and recovery framework that uses transactional concepts.&nbsp;
+ORBWork uses ORBIXWeb and ORBIX Naming services from <A HREF="http://iona.com">Iona</A>.</FONT>
+
+<P><FONT SIZE=-1>WebWork is a fully distributed Web-based workflow enactment
+service that exploits the latest Internet/Web technologies.&nbsp; As compare
+to ORBWork, it is a “light weight” implementation, more ubiquitous Web
+servers (compared to CORBA ), but currently with a somewhat limited support
+for scalability and dynamic changes.</FONT>
+<BR>&nbsp;
+
+<P>Figure
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P><B>METEOR Resources</B><B></B>
+
+<P>Click on the appropriat METEOR component to get further details on that
+component.
+<BR>For research presentation and publications, please check LSDIS library.
+<BR>A comprehensive tutorial on workflow.
+<BR>A practitioner's view of METEOR: view or download (powerpoint).
+<BR>Example applications: Trouble-ticket (a canonical example), Immunization
+Tracking, Eligibility-Referral.
+<BR><A HREF="http://infocosm.com">METEOR product suite</A>.
+<BR><IMG SRC="hrule6.gif" ALT="Example HR" BORDER=0 HEIGHT=1 WIDTH=468>
+
+<P>Designer home page
+<H1>
+<FONT SIZE=-1>METEOR Designer</FONT></H1>
+<FONT SIZE=-1></FONT>
+
+<P><FONT SIZE=-1>The METEOR designer (MTDes) is a tool kit to visually
+design and build workflows.&nbsp; It has two design modes.&nbsp; The first
+mode, called Process Modeler, is aimed as a tool for the management of
+a typical enterprise.&nbsp; A workflow design may be initiated at the high,
+organizational level, without worrying about implementation details.&nbsp;
+This mode focuses on high-level specification issues without going into
+the procedural issues of the runtime.&nbsp; The Process Modeler stresses
+the what of the process rather than the how.&nbsp; The second mode, called
+Workflow Builder, is closer to the implementation aspects of creating a
+workflow application.&nbsp; Technical engineers or system analysts who
+would know the details of the underlying run time system would use this
+mode. The design specification created with the Process Modeler is refined
+in a more fine-grained manner using the Workflow Builder to create a complete
+workflow application.&nbsp; It is in this mode that we specify the entire
+map of the workflow including various tasks, task managers, and their interactions.&nbsp;&nbsp;
+As has been mentioned earlier, the tool has a graphical user interface.&nbsp;
+The designer has several components, including the map designer, the data
+designer, and the task designer. These components can model:</FONT>
+<UL>
+<LI>
+<FONT SIZE=-1>the workflow map expressing the ordering of tasks and the
+dependencies among them,</FONT></LI>
+
+<LI>
+<FONT SIZE=-1>the data objects manipulated and transmitted by the tasks,</FONT></LI>
+
+<LI>
+<FONT SIZE=-1>the details of the individual tasks (workflow activities),
+and</FONT></LI>
+
+<LI>
+<FONT SIZE=-1>the interface to external task development tools (e.g., Microsoft's
+FrontPage to design the interface of a user task, or a rapid application
+development tool).</FONT></LI>
+</UL>
+<FONT SIZE=-1>The functionality of the METEOR workflow designer has been
+tailored so that it allows for almost-complete automatic code generation
+for a complete workflow application. User tasks involving human interactions
+and database tasks are automatically generated.&nbsp; For the computer
+(automatic) tasks including those accessing legacy systems, wrapper code
+is generated to utilize an executable code. Each runtime (ORBWork and WebWork)
+has a suitable code generator.</FONT>
+<BR><FONT SIZE=-1>Workflow specified by the designer can also be stored
+in the METEOR repository (which can be accessed using a WfMC API).</FONT>
+
+<P><FONT SIZE=-1>Current designer version 2.4 is C++ based and runs on
+Windows95, NT and Sun/Solaris.&nbsp; A fully Java-based designer is due
+to be completed in Q4'98.&nbsp; Additional capabilities it is expected
+to support include design and specification for exception handling and
+recovery, security (including multi-level security), and correctness of
+specification. A METEOR-CD with the designer, multimedia tutorial, documentation,
+etc. is available to faculty members teaching&nbsp; graduate courses involving
+workflow management from the LSDIS lab, or for commercial use evaluation
+from <A HREF="http://infocosm.com">Infocosm, Inc</A>.</FONT>
+<BR>&nbsp;<U></U>
+
+<P><IMG SRC="hrule6.gif" ALT="Example HR" BORDER=0 HEIGHT=1 WIDTH=468>
+
+<P><FONT SIZE=+2>ORBWork</FONT>
+
+<P>Latest description of ORBWork is in this paper.
+
+<P><IMG SRC="hrule6.gif" ALT="Example HR" BORDER=0 HEIGHT=1 WIDTH=468>
+
+<P><FONT SIZE=+2>WebWork</FONT>
+<BR>WebWork home page.
+<BR><IMG SRC="hrule6.gif" ALT="Example HR" BORDER=0 HEIGHT=1 WIDTH=468>
+<BR>&nbsp;
+
+<P>&nbsp;
+</BODY>
+</HTML>

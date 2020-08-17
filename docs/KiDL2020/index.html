@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+        <title>ACM HT'20 | KiDL</title>
+        <link rel="icon" href="./images/logo.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="icons.css">
+		<link href="https://fonts.googleapis.com/css2?family=Kameron&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+		<div class = 'navbar'>
+			<a href="http://aiisc.ai/"><img class = 'ailogo' src = './images/ai_institute_logo.png'></a>
+			<div class = 'header'>
+				<p class = 'header'>ACM HT 2020 Tutorial: Knowledge-infused Deep Learning</p>
+			</div>
+			<a href="https://projects.cah.ucf.edu/ht2020/"><img class = 'acmlogo' src = './images/conference.png'></a>
+		</div>
+		<div class = 'container'>
+			<h3>Date: July 14, 2020 Time: 3 - 6 pm Eastern Time</h3>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Tutorial Information</p>
+			</div>
+			<p class = 'text'>
+				Recent advances in statistical and data-driven deep learning 
+				demonstrate significant success in natural language understanding 
+				without using prior knowledge, especially in structured and generic domains, 
+				where data is abundant. On the other hand, in text processing problems that  
+				are dynamic and impact the society at large, existing data-dependent, 
+				state-of-the-art deep learning methods remain vulnerable to veracity 
+				considerations and especially, high volume that masks small, emergent signals. 
+				Statistical natural language processing methods have shown poor performance in 
+				capturing: (1) Human well being online especially in evolving events 
+				(e.g. mental health communications on Reddit, Twitter), (2) Culture and context 
+				specific discussion on the web (e.g. humor detection, extremism on social media), 
+				(3) Social Network Analysis (help-seeker and care-provider) during pandemic or 
+				disaster scenarios, and (4) Explainable methods of learning that  drive technological 
+				innovations and inventions for community betterment. In such social hypertext, 
+				leveraging the semantic-web concept of knowledge graphs  is a promising approach to 
+				the enhancement of deep learning and natural language processing.
+			</p>
+			<p class = 'text'>
+				According to Piagetian human learning theory, the activation of existing schema 
+				guides the apprehension of  experience  to support the generation of  context 
+				sensitive  responses. Activating prior knowledge connects current and past 
+				experience for identifying relations, supporting explanation, reducing ambiguity, 
+				structuring  new knowledge, and application to novel materials. Further, 
+				human learning does not necessarily rely on large amounts of (annotated) cases to proceed.
+				Because prior knowledge is so powerful in human learning, its incorporation at 
+				various levels of abstraction in deep learning could benefit outcomes. Example  
+				the desiderata include compensating for data limitations, improving  inductive bias, 
+				generating explainable outcomes and enabling trust. These are particularly useful 
+				for data-limited but otherwise complex, evolving problems in domains such as  
+				mental healthcare, online social threats and epidemic/pandemic.
+			</p>
+			<p class = 'text'>
+				Despite the general agreement that structured prior knowledge and tacit knowledge 
+				(the inferred outcome of a model) resulting from deep learning should be combined, 
+				there has been little progress. Recent debates on
+				<a href="https://www.zdnet.com/article/devils-in-the-details-in-bengio-marcus-ai-debate/"> Neuro-Symbolic AI </a>, 
+				the inclusion of innate priors in <a href="https://www.abigailsee.com/2018/02/21/deep-learning-structure-and-innate-priors.html">deep learning</a>, 
+				and <a href="https://vimeo.com/390814190">AI fireside chat </a> have identified knowledge-infused 
+				learning  to improve explainability, interpretability, and trust in AI systems. 
+			</p>
+			<p class = 'text'>In this tutorial, we take use cases from the aforementioned two social good applications (Mental Health, Radicalization) and multimodal aspects of social media (e.g. scene understanding from images, video and text (hypermedia/hypertext) often found in documentation of critical events  to explore the modern aspect of hypertext using semantic web in the form of Knowledge Graphs (KG).  Specifically, the tutorial will provide a detailed walkthrough on Knowledge Graphs and their utility in developing knowledge-infusion techniques for interpretable and explainable learning for text, video, images, and graphical data on the web with the following agenda:
+				Motivate the novel paradigm of knowledge-infused learning using computational learning and cognitive theories. 
+				Describe the different forms of knowledge, methods of automatic modeling of KG, and infusion methods in deep/machine learning.
+				Discuss application-specific evaluation methods specifically for explainability and reasoning using benchmark datasets and knowledge-resources that show promise in advancing the capabilities of deep learning.
+				Future directions of KGs and robust learning for the Web and Society. 
+			</p>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Tutorial Outline <a class = 'title-link' href = './httut02-gaurA.pdf'>[Download]</a></p>                
+			</div>
+			<p class = 'text'>
+				This tutorial covers various methods of <a href="https://www.youtube.com/watch?v=TRK_oDU1yc8">Knowledge-infusion</a> in deep learning by 
+				exploiting the relations in a knowledge graph. We have designed this tutorial 
+				to provide theoretical, practical, and applied perspectives , and stimulate novel
+					ideas for future research.
+			</p>
+			<ol>
+				<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSP9fuXZ5fa0v5s6CiliWcpJE-QTxmqLurjsNmc4Td-WYGPwER9V-SaK-nsD9vq4uRhJC8GVe2dtRV_/embed?start=true&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+				<li><p class = 'text'>
+					The motivation for Knowledge Graph-infused Deep Learning <b>(30 minutes)</b>: 
+					In this module, we will describe "Why do we need external knowledge in 
+					learning"? We will explain the fundamental role of a relation-preserving 
+					knowledge representation in learning from social media, scientific articles, 
+					blog posts and graphics. We will describe Probably Approximately Correct 
+					(PAC) learnability and Semantic theories of Robust logic as the foundational 
+					piece for knowledge-infusion. Further, we address how these paradigms 
+					manifest themselves in modeling prior knowledge and cognitive theories, which 
+					constitute our understanding of context and relations in the social good domain.
+				</p></li>
+				<li><p class = 'text'> 
+					All about Knowledge Graphs <b>(60 minutes)</b>: There are multiple ways to represent 
+					external knowledge, such as relational databases (or knowledge bases), flattened 
+					taxonomies (or lexicons), Ontologies, and Knowledge Graphs. In this module, 
+					we elaborate on these forms of external knowledge and  explain the following: 
+					(1) What is a Knowledge Graph, (2) Knowledge Graphs and Domain-Specific Search 
+					Problems, (3) Knowledge Graph Construction and Evolution, (4) Knowledge Graph 
+					Completion and Sub-graph Creation. Furthermore, we introduce KG-driven unsupervised, 
+					semi-supervised, and supervised methods of representation learning over unstructured 
+					multimodal content.</p></li>
+					<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSQpc9uc8KE9mD1Xw5Mwk5jNEadxF2jR4fRrSbyvjMhWmFFAf0HDw0uxN1TnhlA_MMxQIbwY3vlHT-P/embed?start=true&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+				<li><p class = 'text'>
+					Different Forms of Knowledge-Infusion and its Application <b>(60 minutes)</b>: In this 
+					presentation, we describe three approaches to knowledge-infusion:
+					<ol type = 'a'>
+						<li><p class = 'text'>
+							<b>Shallow Infusion</b>: Both the external knowledge and the method 
+							of knowledge infusion is shallow, utilizing syntactic and 
+							lexical knowledge in the form of word embedding models. 
+						</p></li>
+						<li><p class = 'text'>
+							<b>Semi-Deep Infusion</b>: External knowledge is involved through 
+							attention mechanisms or learnable knowledge constraints acting 
+							as a sentinel to guide model learning.
+						</p></li>
+						<li><p class = 'text'>
+							<b>Deep Infusion</b>:  Employs a stratified representation of knowledge 
+							representing different levels of abstractions in different 
+							layers of a deep learning model, to transfer knowledge that 
+							aligns with the corresponding layer in the layered learning process.
+						</p></li>
+					</ol>
+					<center>
+					<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTW7WnWjpwflzOlfdA54mbrUQMlzX-ABXS1dmNJJCM70ryz7VphfEWZlOYd3uioWY7V-i6F894dMup5/embed?start=true&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+					<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTGPsD_Y5-KFVflztu1MthfdO5GXalHMaz9xaHiDt0vwZrnKBlyAEcS1wc33Jzf7PFBHXzXKXHxEloY/embed?start=true&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+					<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQqSpntt-gh3v8GIfrsgBBp47gJV5vPRc0fvcJ_Ec87hQZST8UsVg4VIznxKBmVEgFACEoGhggmL_3O/embed?start=true&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+					</center>
+					<p class = 'text'>
+						We  compare these based on several criteria, such as false alarms, explainability, 
+						and bias, using:
+					</p>
+					<ol type = 'a' start='4'>
+						<li><p class = 'text'>
+							<b>Domain-specific Applications</b>: Considering problems in the real-world 
+							application (e.g.  pandemics such as COVID-19, Ebola), disaster 
+							(e.g. Hurricanes) scenarios), we explain the utility of 
+							knowledge-infused learning in two prominent categories that  
+							highlight key problems:
+							<ol type = 'i'>
+								<li><p class = 'text'>
+									<b><i>Context understanding</i></b>: Understanding current context with 
+									respect to observable objects and events, given learned 
+									experience (from past behavior) and external knowledge 
+									(e.g.: context understanding during crisis and extremism 
+									communication online).
+								</p></li>
+								<li><p class = 'text'>
+									<b><i>Abstraction</i></b>: A computational technique that maps and a
+									ssociates raw data (both textual and graphic) to action-related
+										information for high-order stakeholders (e.g. SAMHSA, 
+										Psychiatrist, Emergency Responders, Local authorities).
+
+
+								</p></li>
+							</ol>
+						</li>
+					</ol>
+				</p></li>
+			</ol>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Target Audience and Prerequisites</p>
+			</div>
+			<p class = 'text'>
+				The audience is expected to have a basic understanding of deep/machine learning,
+				natural language processing, and semantic technologies (e.g., linked open data), 
+				as we aim to guide  attendees through a high-level tour of the most recent 
+				approaches proposed by researchers. Also, we expect basic familiarity with social 
+				media platforms such as Twitter and Reddit. 
+				We expect participants to bring their laptops with all the required tools installed. 
+				of the tutorial proposal.We expect that by the end of the tutorial, the attendees will  
+				understand the use of knowledge graphs to enhance the performance (quality of results), utility, interpretability and explainability of  deep learning and be prepared to  apply 
+				knowledge-infused deep learning to real-world applications.
+			</p>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Who Should Attend</p>
+			</div>
+			<p class = 'text'>
+				Hypertext research has been deeply interested in modeling of people, content, and network 
+				on the web for knowledge discovery. The tutorial will describe methods for contextualization, 
+				abstraction, and personalization aligning with the theme of “Hypertext and Social Good”. 
+				This tutorial at ACM HT 2020 will bring researchers and practitioners together at the confluence 
+				of contextualized knowledge representation, reasoning, semantic linking, natural language processing, 
+				and deep learning.  
+				Essentially, the tutorial will provide the audience an opportunity to learn more about a hybrid machine 
+				learning approach for high impact problems. Toward the end, the attendees would appreciate knowledge-infused 
+				AI as a promising, reliable and practical approach to overcome obstacles in social good domains regarding the 
+				lack of high-quality training data and poor interpretability.
+			</p>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Biographies</p>
+			</div>
+			<div class = 'bio'>
+				<img class = 'image' src = './images/manas.jpg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="https://manasgaur.github.io">Manas Gaur</a></p>
+					<p class = 'name'> <a href="mailto:manas@email.sc.edu?subject=ACM HT'20 KiDL: Request for Information">Contact</a>| <a href="https://twitter.com/manasgaur90">@manasgaur90</a></p>
+					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
+					<p class = 'bio-text'>Manas Gaur is currently a Ph.D. Student in Artificial Intelligence 
+						Institute at the University of South Carolina. He has been Data Science and AI 
+						for Social Good Fellow with the University of Chicago and Dataminr Inc.  
+						His interdisciplinary research funded by NIH and NSF operationalizes the use 
+						of Knowledge Graphs, Natural Language Understanding, and Machine Learning to 
+						solve social good problems in the domain of Mental Health, Cyber Social Harms, 
+						and Crisis Response. His work has appeared in premier AI and Data Science conferences 
+						(CIKM, WWW, AAAI, CSCW), journals in science (PLOS One, Springer-Nature, IEEE Internet Computing), 
+						and healthcare-specific meetings (NIMH MHSR, AMIA).
+
+					</p>
+					</p>
+				</div>
+			</div>
+			<div class = 'bio'>
+				<img class = 'image' src = './images/ugur.jpg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="https://www.linkedin.com/in/ugurkursuncu">Ugur Kursuncu</a></p>
+					<p class = 'name'><a href="https://twitter.com/ugurkursuncu?lang=en">@UgurKursuncu</a></p>
+					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
+					<p class = 'bio-text'>Ugur Kursuncu is currently a Postdoctoral Research Associate 
+						with Dr. Sheth at #AIISC. He received his Ph.D. in Computer Science from The 
+						University of Georgia in 2018, with awards for excellence in Teaching and 
+						Research in 2015 and 2016. His research has focused on Knowledge-infused and 
+						Context-aware learning systems spanning the areas of Cyber Social Threats and 
+						Healthcare, with high impact applications. His research has been published in 
+						top-tier conferences, journals and books, such as CIKM, AAAI, WWW, CSCW, 
+						Springer Nature, IEEE Internet Computing, Expert Systems with Applications 
+						(Elsevier). He has also served as a program committee member in major conferences, 
+						such as WWW and IEEE BigData. 
+					</p>
+					</p>
+				</div>
+			</div>
+			<div class = 'bio'>
+				<img class = 'image' src = './images/ruwan.jpg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="https://www.linkedin.com/in/ruwantw?trk=people-guest_people_search-card">Ruwan Wickramarachchi</a></p>
+					<p class = 'name'><a href="https://twitter.com/ruwantw">@ruwantw</a></p>
+					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
+					<p class = 'bio-text'>Ruwan Wickramarachchi is a Ph.D. student of Dr. Sheth at #AIISC. 
+						His primary research interest is in neuro-symbolic AI for context understanding 
+						with applications in Autonomous Driving and Healthcare. Prior to joining the Ph.D. 
+						program he was a Senior Software Engineer at the Machine Learning Research Group of 
+						LSEG Technology -- Technology services sector of London Stock Exchange Group.
+					</p>
+					</p>
+				</div>
+			</div>
+			<div class = 'bio'>
+				<img class = 'image' src = './images/shweta.png'>
+				<div class = 'info'>
+					<p class = 'name'><a href="http://www.iitp.ac.in/~shweta.pcs14/">Shweta Yadav</a></p>
+					<p class = 'name'><a href="https://twitter.com/shweta_yadav_3">@shweta_yadav</a></p>
+					<p class = 'name'>Kno.e.sis Center, Wright State University
+					<p class = 'bio-text'>Shweta Yadav is currently a Postdoctoral Research Associate at 
+						Kno.e.sis Center with Dr. T. K. Prasad and Dr. Sheth (as the previous executive 
+						director of Ohio Center of Excellence in Knowledge-enabled Computing (Kno.e.sis) 
+						Center). She completed her Ph.D. from Indian Institute of Technology (IIT Patna) in 2019. Her 
+						research interests span health informatics, public health informatics, biomedical 
+						text mining, and computational social science. Her work has been featured in NAACL-HLT, 
+						ACL, EACL, WWW/TheWeb, and journals like Knowledge-based System, Soft Computing, Knowledge based 
+						Information Systems, and The Transactions on Multimedia Computing Communications and Applications.
+						She has also served as an external reviewer/sub-reviewer for top-tier conferences and journals 
+						including WWW/TheWeb, ICWSM, NAACL, ACL, EMNLP, BioInformatics, and ACM Transactions on Asian and 
+						Low-Resource Language Information Processing.
+					</p>
+					</p>
+				</div>
+			</div>
+			<div class = 'bio'>
+				<img class = 'image' src = './images/amit.jpg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="http://aiisc.ai/amit">Amit Sheth</a></p>
+					<p class = 'name'><a href="https://twitter.com/amit_p">@amit_p</a></p>
+					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
+					<p class = 'bio-text'>Prof. Amit Sheth is an Educator, Researcher, and Entrepreneur. 
+						He is the founding director of the university-wide Artificial Intelligence 
+						Institute at the University of South Carolina (#AIISC). Previously , 
+						he was the LexisNexis Ohio Eminent Scholar and the executive director of 
+						Ohio Center of Excellence in Knowledge-enabled Computing. He is a Fellow 
+						of IEEE, AAAI, and AAAS. He has organized 75+ international events 
+						(general/program chair, organization committee chair), 65+ keynotes, 
+						given many well-attended tutorials and is among the well-cited computer 
+						scientists. He has founded three companies by licensing his university 
+						research outcomes, including the first Semantic Web company in 1999 that 
+						pioneered technology similar to what is found today in Google Semantic 
+						Search and Knowledge Graph. Several commercial products and deployed 
+						systems have resulted from his research. 
+					</p>
+					</p>
+				</div>
+			</div>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Keynotes and Presentations associated with the Tutorial</p>
+			</div>
+			<ol><p class = 'text'>
+				<li><p class = 'text'>
+					Amit Sheth 
+					<ol type = 'a'>
+						<li><p class = 'text'>
+							Knowledge Graphs and their Central Role in Big Data Processing: Past, 
+							Present, and Future (<a href="http://bit.ly/iSEMANTICS2020">Keynote</a>), delivered at 7th ACM IKDD CODS and 25th COMAD 2020, Hyderabad, India 
+							and iSEMANTICS conference, Austin Texas. 
+						</p></li>
+						<li><p class = 'text'>
+							Knowledge will propel Machine Understanding of Big Data (<a href="https://www.slideshare.net/apsheth/knowledge-will-propel-machine-understanding-of-big-data">Keynote</a>)
+							delivered as the Keynote at China Conference on Knowledge Graph and Semantic Computing (CCKS), Chengdu, China, 2017
+						</p></li>
+					</ol>
+				</p></li>
+				<li><p class = 'text'>
+					Manas Gaur
+					<ol type = 'a'>
+						<li><p class = 'text'>
+							Towards Knowledge-aware Learning for Mental Health Communications: 
+							Statistical and Semantic AI (<a href="http://bit.ly/AII_UTD">Presentation</a>) , delivered at the Center for Machine Learning in The University of Texas at Dallas
+						</p></li>
+						<li><p class = 'text'>
+							Knowledge-infused AI for Healthcare: Role of Conceptual Medical Knowledge in 
+							Improving Machine Understanding (<a href="http://bit.ly/AII_IIITDdelhi">Invited Talk</a>), delivered at Indraprastha Institute of Information Technology, Delhi, India Link: 
+						</p></li>
+						<li><p class = 'text'>
+							AI for Social Good: Knowledge-aware Characterization of Web Communications to 
+							propel Machine Learning (<a href="http://bit.ly/Sabudh_ppt">Presentation</a>), delivered at LNM Institute of Information Technology, India
+						</p></li>
+						<li><p class = 'text'>
+							Knowledge-infused Learning in Healthcare (<a href="https://www.youtube.com/watch?v=AVEXOtEL0-A&t=3s">Keynote</a>), 
+							delivered at PyData Educational Conference, hosted by DataLab & MediaLab at University of Salamanca, Spain
+						</p></li>
+					</ol>
+				</p></li>
+				<li><p class = 'text'>
+					Ugur Kursuncu
+					<ol type = 'a'>
+						<li><p class = 'text'>
+							Knowledge-infused AI for Healthcare: Role of Conceptual Medical Knowledge in 
+							Improving Machine Understanding (<a href="http://bit.ly/LNMIIT_IIITD_ppt">Invited Talk</a>), delivered 
+							at NIH Grantee Session in Big Data Health Sciences Conference at University of South Carolina
+						</p></li>
+						<li><p class = 'text'>
+							Understanding the Harms of Online Platforms: Radicalization and Gun Violence (<a href="https://bit.ly/OK_talk">Invited Talk</a>) delivered at Data+Creativity Lecture Series, Oklahoma City
+						</p></li>
+						<li><p class = 'text'>
+							Explainability of Medical AI through Domain Knowledge, (<a href="http://bit.ly/invited_talk_2">Invited Talk</a>), delivered as invited presentation in the Ontology Summit 2019
+						</p></li>
+						<li><p class = 'text'>
+							Understanding factors driving Extremism on Social Media(<a href="https://www.youtube.com/watch?v=eulpEZwzABs">Invited Talk</a>, delivered at <a href="https://southbigdatahub.org/">South Big Data Hub</a>
+						</p></li>
+						<li><p class = 'text'>
+							Analysis of Islamist Extremist Narrative on Social Media (<a href="https://youtu.be/Ffc6yOGt-8U?t=2752">Invited Talk</a>), delivered at <a href="http://www.ipsonet.org/conferences/36-conferences/middle-east-dialogue">MED 18: Middle East Dialogue 2018: A New Collective Vision</a>.
+						</p></li>
+					</ol>
+				</p></li>
+				<li><p class = 'text'>
+					Shweta Yadav
+					<ol type = 'a'>
+						<li><p class = 'text'>
+							Text Mining in Biomedical and Healthcare Domain (<a href="https://bit.ly/2xhXiQM">Lecture</a>), delivered at Continuing Education Programme course on "Natural Language Processing" organized by AI-NLP-ML Lab at IIT Patna, India.  
+						</p></li>
+						<li><p class = 'text'>
+							Biomedical Natural Language Processing (Lecture), delivered during the workshop on "Natural Language Processing" organized by "Global Initiative of Academic Networks (GIAN), an MHRD - Govt. of India program" at IIT Patna, India. 
+						</p></li>
+						<li><p class = 'text'>
+							Overview of Feature Engineering and Selection (<a href="https://bit.ly/WSU_feature_engg">Invited Talk</a>), delivered at the Department of Computer Science and Engineering, Wright State University.  
+						</p></li>
+					</ol>
+				</p></li>
+				<li><p class = 'text'>
+					Ruwan Wickramarachchi
+					<ol type = 'a'>
+						<li><p class = 'text'>
+							Knowledge Graph Embeddings for Automotive Data (<a href="https://us2ts.org/program-hybrid-ai">Session Talk</a>), 
+							delivered at the “Hybrid AI for Context Understanding” session co-organized at the 3rd U.S. Semantic Technologies Symposium (March 2020), at North Carolina State University, Raleigh, NC
+						</p></li>
+					</ol>
+				</p></li>
+			</p></ol>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Resources</p>
+			</div>
+			<ol>
+				</p></li>
+				<li><p class = 'text'>
+					Medical Sentiment Analysis using Social Media: <span class = 'text-red'>[Will be made available upon request. <a href="shorturl.at/jopFW">Link for requesting data</a>]</span>
+				</p></li>
+				<li><p class = 'text'>
+					Suicide Severity Risk Lexicon, (<a href="http://bit.ly/lexicons_suicide_severity">Download</a>)
+				</p></li>
+				<li><p class = 'text'>
+					Mental Health and Drug Abuse Knowledge Graph from Twitter Tweets and Reddit Posts (<a href="https://bit.ly/DSM-DAO-lexicon">Download</a>)
+				</p></li>
+				<li><p class = 'text'>
+					Reddit C-SSRS Suicide Dataset (<a href="https://zenodo.org/record/2667859#.Xkn7NxdOmrw">Download</a>)
+				</p></li>
+			</ol>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Papers</p>
+			</div>
+			<ol><p class = 'text-small'>
+				<li class = 'text-small'><p class = 'text-small'>
+					Gaur, Manas, Ugur Kursuncu, Amanuel Alambo, Amit Sheth, Raminta Daniulaityte, 
+					Krishnaprasad Thirunarayan, and Jyotishman Pathak. "" Let Me Tell You About Your 
+					Mental Health!" Contextualized Classification of Reddit Posts to DSM-5 for Web-based 
+					Intervention." In Proceedings of the 27th ACM International Conference on 
+					Information and Knowledge Management, 2018.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Gaur, Manas, Amanuel Alambo, Joy Prakash Sain, Ugur Kursuncu, Krishnaprasad 
+					Thirunarayan, Ramakanth Kavuluru, Amit Sheth, Randy Welton, and Jyotishman Pathak. 
+					"Knowledge-aware assessment of severity of suicide risk for early intervention." 
+					In The World Wide Web Conference, 2019.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Gyrard, Amelie, Manas Gaur, Saeedeh Shekarpour, Krishnaprasad Thirunarayan, and 
+					Amit Sheth. "Personalized Health Knowledge Graph." In ISWC Contextualized Knowledge 
+					Graph Workshop, 2018.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Sheth, Amit, Swati Padhee, and Amelie Gyrard. "Knowledge Graphs and Knowledge
+					Networks: The Story in Brief." IEEE Internet Computing, 2019.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Alambo, Amanuel, Manas Gaur, Usha Lokala, Ugur Kursuncu, Krishnaprasad Thirunarayan, 
+					Amelie Gyrard, Amit Sheth, Randon S. Welton, and Jyotishman Pathak. "Question 
+					answering for suicide risk assessment using Reddit." In IEEE 13th International 
+					Conference on Semantic Computing (ICSC), 2019.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Sheth, Amit, Manas, Gaur, Ugur Kursuncu, and Ruwan Wickramarachchi. 
+					"Shades of Knowledge-Infused Learning for Enhancing Deep Learning." IEEE 
+					Internet Computing, 2019.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Arachie, Chidubem, Manas Gaur, Sam Anzaroot, William Groves, Ke Zhang, and Alejandro 
+					Jaimes. "Unsupervised Detection of Sub-events in Large Scale Disasters." arXiv 
+					preprint arXiv:1912.13332, 2019 (accepted in AAAI 2020).
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Yazdavar, Amir Hossein, Mohammad Saeid Mahdavinejad, Goonmeet Bajaj, William Romine, 
+					Amirhassan Monadjemi, Krishnaprasad Thirunarayan, Amit Sheth, and Jyotishman Pathak. 
+					"Fusing Visual, Textual and Connectivity Clues for Studying Mental Health." arXiv
+					preprint arXiv:1902.06843, 2019.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Kumar, Ramnath, Shweta Yadav, Raminta Daniulaityte, Francois Lamy, Krishnaprasad 
+					Thirunarayan, Usha Lokala and Amit Sheth. “eDarkFind: Unsupervised Multi-view 
+					Learning for Sybil Account Detection.” The Web Conference 2020 (WWW 2020) (in press).
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Yazdavar, Amir Hossein, and S. Hussein. "Al-Olimat, Monireh Ebrahimi, Goonmeet Bajaj, 
+					Tanvi Banerjee, Krishnaprasad Thirunarayan, Jyotishman Pathak, and Amit Sheth. 2017. 
+					Semi-Supervised Approach to Monitoring Clinical Depressive Symptoms in Social Media." 
+					In IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining, 2017.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Purohit, Hemant, Andrew Hampton, Shreyansh Bhatt, Valerie L. Shalin, Amit P. Sheth, and 
+					John M. Flach. "Identifying seekers and suppliers in social media communities to support 
+					crisis coordination." Computer Supported Cooperative Work (CSCW), 2014.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Kursuncu, Ugur, Manas Gaur, Usha Lokala, Krishnaprasad Thirunarayan, Amit Sheth, and I. Budak 
+					Arpinar. "Predictive Analysis on Twitter: Techniques and applications." In Emerging research 
+					challenges and opportunities in computational social network analysis and mining, Springer,  2019.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Kursuncu, Ugur, Manas Gaur, Carlos Castillo, Amanuel Alambo, Krishnaprasad 
+					Thirunarayan, Valerie Shalin, Dilshod Achilov, I. Budak Arpinar, and Amit Sheth. 
+					"Modeling Islamist Extremist Communications on Social Media using Contextual 
+					Dimensions: Religion, Ideology, and Hate." Proceedings of the ACM on Human-Computer 
+					Interaction, 2019.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Kursuncu, Ugur, Manas Gaur, and Amit Sheth. "Knowledge Infused Learning (K-IL): 
+					Towards Deep Incorporation of Knowledge in Deep Learning." AAAI 2020 Spring Symposium 
+					on Combining Machine Learning and Knowledge Engineering in Practice, 2020.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Kursuncu, Ugur. "Modeling the Persona in Persuasive Discourse on Social Media Using 
+					Context-aware and Knowledge-driven Learning." PhD diss., University of Georgia, 2018.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Wickramarachchi, Ruwan., Henson, Cory., and Sheth, Amit. An evaluation of knowledge graph 
+					embeddings for autonomous driving data: Experience and practice. In AAAI Spring Symposium 
+					on Combining Machine Learning and Knowledge Engineering in Practice (AAAI-MAKE ), 2020.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Oltramari, Alessandro., Francis., Jonathan, Henson, Cory., Ma, Kaixin., & Wickramarachchi, 
+					Ruwan. Neuro-symbolic Architectures for Context Understanding. arXiv preprint arXiv:2003.04707, 2020.
+				</p></li>
+			</p></ol>
+			<br>
+			<div class = "follow-us">
+                <p class = "follow-us-text">FOLLOW US ON</p>
+                <a href="https://twitter.com/amit_p?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter"></a>
+                <a href="https://www.facebook.com/AIIUofSC/" class="fa fa-facebook"></a>
+                <a href="https://www.youtube.com/c/aiisc" class="fa fa-youtube"></a>
+                <a href="https://www.linkedin.com/company/kno-e-sis-center/" class="fa fa-linkedin"></a>
+            </div>
+			<div class = 'footer'>
+				<p class = 'title-medium'>© 2020 Artificial Intelligence Institute - University of South Carolina</p>
+			</div>
+			<br>
+		</div>
+    </body>
+</html>

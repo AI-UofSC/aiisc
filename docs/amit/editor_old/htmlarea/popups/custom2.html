@@ -1,0 +1,35 @@
+<html style="width:300px; Height: 60px;">
+ <head>
+  <title>Select Phrase</title>
+<script language="javascript">
+
+var myTitle = window.dialogArguments;
+document.title = myTitle;
+
+
+function returnSelected() {
+  var idx  = document.all.textPulldown.selectedIndex;
+  var text = document.all.textPulldown[idx].text;
+
+  window.returnValue = text;          // set return value
+  window.close();                     // close dialog
+}
+
+</script>
+</head>
+<body bgcolor="#FFFFFF" topmargin=15 leftmargin=0>
+
+<form method=get onSubmit="Set(document.all.ColorHex.value); return false;">
+<div align=center>
+
+<select name="textPulldown">
+<option>The quick brown</option>
+<option>fox jumps over</option>
+<option>the lazy dog.</option>
+</select>
+
+<input type="button" value=" Go " onClick="returnSelected()">
+
+</div>
+</form>
+</body></html> CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

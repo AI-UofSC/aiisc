@@ -1,0 +1,210 @@
+prefix kAO: <http://knoesis.org/khealthAsthmaOntology#> 
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#>
+prefix dbo: <http://dbpedia.org/ontology/> 
+prefix AO: <http://purl.bioontology.org/ontology/AO> 
+prefix vcard: <http://www.w3.org/2006/vcard/ns#> 
+
+#dumb query 
+select ?s ?p ?time
+where {?s rdf:type ssn:Observation.
+?s ssn:observationResult ?so.
+?s ssn:observationResultTime ?time.
+?so ssn:hasValue ?obsval.
+?obsval  rdf:value ?p}
+ORDER BY ?time
+
+
+###how many times user woke up due to cough or wheezing at night?
+select ?time
+where{
+?s ssn:featureOfInterest    kAO:userA.
+?s ssn:observedBy kAO:question2.
+?s ssn:observationResult kAO:optionYes.
+?s ssn:observationResultTime    ?time.
+}
+order by ?time
+
+
+###Nitric oxide greater than 0.20
+select ?p ?time
+where{
+?s ssn:featureOfInterest    kAO:userA.
+?s ssn:observedBy kAO:NODE.
+?s ssn:observationResult ?so.
+?s ssn:observationResultTime ?time.
+?so ssn:hasValue ?obsval.
+?obsval  rdf:value ?p.
+FILTER (?p > 0.20) .
+}
+order by ?time
+
+
+###get the day when user take >2 times albuterol because of asthma symptoms?
+select ?result ?time
+where{
+?s ssn:featureOfInterest    kAO:userA.
+?s ssn:observedBy kAO:question3.
+?s ssn:observationResult ?result.
+FILTER(
+?result = kAO:option2 ||
+?result = kAO:option3 ||
+?result = kAO:option4 ||
+?result = kAO:option5 ||
+?result = kAO:option6orMore ).
+?s ssn:observationResultTime    ?time.
+}
+order by ?time
+
+
+
+##get the day when user take >2 times albuterol and exhaled nitric oxide is greater than 0.20
+select  ?result ?p ?time1
+where{
+?s1 ssn:featureOfInterest    kAO:userA.
+?s1 ssn:observedBy kAO:question3.
+?s1 ssn:observationResult ?result.
+FILTER(
+?result = kAO:option2 ||
+?result = kAO:option3 ||
+?result = kAO:option4 ||
+?result = kAO:option5 ||
+?result = kAO:option6orMore ).
+?s1 ssn:observationResultTime    ?time1.
+
+?s2 ssn:featureOfInterest    kAO:userA.
+?s2 ssn:observedBy kAO:NODE.
+?s2 ssn:observationResult ?so.
+?so ssn:hasValue ?obsval.
+?obsval  rdf:value ?p.
+FILTER (?p > 0.20) .
+?s2 ssn:observationResultTime    ?time1.
+}
+
+
+##get the day when user woke up at night due to cough/wheeze && nitric oxide is greater than 0.2
+select  ?result ?p ?time
+where{
+?s1 ssn:featureOfInterest    kAO:userA.
+?s1 ssn:observedBy kAO:question2.
+?s1 ssn:observationResult ?result.
+FILTER (?result = kAO:optionYes).
+?s1 ssn:observationResultTime    ?time.
+
+?s2 ssn:featureOfInterest    kAO:userA.
+?s2 ssn:observedBy kAO:NODE.
+?s2 ssn:observationResult ?so.
+?so ssn:hasValue ?obsval.
+?obsval  rdf:value ?p.
+FILTER (?p > 0.20) .
+?s2 ssn:observationResultTime    ?time.
+}
+
+
+
+
+##get the day when user take albuterol last night due to cough/wheeze && nitric oxide is greater than 0.2
+select  ?result ?p ?time
+where{
+?s1 ssn:featureOfInterest    kAO:userA.
+?s1 ssn:observedBy kAO:question1.
+?s1 ssn:observationResult ?result.
+FILTER (?result = kAO:optionYes).
+?s1 ssn:observationResultTime    ?time.
+
+?s2 ssn:featureOfInterest    kAO:userA.
+?s2 ssn:observedBy kAO:NODE.
+?s2 ssn:observationResult ?so.
+?so ssn:hasValue ?obsval.
+?obsval  rdf:value ?p.
+FILTER (?p > 0.20) .
+?s2 ssn:observationResultTime    ?time.
+}
+
+
+
+
+##get the day when particulate matter is high (>25) && nitric oxide is greater than 0.2
+select  ?p1 ?p2 ?time
+where{
+?s1 ssn:featureOfInterest    kAO:userA.
+?s1 ssn:fromStimulus kAO:ParticulateMatter.
+?s1 ssn:observationResult ?so1.
+?so1 ssn:hasValue ?obsval1.
+?obsval1  rdf:value ?p1.
+FILTER (?p1 > 25) .
+?s1 ssn:observationResultTime    ?time.
+
+?s2 ssn:featureOfInterest    kAO:userA.
+?s2 ssn:observedBy kAO:NODE.
+?s2 ssn:observationResult ?so2.
+?so2 ssn:hasValue ?obsval2.
+?obsval2  rdf:value ?p2.
+FILTER (?p2 > 0.20) .
+?s2 ssn:observationResultTime    ?time.
+}
+
+
+
+##get the day when volatile is high (>125) && nitric oxide is greater than 0.2
+select  ?p1 ?p2 ?time
+where{
+?s1 ssn:featureOfInterest    kAO:userA.
+?s1 ssn:fromStimulus kAO:VolatileOrganicCompounds.
+?s1 ssn:observationResult ?so1.
+?so1 ssn:hasValue ?obsval1.
+?obsval1  rdf:value ?p1.
+FILTER (?p1 > 125) .
+?s1 ssn:observationResultTime    ?time.
+
+?s2 ssn:featureOfInterest    kAO:userA.
+?s2 ssn:observedBy kAO:NODE.
+?s2 ssn:observationResult ?so2.
+?so2 ssn:hasValue ?obsval2.
+?obsval2  rdf:value ?p2.
+FILTER (?p2 > 0.20) .
+?s2 ssn:observationResultTime    ?time.
+}
+
+
+
+##get the day when pollen level is high
+select ?time ?polvalue
+where {
+kAO:userA   vcard:hasAddress    ?add.
+?add    kAO:hasPostal-code      ?poscode.
+?poscode    kAO:hasWeatherState ?weastate.
+?weastate   kAO:hasTime         ?time.
+?weastate   kAO:hasPollen       ?pollen.
+?pollen     kAO:hasPollenValue  ?polvalue.
+FILTER (?polvalue > 5 ).
+}
+
+
+##The user take albuterol last night due to cough/wheeze && nitric oxide is greater than 0.2, is it trigger by high pollen level? No
+select  ?result ?p ?time ?polvalue ?pollevel
+where{
+?s1 ssn:featureOfInterest    kAO:userA.
+?s1 ssn:observedBy kAO:question1.
+?s1 ssn:observationResult ?result.
+FILTER (?result = kAO:optionYes).
+?s1 ssn:observationResultTime    ?time.
+
+?s2 ssn:featureOfInterest    kAO:userA.
+?s2 ssn:observedBy kAO:NODE.
+?s2 ssn:observationResult ?so.
+?so ssn:hasValue ?obsval.
+?obsval  rdf:value ?p.
+FILTER (?p > 0.20) .
+?s2 ssn:observationResultTime    ?time.
+
+kAO:userA   vcard:hasAddress    ?add.
+?add    kAO:hasPostal-code      ?poscode.
+?poscode    kAO:hasWeatherState ?weastate.
+?weastate   kAO:hasTime         ?time.
+?weastate   kAO:hasPollen       ?pollen.
+?pollen     kAO:hasPollenValue  ?polvalue.
+?pollen     kAO:hasPollenLevel  ?pollevel.
+}
