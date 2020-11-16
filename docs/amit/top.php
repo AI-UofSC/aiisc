@@ -57,12 +57,12 @@
 			<tr>
 			<td style="background-color:white;height:50px;padding-left:10px" class="top_shell">
 				<div style="color: #663300; font-family: Verdana, Arial, Sans-Serif; font-size: 10pt">-->
-					<span itemprop="award">LexisNexis Ohio Eminent Scholar</span><br>
+					<span itemprop="award">Founding Director, AI Institute @ UofSC</span><br>
 					<!--<a href="http://www.engineering.wright.edu/cse/" class="top_a">Computer Science & Engineering</a>,
 					<a href="http://www.wright.edu/" class="top_a">Wright State University</a><br/>-->
 					<!--<a href="http://knoesis.org" class="top_a"><span property="v:affiliation">Executive Director,</span> Kno.e.sis</a>-->
 					
-					<a href="http://aiisc.ai" class="top_a"><span itemprop="jobTitle">Executive Director,</span> <span itemprop="affiliation">Kno.e.sis</span></a>
+					<a href="http://aiisc.ai" class="top_a"><span itemprop="jobTitle">Professor,</span> <span itemprop="affiliation">Computer Science & Engineering</span></a>
 
 		   		</div>
 		   	</td>
