@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+        <title>ACM CoDS COMAD Tutorial</title>
+        <link rel="icon" href="./images/logo.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="icons.css">
+		<link href="https://fonts.googleapis.com/css2?family=Kameron&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+		<div class = 'navbar'>
+			<a href="http://aiisc.ai/"><img class = 'ailogo' src = './images/ai_institute_logo.png'></a>
+			<div class = 'header'>
+				<p class = 'header'>Explainable AI using Knowledge Graphs</p>
+			</div>
+			<a href="https://cods-comad.in/" target="_blank"><img class = 'acmlogo' src = './images/conference.png'></a>
+		</div>
+		<div class = 'container'>
+			<!--<h3>Date: July 14, 2020 Time: 3 - 6 pm Eastern Time</h3>-->
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Tutorial Information</p>
+			</div>
+			<p class = 'text'>
+				During the last decade, traditional data-driven deep learning (DL)has shown remarkable success in essential natural language process-ing tasks, such as relation extraction. Yet, challenges remain in de-veloping artificial intelligence (AI) methods in real-world cases thatrequire explainability through human interpretable and traceableoutcomes. The scarcity of labeled data for downstream supervisedtasks and entangled embeddings produced as an outcome of self-supervised pre-training objectives also hinders interpretability andexplainability. Additionally, data labeling in multiple unstructureddomains, particularly healthcare and education, is computationallyexpensive as it requires a pool of human expertise. Consider Educa-tion Technology, where AI systems fall along a “capability spectrum”depending on how extensively they exploit various resources, suchas academic content, granularity in student engagement, academicdomain experts, and knowledge bases to identify concepts thatwould help achieve knowledge mastery for student goals. Likewise,the task of assessing human health using online conversationsraises challenges for current statistical DL methods through evolv-ing cultural and context-specific discussions. Hence, developingstrategies that merge AI with stratified knowledge to identify con-cepts that would delineate healthcare conversations patterns andhelp healthcare professionals decide. Such technological innova-tions are imperative as they provide consistency and explainabilityin outcomes. This tutorial discusses the notion of explainabilityand interpretability through the use of knowledge graphs in (1)Healthcare on the Web, (2) Education Technology. This tutorial willprovide details of knowledge-infused learning algorithms and itscontribution to explainability for the above two applications thatcan be applied to any other domain using knowledge graphs.
+			</p>
+			<div class = 'pin'>
+				<img class="titlelogo" src="./images/logo.png">
+				<p class="title">Goal and Objective of the Tutorial</p>
+			</div>
+			<p class="text">
+				Recently, there is increasing attention to developing methods toenable the easy adoption of AI in practice. These methods com-prise analyzability, interpretability, traceability, and explainabilityof AI models and its prediction using statistical natural languageprocessing (NLP), information extraction (IE), and deep learning(DL). At the center of this upsurge are the knowledge graphs (KG),a large network of entities, their semantic types, properties, andrelationships between entities. For instance,Wikidata [16], DB-pedia [12], UMLS [1], ConceptNet [15]The utility of KG in DLis to provide relative importance scores (or semantic weighting) tolearnable features for interpretation of the outcomes[cite, cite].A recent study[3]leverage the Columbia-Suicide Severity RatingScale (C-SSRS) to clinically assess the varying suicidality on Redditand identify behavioral cues to extract supportive users, whichimproved the recall of the overall process. Likewise, in the domainof education, the use of deep learning and knowledge infusionmethods to extend Bayesian Knowledge Tracing (BKT) and DeepKnowledge Tracing (DKT) pair the capability to present concept-level masteries for easy intervention with the traditional predictionof student’s overall mastery. Further, the student’s goal contextu-alizes the knowledge graph with a relevant curriculum, whereashis concept-level mastery can be used to personalize the knowl-edge graph. Which enables the intervention layer to generate betterlearning outcomes. For instance, a recent study used Blooms’ Taxon-omy to extend the BKT model of a student to interpretably evaluateknowledge mastery[2, 10, 11]. Such utilization of KG/taxonomiesis of immediate concentration in the domain of explainable AI anddata science, a paradigm of importance to the community in theBig Data Analytics Conference. Through demos, implementabledetails, and resources, the focus of the tutorial is to provide direc-tions in developing AI methods involving the fusion of knowledgefor contextualizing the content, generating attention weights, and evaluating predictions to reason over the healthcare state or learn-ing activity of an individual for improving the human experiencewith AI system. Beginners in the area of Knowledge Graphs wouldlearn an introduction to the knowledge graph, its construction,and utility through knowledge-infused learning. Experts in the do-main of Knowledge Graphs (KGs) and its application in AI wouldappreciate the capability of knowledge-infused learning in gener-ating explanations to classification problems in Healthcare on theWeb and deriving concepts mastery in Education. Moreover, theattendees will gain in-depth understanding of the methods usedfor fusing knowledge through demonstrations, theory, and concep-tual outlining of the tutorial. The tutorial is appropriate for thecommunity engaging in the Conference on Big Data Analytics asit highlights the essence of contextualized knowledge representa-tion and knowledge-based systems in facilitating human-guidedinterventions in Education and Healthcare on the Web for effectiveoutcomes. It will provide the community with tools to overcomeobstacles in social good domains that lack high-quality trainingdata and poor interpretability. We believe the resources providedduring the tutorial will further the research in responsible datascience in healthcare and education.
+			</p>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Tutorial Description and Outline <a class = 'title-link' href = './httut02-gaurA.pdf'>[Download]</a></p>                
+			</div>
+			<p class = 'text'>
+				The critical issues in healthcare, particularly mental healthcare,such as estimating the mental health state of an individual and ed-ucation, such as calibrating and improving knowledge mastery ofan individual, have been highlighted by research in artificial intelli-gence. The methods focus on principles of IE(e.g., predicate inven-tion[9]), DL (e.g., convolutional neural networks[14], deep knowl-edge tracing using the recurrent neural networks[17]), and behav-ioral NLP to predict either severity of mental illness or knowledgemastery in education. No doubt, deep learning-based approacheshave achieved state-of-the-art performance in knowledge stateand mental state prediction. Still, it neither provides explicit ex-planations of its outcome nor provides actionable suggestions onachieving clinical relevance in healthcare or desired mastery ineducation. The domain of healthcare and education technology isstocked with publicly available data in various forms (e.g., socialmedia crawls, epubs/ebooks/PDFs). Leveraging such a large corpusof unstructured text for improving counseling services in healthcareand learning outcomes in education, a paradigm coalesced withexternal curated knowledge is desired. This tutorial presents a para-digm, Knowledge-infused Learning, which describes methodologiesof incorporating domain-knowledge in deep learning approachesfor bringing consistency and robustness in predictions. Specifi-cally, we will provide implementable details on Shallow Infusion,Semi-Deep Infusion, and Deep Infusion of Knowledge, which aremethods to augment auxiliary knowledge for helping the mentalhealthcare providers educationist to understand key features con-tributing to the current knowledge state or mental health state of anindividual. Further, we will discuss methods for contextualizationand abstraction of unstructured text, independently in healthcareand education using knowledge graphs/taxonomy[3, 5, 7, 8], toderive actionable knowledge for mental healthcare providers andeducationists. We will describe strategies for evaluating methods.
+			</p>
+			<ol>
+				<li><p class = 'text'>
+					We begin with the introduction to Knowledge Graph-based Learn-ing comprising of (a) description on the role of KGs in model inter-pretability, traceability of predictions to a KG, in achieving explain-ability of the outcome with examples and (b) procedure to constructKGs and use them at scale. Following which, we would motivate theaudience on the concept of Knowledge-infused AI which would in-clude (a) the theoretical underpinnings of knowledge-infused learn-ing, (b) the different alternatives for combining KGs and Learningmethods, (c) KG-based AI frameworks in practice, and (d) differentevaluation strategies for such frameworks. Thereafter, we wouldgive a preface of using KGs towards improving learning outcomes(e.g. Amazon Alexa, Coursera, eDX) and in healthcare informat-ics. This introductory session would cover prior research coveringshallow and semi-deep infusion of knowledge in deep learning ormachine learning procedures [6]. Subsequently, we will take uptwo key applications to provide a practical tour on the theme ofthe tutorial:
+					<ol type = 'a'>
+						<li><p class = 'text'>
+							<b>Knowledge-infused Learning in Education</b>: would de-liver insights into different KG-type resources in education,methods of construction, and ways to infuse KG in the cur-rent state-of-the-art knowledge tracing approaches in educa-tion: Deep Knowledge Tracing [13]. During this part of thetutorial, we will provide a demo of an industry use-case atEmbibe and different strategies of evaluating this use-case. 
+						</p></li>
+						<li><p class = 'text'>
+							<b>Knowledge-infused Learning in Healthcare</b>:  will con-centrate on two important use-cases of “Healthcare on theWeb”: (a) Utilization of Diagnostic Statistical Manual forMental Health Disorder (DSM-5) to understand Reddit com-munication and (b) Dynamic peer-support group formationon Reddit using this understanding. In the process of ad-dressing research challenges in these expositions, we woulddiscuss methods on associating Medical Knowledge Graphs(e.g. SNOMED-CT, UMLS [4]) with Healthcare on the Web.
+						</p></li>
+					</ol>
+				</li>
+			</ol>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Target Audience</p>
+			</div>
+			<p class = 'text'>
+				This tutorial will bring researchers in academia, industry, humani-tarian organizations, and healthcare practitioners at the confluenceof knowledge representation, natural language understanding, anddeep learning. Prior exposure to the basic concepts in NLP andDL is desirable, however, there are no prerequisites for attendingthe tutorial. We will cover basics and advanced techniques withsufficient use cases and demonstrations. Newcomers in the areawill learn the basic principles of data science and the fundamentalsof knowledge-infused learning. Expert attendees will appreciatepromising, reliable, and practical approaches to overcoming familiartechnical obstacles in social good domains.
+			</p>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Presenters' Biographies</p>
+			</div>
+			<div class = 'bio'>
+				<img class = 'image' src = './images/amit.jpg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="http://aiisc.ai/amit">Amit Sheth</a></p>
+					<p class = 'name'><a href="https://twitter.com/amit_p">@amit_p</a></p>
+					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
+					<p class = 'bio-text'>Prof. Amit Sheth is an Educator, Researcher, and Entrepreneur. 
+						He is the founding director of the university-wide Artificial Intelligence 
+						Institute at the University of South Carolina (#AIISC). Previously , 
+						he was the LexisNexis Ohio Eminent Scholar and the executive director of 
+						Ohio Center of Excellence in Knowledge-enabled Computing. He is a Fellow 
+						of IEEE, AAAI, and AAAS. He has organized 75+ international events 
+						(general/program chair, organization committee chair), 65+ keynotes, 
+						given many well-attended tutorials and is among the well-cited computer 
+						scientists. He has founded three companies by licensing his university 
+						research outcomes, including the first Semantic Web company in 1999 that 
+						pioneered technology similar to what is found today in Google Semantic 
+						Search and Knowledge Graph. Several commercial products and deployed 
+						systems have resulted from his research. 
+					</p>
+					</p>
+				</div>
+			</div>
+			<div class = 'bio'>
+				<img class = 'image' src = './images/manas.jpg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="https://manasgaur.github.io">Manas Gaur</a></p>
+					<p class = 'name'> <a href="mailto:manas@email.sc.edu?subject=ACM HT'20 KiDL: Request for Information">Contact</a>| <a href="https://twitter.com/manasgaur90">@manasgaur90</a></p>
+					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
+					<p class = 'bio-text'>Manas Gaur is currently a Ph.D. Student in Artificial Intelligence 
+						Institute at the University of South Carolina. He has been Data Science and AI 
+						for Social Good Fellow with the University of Chicago and Dataminr Inc.  
+						His interdisciplinary research funded by NIH and NSF operationalizes the use 
+						of Knowledge Graphs, Natural Language Understanding, and Machine Learning to 
+						solve social good problems in the domain of Mental Health, Cyber Social Harms, 
+						and Crisis Response. His work has appeared in premier AI and Data Science conferences 
+						(CIKM, WWW, AAAI, CSCW), journals in science (PLOS One, Springer-Nature, IEEE Internet Computing), 
+						and healthcare-specific meetings (NIMH MHSR, AMIA).
+
+					</p>
+					</p>
+				</div>
+			</div>
+			<div class = 'bio'>
+				<img class = 'image' src = './images/keyur.png'>
+				<div class = 'info'>
+					<p class = 'name'><a href="https://www.linkedin.com/in/keyur-faldu-681b6633">Keyur Faldu</a></p>
+					<p class = 'name'><a href="https://twitter.com/keyurfaldu?lang=en">@keyurfaldu</a></p>
+					<p class = 'name'>Embibe
+					<p class = 'bio-text'>Keyur Faldu is currently working as a chief data scientist atEmbibe. He has founded and built the data science lab at Em-bibe, which is primarily responsible for building AI platformsfor Learning Outcomes using intelligent content authoring,and intelligent intervention leveraging educational knowl-edge base and a big data lake. He has more than 14 yearsof industry experience in data science, machine learning,deep learning, and natural language processing. He workedat startups Veveo Inc, and Runa, and also was part of thefounding team for data science at Mckinsey Digital Labs atMckinsey. He holds post-graduation in Computer Sciencefrom the Indian Institute of Science, Bangalore.
+					</p>
+					</p>
+				</div>
+			</div>
+			<div class = 'bio'>
+				<img class = 'image' src = './images/ankit.jpg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="https://www.linkedin.com/in/desaiankitb/">Ankit Desai</a></p>
+					<p class = 'name'><a href="https://twitter.com/desaiankitb">@desaiankitb</a></p>
+					<p class = 'name'>Embibe
+					<p class = 'bio-text'>Ankit Desai (Ph.D.) is currently working as an AssociatePrincipal Data Scientist at Data Science Lab at Embibe. He isinvolved in a process of architecting the Knowledge Graph.Overall 11+ years of experience. Apart from working atEmbibe, he has published multiple research papers in in-ternational conferences and journals. His current researchinterests include Educational Data Mining, Graph Mining,Mining Massive Data sets, and Cost-sensitive Data Mining.Architecting the data science projects from scratch to pro-duction level interests him the most. Moreover, he has served as a review committee member for conferences of ACM and IEEE.
+					</p>
+					</p>
+				</div>
+			</div>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Past Experiences</p>
+			</div>
+			<ol>
+				<li>
+					Knowledge-infused Learning for Healthcare, PyData VirtualConference at Salamanca, 2020 (<a href="https://docs.google.com/presentation/d/1F69f6s0ft4zijjp5o02qlaAt5pyP0H3FLr2joRBDZUU/" target="_blank">Slides</a>, <a href="https://www.youtube.com/watch?v=AVEXOtEL0-A&t=24s" target="_blank">Video</a>)
+				</li>
+				<li>
+					Knowledge-infused Statistical Learning for Social Good Ap-plications, PyData Virtual Conference at Berlin 2020  (<a href="https://docs.google.com/presentation/d/1bOSsgTRl0zJR2i4tB_FEN9jhb7XY3mml4gUOjzJYwOQ" target="_blank">Slides</a>, <a href="https://www.youtube.com/watch?v=NHTSm5TW7E0&t=2s" target="_blank">Video</a>)
+				</li>
+				<li>
+					Knowledge-infused Deep Learning, Tutorial at 31st ACMHypertext and Social Media (Virtual) 2020. (<a href="https://www.slideshare.net/aiisc/acm-ht20-tutorialknowledgeinfuseddeeplearningaiinstitute-236984854" target="_blank">Slides</a>, <a href="https://www.dropbox.com/s/5witoi9qrx2hkwu/Tutorial.mp4?dl=0" target="_blank">Video</a>)
+				</li>
+				<li>
+					Knowledge will propel Machine Understanding of Big Data,China Conference on Knowledge Graph and Semantic Com-puting (CCKS) 2017. (<a href="https://www.slideshare.net/apsheth/knowledge-will-propel-machine-understanding-of-big-data" target="_blank">Slides</a>, <a href="https://www.youtube.com/watch?v=4e0dtV7CTWM&list=PLqJzTtkUiq57UUmay2DEf09vDGI8zvEqR&index=2" target="_blank">Video</a>)
+				</li>
+				<li>
+					Knowledge Graphs and their Central Role in Big Data Pro-cessing: Past, Present, and Future, Keynote at 7th ACM CoDSand 25th COMAD 2020. (<a href="https://2020-us.semantics.cc/knowledge-graphs-and-their-central-role-big-data-processing-past-present-and-future" target="_blank">Slides</a>)
+				</li>
+				<li>
+					AI in Education: Transforming education using Personal-ized Adaptive Learning, Open Data Science Conference 2019. (<a href="https://www.youtube.com/watch?v=4ppenYfvHNE" target="_blank">Video</a>)
+				</li>
+				<li>
+					Explainability of Medical AI through Domain Knowledge,Ontology Summit 2019. (<a href="https://docs.google.com/presentation/d/1Osmve6J7dXrP_O9Z-F8W9JfY34dZt2CF-JKKp6sWDS4" target="_blank">Slides</a>, <a href="https://s3.amazonaws.com/ontologforum/OntologySummit2019/Medical/MedicalExplanation--UgurKursuncu-ManasGaur_20190327.mp4" target="_blank">Video</a>)
+				</li>
+				<li>
+					Workshop on Knowledge-infused Mining and Learning, Co-located with 26th ACM SIGKDD conference. (<a href="https://www.youtube.com/watch?v=Ev6OVHdi0q4&list=PLqJzTtkUiq54bk4w92GzoUguE7jHP_LUa" target="_blank">Slides</a>, <a href="http://ceur-ws.org/Vol-2657/" target="_blank">Proceedings</a>)
+				</li>
+			</ol>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Acknowledgement</p>
+			</div>
+			<p class="text">
+				We acknowledge partial support from the National Institutes ofHealth (NIH) award: MH105384-01A1: "Modeling Social Behaviorfor Healthcare Utilization in Depression", National Science Founda-tion (NSF) award 1761880: “Spokes: MEDIUM: MID-WEST: Collab-orative: Community-Driven Data Engineering for Substance AbusePrevention in the Rural Midwest”. Any opinions, conclusions or rec-ommendations expressed in this material are those of the authorsand do not necessarily reflect the views of the NSF.
+			</p>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>References</p>
+			</div>
+			<ol><p class = 'text-small'>
+				<li class = 'text-small'><p class = 'text-small'>
+					Olivier Bodenreider. 2004.  The unified medical language system (UMLS): in-tegrating biomedical terminology.Nucleic acids research32, suppl_1 (2004),D267–D270.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Soma Dhavala, Chirag Bhatia, Joy Bose, Keyur Faldu, and Aditi Avasthi. 2020.Auto Generation of Diagnostic Assessments and Their Quality Evaluation.Inter-national Educational Data Mining Society(2020).
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Manas Gaur, Amanuel Alambo, Joy Prakash Sain, Ugur Kursuncu, KrishnaprasadThirunarayan, Ramakanth Kavuluru, Amit Sheth, Randy Welton, and JyotishmanPathak. 2019. Knowledge-aware assessment of severity of suicide risk for earlyintervention. In The World Wide Web Conference. 514–525.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Manas Gaur, Keyur Faldu, and Amit Sheth. 2020.  Semantics of the Black-Box:Can knowledge graphs help make deep learning systems more interpretable and explainable? arXiv preprint arXiv:2010.08660(2020).
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Manas Gaur, Ugur Kursuncu, Amanuel Alambo, Amit Sheth, Raminta Daniu-laityte, Krishnaprasad Thirunarayan, and Jyotishman Pathak. 2018. " Let Me Tell You About Your Mental Health!" Contextualized Classification of Reddit Posts to DSM-5 for Web-based Intervention. In Proceedings of the 27th ACM International Conference on Information and Knowledge Management. 753–762.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Manas Gaur, Ugur Kursuncu, Amit Sheth, Ruwan Wickramarachchi, and Shweta Yadav. 2020. Knowledge-infused Deep Learning. InProceedings of the 31st ACM Conference on Hypertext and Social Media. 309–310.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Christian Glahn and Marion R Gruber. 2020. Designing for context-aware and contextualized learning. In Emerging Technologies and Pedagogies in the Curriculum. Springer, 21–40.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Amelia Gyrard, Manas Gaur, Saeedeh Shekarpour, Krishnaprasad Thirunarayan,and Amit Sheth. 2018. Personalized health knowledge graph. (2018).
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Stanley Kok and Pedro Domingos. 2007. Statistical predicate invention. In Proceedings of the 24th international conference on Machine learning. 433–440
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Amar Lalwani and Sweety Agrawal. 2017. Few hundred parameters out perform few hundred thousand. In Proceedings of the 10th International Conference on Educational Data Mining, EDM, Vol. 17. ERIC, 448–453
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Amar Lalwani and Sweety Agrawal. 2018. Validating revised bloom’s taxonomy using deep knowledge tracing. InInternational Conference on Artificial Intelligencein Education. Springer, 225–238.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Jens Lehmann, Robert Isele, Max Jakob, Anja Jentzsch, Dimitris Kontokostas, Pablo N Mendes, Sebastian Hellmann, Mohamed Morsey, Patrick Van Kleef, SörenAuer, et al.2015. DBpedia–a large-scale, multilingual knowledge base extracted from Wikipedia. Semantic web6, 2 (2015), 167–195.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Chris Piech, Jonathan Bassen, Jonathan Huang, Surya Ganguli, Mehran Sahami, Leonidas J Guibas, and Jascha Sohl-Dickstein. 2015. Deep knowledge tracing. In Advances in neural information processing systems. 505–513.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Michael Schlichtkrull, Thomas N Kipf, Peter Bloem, Rianne Van Den Berg, Ivan Titov, and Max Welling. 2018. Modeling relational data with graph convolutional networks. In European Semantic Web Conference. Springer, 593–607
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Robyn Speer, Joshua Chin, and Catherine Havasi. 2016. Conceptnet 5.5: An open multilingual graph of general knowledge. arXiv preprint arXiv:1612.03975(2016).
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Denny Vrandečić and Markus Krötzsch. 2014. Wikidata: a free collaborative knowledge base. Commun. ACM57, 10 (2014), 78–85.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Jinjin Zhao, Shreyansh Bhatt, Candace Thille, Dawn Zimmaro, and Neelesh Gattani. 2020. Interpretable Personalized Knowledge Tracing and Next Learning Activity Recommendation. In Proceedings of the Seventh ACM Conference on Learning@ Scale. 325–328.
+				</p></li>
+			</p></ol>
+			<br>
+			<div class = "follow-us">
+                <p class = "follow-us-text">FOLLOW US ON</p>
+                <a href="https://twitter.com/amit_p?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter"></a>
+                <a href="https://www.facebook.com/AIIUofSC/" class="fa fa-facebook"></a>
+                <a href="https://www.youtube.com/c/aiisc" class="fa fa-youtube"></a>
+                <a href="https://www.linkedin.com/company/kno-e-sis-center/" class="fa fa-linkedin"></a>
+            </div>
+			<div class = 'footer'>
+				<p class = 'title-medium'>© 2020 Artificial Intelligence Institute - University of South Carolina</p>
+			</div>
+			<br>
+		</div>
+    </body>
+</html>
