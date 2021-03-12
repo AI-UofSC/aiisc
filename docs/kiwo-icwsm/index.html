@@ -34,17 +34,17 @@
 				<strong>The current landscape of AI (30 mins)</strong>
 			</p>
 			<p class="text">
-				In this section, we cover AI systems that have been developed in the field of consumer health question answering, mental health care informatics, crisis response, addiction response and cyber social harassment \cite{he2020infusing,kursuncu2018s,kursuncu2019modeling,wang2019balanced}\cite{lamy2020listed}. We discuss the techniques and present a comprehensive survey of datasets used to train AI systems for social and public health \cite{olteanu2019social}\cite{yang2020towards}. We evaluate the datasets in terms of:
+				In this section, we cover AI systems that have been developed in the field of consumer health question answering, mental health care informatics, crisis response, addiction response and cyber social harassment [6,7,8,12,9]. We discuss the techniques and present a comprehensive survey of datasets used to train AI systems for social and public health [11,15]. We evaluate the datasets in terms of:
 				<ol>
 					<li><strong>Domain Coverage - </strong> Does the dataset represent the population across Spatio-temporal and thematic variations? For example, we can bootstrap a sparse, region-specific dataset using a domain-specific Ontology to be applicable in a different region (Using opioid crisis analysis in the midwest to understand the opioid epidemic in Ohio).</li>
-					<li><strong>Adequacy of labels in capturing the semantics - </strong> Do the dataset labels contain enough information to model and understand the context? Consider studying suicide risk severity in crisis scenarios. The labels suicidal indication, ideation, behavior, and attempt, which are supported by a clinically accepted questionnaire (Columbia Suicide Severity Rating Scale \cite{gaur2019knowledge}), captures the context more meaningfully than no risk, low risk, moderate risk, or severe risk.</li>
+					<li><strong>Adequacy of labels in capturing the semantics - </strong> Do the dataset labels contain enough information to model and understand the context? Consider studying suicide risk severity in crisis scenarios. The labels suicidal indication, ideation, behavior, and attempt, which are supported by a clinically accepted questionnaire (Columbia Suicide Severity Rating Scale [2]), captures the context more meaningfully than no risk, low risk, moderate risk, or severe risk.</li>
 					<li><strong>Hidden Biases - </strong>Does the dataset have inherent biases that machine learning won’t find on its own? Consider a study of religion, ideology, and hate; aggregating the population over these categories introduces inherent aggregation biases (a particular religion or ideology in association with extremism) that knowledge can effectively identify.</li>
 				</ol>
 			</p>
 			<p class="text">We motivate the need for Explainable Data to train machine learning models whose outcomes can be trusted to be robust and fair when deployed in high stakes decision-making applications, especially about cyber social threats and public health.</p>
 
-			<p class="text"><strong>Explainable Data: Guidelines and Evaluation (30 mins)</strong></p>
-			<p class="text">We present our work on creating Explainable Data, including use-cases from mental health care informatics, crisis response, Addictions response and cyber social harassment \cite{gaur2019knowledge,kursuncu2019modeling,wijesiriwardene2020alone}. We show that domain experts and end-users trust outcomes from models trained on these datasets to be accurate in their predictions and reliably de-biased \cite{gaur2020semantics}. As an example, we created a dataset from the dark web curated from drug abuse ontology. The drug entities are extracted from product descriptions using ontology mappings. Those drug entities helped the domain experts extract social media opinions about different drugs being sold in marketplaces. When the deep learning model is trained on this kind of data, we can explain the predictions to domain experts which entity or layer on the model contributed to such prediction as we had a good handle on how the dataset is created \cite{Yadav2020-dq}\cite{daniulaityte2020dao}\cite{lamy2020listed}.</p>
+			<p class="text"><strong>Explainable Data: Examples (30 mins)</strong></p>
+			<p class="text">We present our work on creating Explainable Data, including use-cases from mental health care informatics, crisis response, Addictions response and cyber social harassment [2,8,13]. We show that domain experts and end-users trust outcomes from models trained on these datasets to be accurate in their predictions and reliably de-biased [4]. As an example, we created a dataset from the dark web curated from drug abuse ontology. The drug entities are extracted from product descriptions using ontology mappings. Those drug entities helped the domain experts extract social media opinions about different drugs being sold in marketplaces. When the deep learning model is trained on this kind of data, we can explain the predictions to domain experts which entity or layer on the model contributed to such prediction as we had a good handle on how the dataset is created [14,1,9]</p>
 
 			<p class="text"><strong>Explainable Data: Guidelines and Evaluation (30 mins)</strong></p>
 			<p class="text">Lastly, we present general guidelines for Explainable Data creation and evaluation metrics to assess/analyze the extent to which models trained on the datasets are explainable and trustable. To conclude, we briefly discuss future directions for data creation with higher-level aims such as generalizability to abstractly related fields (Eg: puzzle-solving in relation to molecular design).</p>
@@ -76,7 +76,7 @@
 				</ol>
 			</p>
 			<p class="text">
-				This is the first time the highlighted tutors are delivering a tutorial together, albeit having worked together on various talks and presentations at PyData and Health-Science Conferences. 				While past tutorials and presentations have covered incorporating knowledge into the training methodology, we explain how knowledge is used to enhance the dataset set used for training in this tutorial \cite{gaur2020knowledge,gaur2019shades}. Such knowledge guided data enrichment is easy for DEs and end-users to understand, enabling their trust in outcomes of models. Additional benefits include generalizable and reliable behavior across training methods and tasks on similar data.				
+				This is the first time the highlighted tutors are delivering a tutorial together, albeit having worked together on various talks and presentations at PyData and Health-Science Conferences. While past tutorials and presentations have covered incorporating knowledge into the training methodology, we explain how knowledge is used to enhance the dataset set used for training in this tutorial [3,5]. Such knowledge guided data enrichment is easy for DEs and end-users to understand, enabling their trust in outcomes of models. Additional benefits include generalizable and reliable behavior across training methods and tasks on similar data.				
 			</p>
 
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/NHTSm5TW7E0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -146,7 +146,7 @@
 				<div class = 'info'>
 					<p class = 'name'><a href="https://www.linkedin.com/in/usha-lokala/">Usha Lokala</a></p>
 					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
-					<p class = 'bio-text'>She is a Ph.D. student at AIISC. Her research interests include ontology engineering, knowledge graphs and natural language processing. Her work has been published in reputed conferences and Journals (IEEE, Drug and Alcohol Dependence, WWW, CPDD). \cite{lokala2019global}'s work on public health addictions won second prize in Opioid Challenge at SBP BRiMS 2018, a computational social science conference.
+					<p class = 'bio-text'>She is a Ph.D. student at AIISC. Her research interests include ontology engineering, knowledge graphs and natural language processing. Her work has been published in reputed conferences and Journals (IEEE, Drug and Alcohol Dependence, WWW, CPDD). [10]'s work on public health addictions won second prize in Opioid Challenge at SBP BRiMS 2018, a computational social science conference.
 					</p>
 					</p>
 				</div>
@@ -156,65 +156,39 @@
 				<img class = 'titlelogo' src = './images/logo.png'>
 				<p class = 'title'>References</p>
 			</div>
-			<!-- <ol><p class = 'text-small'>
+			<ol><p class = 'text-small'>
 				<li class = 'text-small'><p class = 'text-small'>
-					Olivier Bodenreider. 2004.  The unified medical language system (UMLS): integrating biomedical terminology. Nucleic acids research 32, suppl_1 (2004), D267–D270.
+					Daniulaityte, R.; Lamy, F.; Gaur, M.; Thirunarayan, K.; Kursuncu, U.; Sheth, A. P.; et al. 2020. Dao: An ontology for substance use epidemiology on social media and dark web. JMIR Public Health and Surveillance.				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Gaur, M.; Alambo, A.; Sain, J. P.; Kursuncu, U.; Thirunarayan, K.; Kavuluru, R.; Sheth, A.; Welton, R.; and Pathak, J. 2019. Knowledge-aware assessment of severity of suicide risk for early intervention. In ACM Web Conference.				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Gaur, M.; Kursuncu, U.; Sheth, A.; Wickramarachchi, R.; and Yadav, S. 2020. Knowledge-infused deep learning. In ACM Hypertext and Social Media.				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Gaur, M.; Faldu, K.; and Sheth, A. 2020. Semantics of the black-box: Can knowledge graphs help make deep learning systems more interpretable and explainable? arXiv preprint arXiv:2010.08660.</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Gaur, M.; Kursuncu, U.; and Wickramarachchi, R. 2019. Shades of knowledge-infused learning for enhancing deep learning. IEEE Internet Computing.				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					He, Y.; Zhu, Z.; Zhang, Y.; Chen, Q.; and Caverlee, J. 2020. Infusing disease knowledge into bert for health question answering, medical inference and disease name recognition. arXiv preprint arXiv:2010.03746.				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Kursuncu, U.; Gaur, M.; Lokala, U.; Illendula, A.; Thirunarayan, K.; Daniulaityte, R.; Sheth, A.; and Arpinar, I. B. 2018. What’s ur type? contextualized classification of user types in marijuana-related communications using compositional multiview embedding. In Web Intelligence.				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Kursuncu, U.; Gaur, M.; Castillo, C.; Alambo, A.; Thirunarayan, K.; Shalin, V.; Achilov, D.; Arpinar, I. B.; and Sheth, A. 2019. Modeling islamist extremist communications on social media using contextual dimensions: Religion, ideology, and hate. ACM CSCW.				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Lamy, F. R.; Daniulaityte, R.; Barratt, M. J.; Lokala, U.; Sheth, A.; and Carlson, R. G. 2020. Listed for sale: analyzing data on fentanyl, fentanyl analogs and other novel synthetic opioids on one cryptomarket. Drug and alcohol dependence.				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Lokala, U.; Lamy, F. R.; Daniulaityte, R.; Sheth, A.; Nahhas, R. W.; Roden, J. I.; Yadav, S.; and Carlson, R. G. 2019. Global trends, local harms: availability of fentanyl-type drugs on the dark web and accidental overdoses in ohio. Computational and Mathematical Organization Theory.				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Olteanu, A.; Castillo, C.; Diaz, F.; and Kiciman, E. 2019. Social data: Biases, methodological pitfalls, and ethical boundaries. Frontiers in Big Data.
 				</p></li>
 				<li class = 'text-small'><p class = 'text-small'>
-					Soma Dhavala, Chirag Bhatia, Joy Bose, Keyur Faldu, and Aditi Avasthi. 2020. Auto Generation of Diagnostic Assessments and Their Quality Evaluation. International Educational Data Mining Society (2020).
-				</p></li>
+					Wang, T.; Zhao, J.; Yatskar, M.; Chang, K. W.; and Ordonez, V. 2019. Balanced datasets are not enough: Estimating and mitigating gender bias in deep image representations. In IEEE ICCV.				</p></li>
 				<li class = 'text-small'><p class = 'text-small'>
-					Manas Gaur, Amanuel Alambo, Joy Prakash Sain, Ugur Kursuncu, Krishnaprasad Thirunarayan, Ramakanth Kavuluru, Amit Sheth, Randy Welton, and Jyotishman Pathak. 2019. Knowledge-aware assessment of severity of suicide risk for early intervention. In The World Wide Web Conference. 514–525.
-				</p></li>
+					Wijesiriwardene, T.; Inan, H.; Kursuncu, U.; Gaur, M.; Shalin, V. L.; Thirunarayan, K.; Sheth, A.; and Arpinar, I. B. 2020. Alone: A dataset for toxic behavior among adolescents on twitter. In Social Informatics.				</p></li>
 				<li class = 'text-small'><p class = 'text-small'>
-					Manas Gaur, Keyur Faldu, and Amit Sheth. 2020.  Semantics of the Black-Box: Can knowledge graphs help make deep learning systems more interpretable and explainable? arXiv preprint arXiv:2010.08660 (2020).
-				</p></li>
+					Yadav, S.; Lokala, U.; Daniulaityte, R.; Thirunarayan, K.; Lamy, F.; and Sheth, A. 2020. “when they say weed causes depression, but it’s your fav antidepressant”: Knowledge-aware attention framework for relationship extraction.				</p></li>
 				<li class = 'text-small'><p class = 'text-small'>
-					Manas Gaur, Ugur Kursuncu, Amanuel Alambo, Amit Sheth, Raminta Daniulaityte, Krishnaprasad Thirunarayan, and Jyotishman Pathak. 2018. "Let Me Tell You About Your Mental Health!" Contextualized Classification of Reddit Posts to DSM-5 for Web-based Intervention. In Proceedings of the 27th ACM International Conference on Information and Knowledge Management. 753–762.
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Manas Gaur, Ugur Kursuncu, Amit Sheth, Ruwan Wickramarachchi, and Shweta Yadav. 2020. Knowledge-infused Deep Learning. In Proceedings of the 31st ACM Conference on Hypertext and Social Media. 309–310.
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Christian Glahn and Marion R Gruber. 2020. Designing for context-aware and contextualized learning. In Emerging Technologies and Pedagogies in the Curriculum. Springer, 21–40.
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Amelia Gyrard, Manas Gaur, Saeedeh Shekarpour, Krishnaprasad Thirunarayan, and Amit Sheth. 2018. Personalized health knowledge graph. (2018).
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Stanley Kok and Pedro Domingos. 2007. Statistical predicate invention. In Proceedings of the 24th international conference on Machine learning. 433–440
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Amar Lalwani and Sweety Agrawal. 2017. Few hundred parameters out perform few hundred thousand. In Proceedings of the 10th International Conference on Educational Data Mining, EDM, Vol. 17. ERIC, 448–453
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Amar Lalwani and Sweety Agrawal. 2018. Validating revised bloom’s taxonomy using deep knowledge tracing. In International Conference on Artificial Intelligence in Education. Springer, 225–238.
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Jens Lehmann, Robert Isele, Max Jakob, Anja Jentzsch, Dimitris Kontokostas, Pablo N Mendes, Sebastian Hellmann, Mohamed Morsey, Patrick Van Kleef, Sören Auer, et al.2015. DBpedia – a large-scale, multilingual knowledge base extracted from Wikipedia. Semantic web 6, 2 (2015), 167–195.
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Chris Piech, Jonathan Bassen, Jonathan Huang, Surya Ganguli, Mehran Sahami, Leonidas J Guibas, and Jascha Sohl-Dickstein. 2015. Deep knowledge tracing. In Advances in neural information processing systems. 505–513.
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Michael Schlichtkrull, Thomas N Kipf, Peter Bloem, Rianne Van Den Berg, Ivan Titov, and Max Welling. 2018. Modeling relational data with graph convolutional networks. In European Semantic Web Conference. Springer, 593–607
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Robyn Speer, Joshua Chin, and Catherine Havasi. 2016. Conceptnet 5.5: An open multilingual graph of general knowledge. arXiv preprint arXiv:1612.03975(2016).
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Laura von Rueden, Sebastian Mayer, Katharina Beckh, Bogdan Georgiev, Sven Giesselbach, Raoul Heese, Birgit Kirsch, Julius Pfrommer, Annika Pick, Rajkumar Ramamurthy, et al.2019. Informed Machine Learning – A Taxonomy and Survey of Integrating Knowledge into Learning Systems. arXiv preprint arXiv:1903.12394 (2019).
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Denny Vrandečić and Markus Krötzsch. 2014. Wikidata: a free collaborative knowledge base. Commun. ACM57, 10 (2014), 78–85.
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Xiaozhi Wang, Tianyu Gao, Zhaocheng Zhu, Zhiyuan Liu, Juanzi Li, and Jian Tang. 2019. KEPLER: A unified model for knowledge embedding and pre-trained language representation. arXiv preprint arXiv:1911.06136 (2019).				
-				</p></li>
-				<li class = 'text-small'><p class = 'text-small'>
-					Jinjin Zhao, Shreyansh Bhatt, Candace Thille, Dawn Zimmaro, and Neelesh Gattani. 2020. Interpretable Personalized Knowledge Tracing and Next Learning Activity Recommendation. In Proceedings of the Seventh ACM Conference on Learning@ Scale. 325–328.
-				</p></li>
-			</p></ol> -->
+					Yang, K.; Qinami, K.; Fei-Fei, L.; Deng, J.; and Russakovsky, O. 2020. Towards fairer datasets: Filtering and balancing the distribution of the people subtree in the imagenet hierarchy. In ACM FAT.				</p></li>
+			</p></ol>
 			<br>
 			<div class = "follow-us">
                 <p class = "follow-us-text">FOLLOW US ON</p>
