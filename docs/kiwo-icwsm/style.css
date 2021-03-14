@@ -31,7 +31,7 @@ a {
 
 .header {
     justify-self: center;
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: bold;
     text-align: center;
     color: #FF66B3;
@@ -39,10 +39,12 @@ a {
 .ailogo {
     justify-self: flex-start;
     width: 100px;
+    padding-left: 0.3cm;
 }
 .logo {
     justify-self: flex-end;
     width: 130px;
+    padding-right: 0.3cm;
 }
 .container {
     margin-top: 10vh;
