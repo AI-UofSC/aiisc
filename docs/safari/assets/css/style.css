@@ -1,18 +1,8 @@
-/**
-* Template Name: Sailor - v4.0.1
-* Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
- /* background-color: black;
-  color:white;*/
+
 }
 
 a {
@@ -95,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo img {
-  max-height: 50px;
+  max-height: 80px;
 }
 
 /*--------------------------------------------------------------
