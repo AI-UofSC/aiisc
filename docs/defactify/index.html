@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DE-FACTIFY 2022</title>
+
+    <!-- favicon -->
+    <!-- <link href="favicon.png" rel=icon> -->
+
+
+    <!-- web-fonts -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'> -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700,500' rel='stylesheet' type='text/css'>
+
+    <link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+        @media only screen and (max-width: 600px) {
+            #google-form
+            {
+                display:none;
+            }
+        }
+        @media only screen and (min-width: 600px) {
+            #google-form-link
+            {
+                visibility: hidden;
+            }
+        }
+
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar">
+<div id="main-wrapper">
+    <!-- Page Preloader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="status-mes"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <!-- Navigation -->
+        <nav class="navbar main-menu" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top"><img src="img/banner_high_resolution_crop.png" width="150" height="80" alt=""></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden"><a href="#page-top"></a></li>
+                        <li><a class="page-scroll" href="#section-news">News</a></li>
+
+                        <li>
+                        <li><a class="page-scroll" href="#section-intro">About</a></li>
+                       
+                        <li>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" style="padding:0; padding-top:13px;background-color: transparent;font-size: 15px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="page-scroll" href="#">SHARED TASKS</a>
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: max-content;float:center;padding-left: 5px;">
+                            <a  style="color: #0e1555;" href="./factify.html">FACTIFY</a>
+                            <a  style="color: #0e1555;" href="./memotion_2.html">MEMOTION 2</a>
+                            <a class="dropdown-item page-scroll" style="color: #0e1555;" href="#"></a>
+                          </div>
+                        </li>                         
+                        <li>
+                        <div class="dropdown">
+						  <button class="btn btn-secondary dropdown-toggle" style="padding:0; padding-top:13px;background-color: transparent;font-size: 15px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <a class="page-scroll" href="#">CALL FOR SUBMISSIONS</a>
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: max-content;float:center;padding-left: 5px;">
+						    <a class="dropdown-item page-scroll" style="color: #0e1555;" href="#section-proposed">Regular Paper Submission</a>
+						    <a class="dropdown-item page-scroll" style="color: #0e1555;" href="#section-shared">Shared Tasks</a>
+						    <!--<a class="dropdown-item page-scroll" style="color: #0e1555;" href="#section-journal">Journal Special Issue</a> -->
+                             <!--<a class="dropdown-item page-scroll" style="color: #0e1555;" href="#section-awards">Awards</a> -->
+						    <a class="dropdown-item page-scroll" style="color: #0e1555;" href="#"></a>
+						  </div>
+						</li>
+                        <li><a class="page-scroll" href="#section-speaker">Speakers</a></li>
+                        <li><a class="page-scroll" href="#section-organizingcommittee">Committees</a></li>
+
+                        <li><a class="page-scroll" href="#section-contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- .nav -->
+
+    </header>
+
+    <div class="jumbotron text-center">
+        <div class="content">
+            <h1><img src="img/banner_high_resolution_crop_2.png" width="110%"> <br> @ AAAI 2022</h1>
+            <h3 style="color:white; background-color: green ;font-size:30px">First Workshop on ​Multimodal Fact-Checking and Hate Speech Detection</h3>
+
+            <!-- <div class="event-date">11<sup>th</sup> January 2021, IIIT Delhi</div> -->
+            <!--<div class="event-date">Co-located with AAAI 2022</div> -->
+            <h2 style="color: #FFFFFF;"> February, 2022</h2>
+            <!--<a class="page-scroll" href="#section-intro"><button type="button" class="btn btn-default btn-lg">LEARN MORE</button></a>-->
+            <br>
+           
+
+        </div>
+    </div>
+    <!-- .Jumbotron-->
+
+    <section id="section-news" class="section-wrapper about-event gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>NEWS</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p align="justify">
+                         <ul style="list-style: none;">
+                            <li><div style="width: 5%; float: left;"><i class="fa fa-cog fa-spin fa-x" style="color:#0000ff;" aria-hidden="true"></i></div>FACTIFY dataset to be released on 15th september.</li>
+
+                            <li><div style="width: 5%; float: left;"><i class="fa fa-cog fa-spin fa-x" style="color:#0000ff;" aria-hidden="true"></i></div>All the acepted papers are likely to be published in formal proceedings (to be confirmed)</li>
+
+   
+                        </ul>
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section> 
+
+    <section id="section-intro" class="section-wrapper about-event">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>ABOUT THE WORKSHOP</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p align="justify">
+                        Combating fake news is one of the burning societal crisis. It is difficult to expose false claims before they create a lot of damage. Automatic fact/claim verification has recently become a topic of interest among diverse research communities. Research efforts and datasets on text fact verification could be found, but there is not much attention towards multi-modal or cross-modal fact-verification. This workshop will encourage researchers from interdisciplinary domains working on multi-modality and/or fact-checking to come together and work on multimodal (images, memes, videos) fact-checking. At the same time, multimodal hate speech detection is an important problem but has not received much attention.  Lastly, learning joint modalities his of interest to both Natural Language Processing (NLP) and Computer Vision (CV) forums. <br/>
+
+
+
+                    <b> Rationale: </b> During the last decade, both the field of studies - NLP and CV have made significant progress due to the success strories of neural network. Mutimodal tasks like visual question-answering (VQA), image captioning, video captioning, caption based image retrieval, etc. started getting into the main spotlight either in NLP/CV forums. Mutimodality is the next big leap for the AI community.  De-Factify is a specified forum to discuss on multimodal fake news, and hate speech related challenges. We also encourage discussion on multi-modal tasks in general. <br/>
+<ol>
+    <li><b>Multi-Modal Fact Checking:</b> Social media for news consumption is double edged sword. On the one hand, its low cost, easy access and rapid circulation of information lead people to consume news from social media. On the other hand, it enables the wide spread of <i>fake news</i>, i.e., low quality news with the false information. It affects everyone including government, media, individual, health, law and order, and economy. Therefore, fake news detection on social media has recently become an appealing research topic. We encourage solution to fake news like automated fact checking at scale, early detction of fake news etc. </li>  <br>
+
+    
+    <table>
+    <thead>
+      <tr>
+        <th><img src="img/trump_osama.png" alt="Image" style="width:300px;"></th>
+        <th><img src="img/baiden_corona.png" alt="Image" style="height:295px;"></th>
+        <th><img src="img/modi_namaz.png" alt="Image" style="width:300px;"></th>
+        <th><img src="img/pfizer_ceo.png" alt="Image" style="width:280px;"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center">The image purportedly shows US President Donald Trump in his younger days, shaking hands with global terrorist Osama Bin Laden. It had gone viral during the 2020 US presidential election. The picture also has a quote superimposed on it, praising Laden, which is attributed to Trump.</td>
+        <td style="text-align: center">US President Joe Biden has announced that Americans who have not taken Covid vaccines will be put in quarantine camps and detained indefinitely till they take their shots. - this is absolutely a false claim</td>
+        <td style="text-align: center">A morphed picture of Prime Minister Narendra Modi is going viral on social platforms like Facebook and WhatsApp. Narendra Modi on July 11 was in Turkmenistan where he visited the Mausoleum of the First President of Turkmenistan, in Ashgabat. A picture was clicked during his visit in which Narendra Modi is seen standing with other religious and political leaders of Turkmenistan. While those leaders are seen raising their hands for dua (Islamic way of prayer), Modi is standing folding his hand. A morphed picture of the event is being shared on social media. </td>
+        <td style="text-align: center">Several people are making a claim on their social media accounts that the CEO of Pfizer had to cancel a planned trip to Israel because he was not fully vaccinated. - the claim is not true.</td>
+      </tr>
+    </tbody>
+    </table>
+
+    
+     <br> 
+    <br>
+    <li><b>Multi-Modal Hate-Speech</b> ​Hate speech is defined as speech (or any form of expression) that expresses (or seeks to promote, or has the capacity to increase) hatred against a person or a group of people because of a characteristic they share, or a group to which they belong. Twitter develops this definition in its hateful conduct policy  as <i>violence against or directly attack or threaten other people on the basis of race, ethnicity, national origin, sexual orientation, gender, gender identity, religious affiliation, age, disability, or serious disease.</i> We encourage works that help in detection of Multi-Modal Hate-Speech.</li>
+
+    
+    <table>
+    <thead>
+      <tr>
+        <th><img src="img/hate.jpg" alt="Image" style="width:300px;"></th>
+        <th><img src="img/trump_muslim.jpeg" alt="Image" style="height:200px;"></th>
+        <th><img src="img/jesus.png" alt="Image" style="width:300px;"></th>
+        <th><img src="img/lgbt.jpeg" alt="Image" style="width:280px;"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center">A simple image of few candies on a table. A set of candies are multicolored, while the others are black. The embeded text has a sarcastic twist to portray how blacks should be excluded from a so-called `perfect society'. This is an example of racist message.</td>
+        <td style="text-align: center">In this image former president Donalnd Trump is visible on a glof cart along with a Muslim man wearing a white middle-east dress. The embeded text is offensive towards muslim. The way it being written as if these are being said by Trump.</td>
+        <td style="text-align: center">In this image Jesus Christ is being depicted on a terrorist avatar - wearing sunglasses, having gun in one hand and riding on a Dinosaur. The tagline says "This is America" - it is offesive to both religious and towards the national image of America.</td>
+        <td style="text-align: center">This image showing a lady in a smiling face, whereas the text message depicts clear hate towards LGBT, rather gay to be very specific. The message clarifies sexual orientation is god's will.</td>
+      </tr>
+    </tbody>
+    </table>
+    
+    
+</ol>
+<br/>
+
+<b> Shared tasks </b> we will be conduction 2 shared tasks: <br>
+<ol> 
+    <li> FACTIFY - Multi-Modal Fact Verification. please visit <a href = "./factify.html">this link</a> for details.</li>
+    <li> MEMOTION 2 - Task on analysis of memes (to be confirmed). please visit <a href = "./memotion_2.html">this link</a> for details.</li>
+</ol>
+
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- .about-event -->
+
+    <section id="section-proposed" class="section-wrapper pricing-section gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>CALL FOR SUBMISSIONS</h1><br/>
+                        <h2>REGULAR PAPER SUBMISSION</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                 <ul style="text-align: justify;list-style: none;">
+                     <li><b>Topics of Interests:</b> It is a forum to bring attention towards collecting, measuring, managing, mining, and understanding multimodal disinformation, misinformation, and malinformation data from social media. This workshop covers (but not limited to) the following topics: --
+                     	<ul style="margin-left: 2%;">
+                            <li> Development of corpora and annotation guidelines for multimodal fact checking </li>
+                            <li> Computational models for multimodal fact checking </li>
+                            <li> Development of corpora and annotation guidelines for multimodal hate speech detection and classification </li>
+                            <li> Computational models for multimodal hate speech detection and classification </li>
+                            <li> Analysis of diffusion of Multimodal fake news and hate speech in social networks  </li>
+                            <li>Understanding the impact of the hate content on specific groups (like targeted groups) </li>
+                            <li> Fake news and hate speech detection in low resourced languages </li>
+                            <li>Hate speech normalization</li>
+                            <li> Case studies and/or surveys related to multi-modal fake news or hate speech </li>
+                            <li> Analyzing behavior, psychology of multi-modal hate speech/ fake news propagator </li> 
+                            <li> Real world/ applied tool development for multi-modal hate speech/fake news detection </li>
+                            <li> Early detection of multi-modal fake news/hate speech </li>
+                            <li> Use of modalities other than text and images (like audio, video etc) </li>
+							<li>Evolution of multi modal fake news and hate speech</li>
+                            <li>Information extraction, ontology design and knowledge graph for multi-modal hate speech and fake news </li>
+                            <li> Cross lingual, code-mixed, code switched multi-modal fake news/hate speech analysis </li> 
+							<li>Computational social science</li>
+						</ul>
+                     </li>
+                     <br/>
+                     <li><b>Submission Instructions:</b>
+                        <ul style="margin-left: 2%;">
+                        <li><b>Long papers: </b> Novel, unpublished, high quality research papers. more info to be updated  </li> 
+                        <li> <b> Short papers: </b> to be updated. </li>
+                        <li><b>Previously rejected papers: </b> to be updated</li>
+                        <li><b>Extended abstracts: </b>to be updated</li>
+                        <!--<li>All papers must be submitted via our <a href="https://easychair.org/conferences/?conf=constraint2021">EasyChair submission page</a>. Regular papers will go through a double-blind peer-review process. Extended abstracts may be either single blind (i.e., reviewers are blind, authors have names on submission) or double blind (i.e., authors and reviewers are blind). Only manuscripts in PDF or Microsoft Word format will be accepted.</li></li> -->
+                        </ul>
+                     </li>
+                     <br/>
+                     <li><b>Important Dates (Round 1):</b>
+                    	<ul style="margin-left: 2%;">
+                     	    <li><b>Oct 20, 2021:</b> Papers due at 11:59 PM UTC-12</li>
+    						<li><b>Nov 20, 2021:</b> Notification of papers due at 11:59 PM UTC-12</li>
+    						<li><b>Dec 10, 2021:</b> Camera ready submission due of accepted papers at 11:59 PM UTC-12</li>
+    						<li><b>Feb  2022:</b> workshop</li>
+    					</ul>
+                     </li>
+                     <br/> 
+                    <li><b>Important Dates (Round 2):</b>
+                        <ul style="margin-left: 2%;">
+                            <li><b>Nov 10, 2021:</b> Papers due at 11:59 PM UTC-12</li>
+                            <li><b>Dec 05, 2021:</b> Notification of papers due at 11:59 PM UTC-12</li>
+                            <li><b>Dec 20, 2021:</b> Camera ready submission due of accepted papers at 11:59 PM UTC-12</li>
+                            <li><b>Feb  2022:</b> workshop</li>
+                        </ul>
+                     </li>
+                     <br/>     
+                  </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="section-shared" class="section-wrapper about-event gray-bg" style="margin-top: -5%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                         <h2>SHARED TASK</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                	 <div class="row">
+		                 <ul style="text-align: justify; list-style: none;">
+		                    <li><b>Task:</b> We are planning to host 2 shared tasks
+	                     	<ul style="margin-left: 2%;">
+								<li>FACTIFY - Multi-Modal Fact Verification. please visit <a href = "./factify.html">this link</a> for details.</li>
+								<li>MEMOTION 2 - Task on analysis of memes (to be confirmed). please visit <a href = "./memotion_2.html">this link</a> for details.</li>
+							</ul>
+							</li>		  
+					<br>               
+                    <li><b>FACTIFY Important Dates:</b>
+                    	<ul style="margin-left: 2%;">
+                     	    <li><b>September 15, 2021:</b> Release of the training set</li>
+    						<li><b>November 1, 2021:</b> Release of the test set</li>
+    						<li><b>November 8, 2021:</b> Deadline for submitting the final results</li>
+    						<li><b>November 10, 2020:</b> Announcement of the results </li>
+    						<li><b>November 22, 2020:</b> System paper submission deadline (All teams are invited to submit a paper)</li>
+                            <li> <b> December 10 2021: </b> Notification of system papers </li>
+                            <li><b>December 20 2021: </b> Camera ready submission 
+    					</ul>
+                    </li>
+                    <li><b>Memotion 2 (to be confirmed) Important Dates:</b>
+                        <ul style="margin-left: 2%;">
+                            <li><b>TBD</b> Release of the training set</li>
+                            <li><b>TBD</b> Release of the test set</li>
+                            <li><b>TBD</b> Deadline for submitting the final results</li>
+                            <li><b>TBD</b> Announcement of the results </li>
+                            <li><b>TBD</b> System paper submission deadline (All teams are invited to submit a paper)</li>
+                            <li> <b> December 10 2021: </b> Notification of system papers </li>
+                            <li><b>December 20 2021: </b> Camera ready submission  
+                        </ul>
+                    </li>                    
+					</ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- .about-event -->
+<!--
+    <section id="section-journal" class="section-wrapper about-event gray-bg" style="margin-top: -5%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                         <h2>JOURNAL SPECIAL ISSUE</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                	 <div class="row">
+
+		                    Selected workshop papers will be invited for an extension to be considered in a <a href="http://lcs2.iiitd.edu.in/ads/Neurocomputing_SI.pdf">special issue</a> of Neurocomputing journal (Impact factor: 4.438)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+
+
+    <!--<section id="section-accepted" class="section-wrapper about-event gray-bg" style="margin-top: -5%;">
+        <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                         <h2>Accepted Papers</h2>
+                    </div>
+                </div>
+            </div>
+    </section> -->
+
+
+	<section id="section-speaker" class="section-wrapper team client-logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>Talk 1</h1>
+                    </div>
+                </div>
+            </div>
+           <div class="row">
+                <div class="col-md-12">
+                    <figure class="thumbnail">
+                        <a href="https://web.eecs.umich.edu/~mihalcea/index.html"><img src="img/speaker/rada.jpg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                        <figcaption class="caption text-center">
+                            <h3> Dr. Rada Mialcea 
+                                <small> CSE Professor at University of Michigan. Director at Language and Information Technologies Lab of University of Michigan </small>
+                            </h3>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>Talk 2</h1>
+                    </div>
+                </div>
+            </div>
+           <div class="row">
+                <div class="col-md-12">
+                    <figure class="thumbnail">
+                        <a href="https://web.eecs.umich.edu/~mihalcea/index.html"><img src="img/speaker/morency.jpeg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                        <figcaption class="caption text-center">
+                            <h3> Dr. Louis-Philippe Morency
+                                <small> Associate Professor at CMU language technology institute where he leads the Multimodal Communication and Machine Learning Laboratory </small>
+                            </h3>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+
+            </div>
+        </div>
+    </section>
+
+            <section id="section-organizingcommittee" class="section-wrapper team client-logo  gray-bg">
+
+
+            <div id="task2"></div>
+            <div class="container">
+	            <div class="row" style="margin-top: 7%">
+	                <div class="col-md-12">
+	                    <div class="section-title">
+	                        <h1>ORGANIZING COMMITTEE CHAIRS</h1>
+	                    </div>
+	                </div>
+	                <!-- .row -->
+	                <div class="col-lg-4 col-md-6">
+	                    <figure class="thumbnail">
+	                        <a href="http://amitavadas.com/"><img src="img/committee/amitava.jpg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+	                        <figcaption class="caption text-center">
+	                            <h3>Amitava Das
+	                                <small> Wipro Research, India</small>
+	                            </h3>
+	                        </figcaption>
+	                    </figure>
+	                </div>
+	                <div class="col-lg-4 col-md-6">
+	                    <figure class="thumbnail">
+	                        <a href="http://amit.aiisc.ai/"><img src="img/committee/amitsheth.jpg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+	                        <figcaption class="caption text-center">
+	                            <h3>Amit Sheth
+	                                <small>U of South Carolina, USA </small>
+	                            </h3>
+	                        </figcaption>
+	                    </figure>
+	                </div>
+	                <div class="col-lg-4 col-md-6">
+	                    <figure class="thumbnail">
+	                        <a href="http://faculty.iiitd.ac.in/~tanmoy/"><img src="img/committee/tanmoy.png" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+	                        <figcaption class="caption text-center">
+	                            <h3>Tanmoy Chakraborty
+	                                <small>IIIT Delhi, India </small>
+	                            </h3>
+	                        </figcaption>
+	                    </figure>
+	                </div>
+	                <div class="col-lg-4 col-md-6">
+	                    <figure class="thumbnail">
+	                        <a href="https://www.iitp.ac.in/~asif/"><img src="img/committee/asif.jpg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+	                        <figcaption class="caption text-center">
+	                            <h3>Asif Ekbal
+	                                <small>IIT Patna, India </small>
+	                            </h3>
+	                        </figcaption>
+	                    </figure>
+	                </div>
+	                <div class="col-lg-4 col-md-6">
+	                    <figure class="thumbnail">
+	                        <a href="https://chahuja.com/"><img src="img/committee/chaitanya.png" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+	                        <figcaption class="caption text-center">
+	                            <h3>Chaitanya Ahuja
+	                                <small>CMU, USA </small>
+	                            </h3>
+	                        </figcaption>
+	                    </figure>
+	                </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <figure class="thumbnail">
+                            <a href="https://parthpatwa.github.io/"><img src="img/committee/parth.jpg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                            <figcaption class="caption text-center">
+                                <h3>Parth Patwa
+                                    <small>UCLA, USA </small>
+                                </h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+	            </div>
+	        </div>
+
+
+
+
+<div class="container">
+                <div class="row" style="margin-top: 7%">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h1>ORGANIZING COMMITTEE COORDINATORS</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <figure class="thumbnail">
+                            <a href="https://www.linkedin.com/in/parul09/"><img src="img/committee/parul.jpg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                            <figcaption class="caption text-center">
+                                <h3>Parul Chopra
+                                    <small>CMU, USA </small>
+                                </h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <figure class="thumbnail">
+                            <a href="https://www.linkedin.com/in/amrit-bhaskar/"><img src="img/committee/amrit.jpeg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                            <figcaption class="caption text-center">
+                                <h3>Amrit Bhaskar
+                                    <small>ASU, USA </small>
+                                </h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <figure class="thumbnail">
+                            <a href="https://www.linkedin.com/in/nethragunti16/"><img src="img/committee/nethra.jpeg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                            <figcaption class="caption text-center">
+                                <h3>Nethra Gunti
+                                    <small>IIIT Sri City, India </small>
+                                </h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <figure class="thumbnail">
+                            <a href="https://www.linkedin.com/in/sathyanarayanan-ramamoorthy-52183a178"><img src="img/committee/sathya.jpg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                            <figcaption class="caption text-center">
+                                <h3>Sathyanarayan R.
+                                    <small>IIIT Sri City, India </small>
+                                </h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                           <figure class="thumbnail">
+                            <a href="https://www.linkedin.com/in/shreyash-mishra/"><img src="img/committee/shreyash.png" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                            <figcaption class="caption text-center">
+                                <h3>Shreyash Mishra
+                                    <small>IIIT Sri City, India </small>
+                                </h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                           <figure class="thumbnail">
+                            <a href="https://www.linkedin.com/in/suryavardan/"><img src="img/committee/surya.jpg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                            <figcaption class="caption text-center">
+                                <h3>S. Suryavardan 
+                                    <small>IIIT Sri City, India  </small>
+                                </h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>WEB CHAIRS</h1>
+                    </div>
+                </div>
+            <div class="col-md-6">
+                    <figure class="thumbnail">
+                        <a href="https://parthpatwa.github.io/"><img src="img/committee/parth.jpg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                        <figcaption class="caption text-center">
+                            <h3>Parth Patwa
+                                <small>UCLA, USA </small>
+                            </h3>
+                        </figcaption>
+                    </figure>
+                </div>
+            <div class="col-md-6">
+                    <figure class="thumbnail">
+                        <a href=""><img src="img/committee/vishal.jpeg" class="img-responsive img-circle" alt="Image" style="height:190px; width:170px;"></a>
+                        <figcaption class="caption text-center">
+                            <h3>Vishal Pallagani 
+                                <small>U of South Carolina, USA </small>
+                            </h3>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-programcommittee" class="section-wrapper team client-logo gray-bg">
+            <div class="row">
+                <div class="col-md-12">
+                    <div  style="text-align: center;">
+                        <h1>PROGRAM COMMITTEE MEMBERS</h1>
+                    </div>
+                    <ul style="text-align: center;">
+                        <li>TBD</li>
+                       <!-- <li>Preslav I. Nakov, Qatar Computing Research Institute</li>
+						<li>Monojit Choudhury, Microsoft Research India</li>
+						<li>Balaji Vasan Srinivasan, Adobe Research India</li>
+						<li>Deepak Padmanabhan, Queen's University Belfast, UK</li>
+						<li>Subhabrata Mukherjee, Microsoft Research, Redmond, USA</li>
+						<li>Dongwon Lee, Pennsylvania State University</li>
+						<li>Cheng Long, NTU</li>
+						<li>Nitin Agarwal, University of Arkansas - Little Rock</li>
+						<li>Amitava Das, Wipro Research, India</li>
+						<li>Sudipta Kar, Amazon Alexa AI, USA</li>
+						<li>Sandipan Dandapat, Bing Search, Microsoft - India</li>
+						<li>Amir Javed, Cardiff University, UK</li>
+						<li>Utpal Garain, ISI Kolkata, India</li>
+						<li>Anil Bandhakavi, Logically, UK</li>
+						<li>Thomas Mandl, University of Hildesheim, Germany</li>
+						<li>Tracy King, Adobe Sensei and Search</li>
+						<li>Anoop Kunchukuttan, Microsoft AI and Research, India</li>
+						<li>Yunfei Long, University of Essex, UK</li>
+						<li>Sandra Kuebler, Indiana University, USA</li>
+						<li>Luca de Alfaro, University of California, Santa Cruz, USA</li>
+						<li>Vasudeva Varma, IIIT Hyderabad, India</li>
+						<li>Yaqing Wang, University at Buffalo</li>
+						<li>Ashique KhudaBukhsh, Carnegie Mellon University</li>
+						<li>Vagelis Papalexakis, University of California Riverside, USA</li>
+						<li>Reza Zafarani, Syracuse University, USA</li>
+						<li>Shweta Yadav, National Institute of Health, USA</li>
+						<li>Shourya Roy, Flipkart</li>
+                        <li>Sudha Bhingardive, Rakuten, Tokyo</li>
+                        <li>Victoria L. Rubin, Western University, London, Ontario, Canada</li>
+                        <li>Aditya Joshi, CSIRO, Australia</li>
+                        <li>Sibel Adali, Rensselaer Polytechnic Institute, USA</li>
+                        <li>Amrith Krishna, University of Cambridge, UK</li> -->
+                    </ul>
+                </div>
+            </div>
+
+           
+        <!-- /.container -->
+    </section>
+    <!-- .team -->
+
+    
+
+
+  
+
+
+    </section>
+     <section id="section-contact" class="section-wrapper about-event" style="margin-top: -4%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>CONTACT US</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row w-50 mx-auto">
+                <!--  <div class="col-md-7">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8599961833356!2d77.2692578154063!3d28.543927594835793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce36d07074563%3A0x899f8bbdbff7da90!2sIIITD+New+Academic+Block!5e0!3m2!1sen!2sin!4v1532875838153" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div> -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="trow">
+                             <td><i class="fa fa-envelope" style="font-size: 20px;"></i>
+                             &nbsp;&nbsp; <a href="mailto:amitava.santu@gmail.com">amitava.santu@gmail.com</a></td>
+                        </tr>
+                        <tr class="trow">
+                            <td ><i class="fa fa-envelope" style="font-size: 20px;"></i>
+                             &nbsp;&nbsp;<a href="mailto:parthpatwa@ucla.edu">parthpatwa@ucla.edu</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--<div class="container" style="text-align: center;">
+                    <p>Email ID: <a href="tanmoy@iiitd.ac.in">tanmoy@iiitd.ac.in</a></p>
+                    <p>Email ID: <a href="parthprasad.p17@iiits.in">parthprasad.p17@iiits.in</a></p> -->
+                    <!--<p class="w-50 mx-auto" id="mail">Subscribe to our mailing list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://forms.gle/PHeoXkDjywaN5vPx7" class="btn btn-primary">Click Here</a></p> -->
+
+                    <!--<div class="container">
+                        <div class="row">
+                            <div id="socialicons" style="">
+                                <span style="width: 90px;float: left"><h3>Follow Us</h3></span> &nbsp;
+                                <a class="icon" href="https://twitter.com/CONSTRAINT_AAAI" title="Follow with Twitter" target="_blank"><i class="fa fa-twitter" style="font-size: 20px;"></i></a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <!--end of .container -->
+
+    </section>
+
+    <footer class="footer">
+        <div class="copyright-section gray-bg">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="copytext text-center">&copy; DE-FACTIFY 2022. All rights reserved | Template By: <a href="https://uicookies.com">uiCookies</a></div>
+                </div>
+            </div>
+            <!-- .container -->
+        </div>
+        <!-- .copyright-section -->
+    </footer>
+    <!-- .footer -->
+
+</div>
+<!-- #main-wrapper -->
+
+
+<!-- jquery -->
+<script src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+
+<!--<script src="js/one-page-nav.js"></script>-->
+<script src="js/scripts.js"></script>
+</body>
+</html>
