@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+        <title>KGC 2022 KiRL Tutorial</title>
+        <link rel="icon" href="./images/logo.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="icons.css">
+		<link href="https://fonts.googleapis.com/css2?family=Kameron&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+		<div class = 'navbar'>
+			<a href="http://aiisc.ai/"><img class = 'ailogo' src = './images/ai_institute_logo.png'></a>
+			<div class = 'header'>
+				<p class = 'header'>Knowledge-infused Reinforcement Learning</p>
+			</div>
+			<a href="https://cods-comad.in/" target="_blank"><img class = 'acmlogo' src = './images/conference.png'></a>
+		</div>
+		<div class = 'container'>
+			<h3>Date: TBD</h3>
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Abstract</p>
+			</div>
+			<p class = 'text'>
+			Virtual health agents (VHAs) have received considerable attention, but the early focus has been on collecting data, helping patients follow generic health guidelines, and providing reminders for clinical appointments. While presenting the collected data and frequency of visits to the clinician is useful, further context and personalization are needed for a VHA to interpret and understand what the data means in clinical terms. This has made their use in managing health limited. Such understanding enables patient empowerment and self-appraisal -- i.e., aiding the patient in interpreting the data to understand the changes in the patient’s health conditions, and self-management -- i.e., to help a patient better manage their health through better adherence to the clinician guidelines and clinician recommended care plan. Crisis conditions such as the current pandemic have further stressed our healthcare system and have made the need for such advanced support more attractive and in demand. Consider the rapid growth in mental health because the patients who already had mental health conditions worsen, and many develop such conditions due to the challenges arising from lockdown, isolation, and economic hardships. The severe lack of timely availability of clinical expertise to meet the rapidly growing demand provides the motivation for advancing this research in developing more advanced VHAs and evaluating it in the context of mental health management.
+			</p>
+			<div class = 'pin'>
+				<img class="titlelogo" src="./images/logo.png">
+				<p class="title">Intellectual Contributions of this tutorial</p>
+			</div>
+			<p class="text">
+				This tutorial seeks to showcase AI strategies that provide medical context to patient data with the help of a knowledge graph. This supports personalization through a personalized knowledge graph that captures the patient’s personalized health management objectives within the context of the clinical guidelines and care plan. The continuous capture of this information through the analysis of patient-VHA interactions, and the strategy of creating engaging interactions (conversations) can further augment the personalized knowledge graph. These operations are required to support self-appraisal and self-management, and when necessary perform fail-safe tasks such as connecting the patient to a crisis help-line or professional help. The core innovation is the use of a novel knowledge-infused reinforcement learning method. The by-product of this approach leads to transparency in decision-making with the ability to offer a user understandable explanation. 
+			</p>
+			<div class = 'pin'>
+				<img class="titlelogo" src="./images/logo.png">
+				<p class="title">Tutorial Focus</p>
+			</div>
+			<p class="text">
+				We combine the qualities of Knowledge infused Learning [1-5, 7], Reinforcement Learning [4,5], and advanced use of Knowledge Graphs [5,8-9] (e.g., through the incorporation of the process knowledge) to develop a VHA which will have transparency in decision making due to the use of knowledge and generate explanations in terms that the user can understand. The transparency of the system will also allow component-wise understanding of the model which the model developers can benefit from as well [6]. Finally, explicitly using the users' feedback to reiterate and revise the user-level personalized knowledge graph, the model and quality of explanations can deliver a VHA that clinicians and patients can use in practice to help their healthcare needs. Following two tutorial’s focus modules define a cohesive component-level architecture of VHA:
+				<ol type="1">
+					<li><p class="text">
+						<b>Personalized Knowledge Graph (PKG) construction:</b> Figure 1 is a component-level modular architecture for constructing knowledge graphs.  During the tutorial, we will provide details on constructing a knowledge graph (KG), which we acquired from our extensive body of research at the intersection of KG, natural language processing/understanding, and artificial intelligence. This tutorial will adapt the flow of information illustrated in the following architecture for constructing PKG.
+					</p></li>
+					<figure>
+						<img src="images/fig1.png" style="width:700px;height:400px;">
+						<figcaption>Figure 1: Modular Architecture of Constructing KG (credit: Joey Yip, a Ph.D. student at AIISC)</figcaption>
+					  </figure>
+					<li><p class="text">
+						<b>Knowledge-infused Reinforcement Learning using PKG:</b> to predict the next high-level action, such as determining the appropriate question for interacting with a specific patient (e.g., getting a mental health status check, measuring the safety of information in PKG and interactions, asking clinical validation questions, etc) while incorporating patient feedback and domain (clinical) knowledge (Figure 2).
+					</p></li>
+					<figure>
+						<img src="images/fig2.png" style="width:720px;height:280px;">
+						<figcaption>Figure 2: Illustration of Knowledge-infused Reinforcement Learning using knowledge graph and process knowledge in clinical guidelines to support patients in their goal management.</figcaption>
+					  </figure>
+				</ol>
+			</p>
+			<div class = 'pin'>
+				<img class="titlelogo" src="./images/logo.png">
+				<p class="title">Tutorial Organization</p>
+			</div>
+			<p class="text">
+				<ol type="1">
+					<li><p class="text">
+						<b>Knowledge-infused Learning (KiL):</b> KiL a form of neuro-symbolic AI is a novel paradigm that seeks to incorporate a variety of explicit (symbolic) knowledge into a data-driven statistical AI framework that supports advancement in machine intelligence. Utilizing knowledge and data in deep learning models to enable learning from lower-level syntactic and lexical features from data through statistical (deep) learning as well as higher-level concepts from knowledge. Using knowledge also allows greater transparency in the decision-making, and enables explanations that users need for informed decision making.
+						<ol type="a">
+							<li><p class="text">
+								<b>Anatomy of KiL</b>
+								<ol type="i">
+									<li><p class="text">
+										<b>Shallow Infusion:</b> The knowledge is converted to an embedding vector and is concatenated to the data vector before being passed into the traditional deep learning pipeline. This method is fast and scalable and while it shows improvements over only using the data, the compression of knowledge in a vector-based embedding loses a lot of the semantic and relational level information.
+									</p></li>
+									<li><p class="text">
+										<b>Semi-Deep Infusion:</b> This technique guides the parameter learning process of the deep learning model using the knowledge. Such a process ensures the parameters that govern data patterns are somewhat in alignment with the knowledge being infused. However, parametric models are layers and layers deep, representing different levels of abstraction, Therefore what kind of knowledge to guide the parameters of which specific layers remains an open question.
+									</p></li>
+									<li><p class="text">
+										<b>Deep Infusion:</b> This technique guides the parameters of each layer of the deep learning model utilizing stratified layers of abstraction in the knowledge graph, thus providing the optimal level of knowledge infusion.
+									</p></li>
+								</ol>
+							</p></li>
+						</ol>
+					</p></li>
+					<li><p class="text">
+						<b>KiL for End User-level Explainability:</b> Several methods to explain the outcomes of deep learning models have been proposed through the years, broadly classified as explainable AI (XAI). Similar to how a debugger understands the exceptions thrown by the program errors, XAI explanations can be thought of as a stack trace that the developer of the system can understand by not the end-user and application/domain expert. XAI explanations make sense to deep learning model debuggers and computer scientists that develop the models.  However, to end-users like the clinicians, explanations that are meaningful at the application or domain levels (e.g., compliance with clinical guidelines) are required.
+						As an example, visualization attention models to predict suicidality tells the computer scientist that the model and its components are functioning seemingly well. To the clinician, it still doesn't explain it through a line of reasoning that they can comprehend. For instance, considering the decision making based on  Columbia Suicide Severity Rating Scale (C-SSRS), it is important for a model to explain its outcome based on the flow of questions in C-SSRS. This would help clinicians assimilate model outcomes and help them make a conscious decision.
+ 					</p></li>
+					 <li><p class="text">
+						 <b>Knowledge-infused Reinforcement learning (KiRL):</b> Reinforcement Learning trains the VHA to understand the patient through trial and error based correction using directly the patient feedback. This adds a significant level of personalization based on the continuous user-feedback-based correction that is not present in supervised learning methods.
+						 <ol type="a">
+							 <li><p class="text">
+								 <b>Why Reinforcement learning is an alternative way for Human-AI collaboration - </b>Reinforcement Learning trains the VHA to understand the patient through trial and error based correction using directly the patient feedback. This adds a significant level of personalization based on the user-feedback-based correction that is not present in supervised learning methods.
+							 </p></li>
+							 <li><p class="text">
+								 <b>KiRL:</b> We combine the qualities of the aforementioned Knowledge infused Learning, Reinforcement Learning, to develop a VHA which will have transparency in decision making due to the use of knowledge and generate explanations in terms that the user can understand i.e. User level explanations as an upgrade from the traditional XAI based explanations. The transparency of the system will also allow component-wise understanding of the model which the model developers can benefit from as well. Finally, explicitly using the user's feedback to reiterate and revise the user-level personalized knowledge graph, the model and quality of explanations can deliver a VHA that clinicians and patients can use in practice to help their healthcare needs. 
+							 </p></li>
+						 </ol>
+					 </p></li>
+				</ol>
+			</p>
+			<div class = 'pin'>
+				<img class="titlelogo" src="./images/logo.png">
+				<p class="title">Length of the Tutorial</p>
+			</div>
+			<p class="text">
+				We plan a 1-hour lecture-style tutorial with 1 break (5-10 mins for Questions and Answers). Following it, we plan to have 30 minutes of hands-on practice. (Total: 1 hour 30 minutes)
+			</p>
+			<div class = 'pin'>
+				<img class="titlelogo" src="./images/logo.png">
+				<p class="title">Expected background and prerequisite of audience</p>
+			</div>
+			<p class="text">
+				The tutorial would be a mix of lecture-style and hands-on in the python programming language. The audience is expected to have a basic understanding of deep/machine learning, natural language processing, and semantic technologies (e.g., linked open data). We aim to guide attendees through a high-level tour of the most recent approaches proposed by researchers. Also, we expect basic familiarity with social media platforms such as Twitter and Reddit. We expect participants to bring their laptops with all the required tools installed. Details on tools needed and the background material will be provided upon acceptance of the tutorial proposal. We expect that by the end of the tutorial, the attendees will understand the use of knowledge graphs to enhance the performance (quality of results), utility, interpretability, and explainability of deep learning and be prepared to apply knowledge-infused deep learning to real-world applications.
+			</p>
+
+			<!--presenter's biography-->
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>Presenters' Biographies</p>
+			</div>
+
+			<div class = 'bio'>
+				<img class = 'image' src = './images/kaushik.jpeg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="https://scholar.google.com/citations?user=LpOo_IUAAAAJ&hl=en&oi=ao">Kaushik Roy</a></p>
+					<p class = 'name'><a href="mailto:kaushikr@email.sc.edu?subject=KGC '22 KiRL: Request for Information">Contact</a>| </a><a href="https://twitter.com/kaushikunal">@kaushikunal</a></p>
+					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
+					<p class = 'bio-text'>He is a Ph.D. student at AIISC. He completed his master's in computer science at Indiana University Bloomington and has worked at UT Dallas’s starling lab. His research interests include statistical relational artificial intelligence, sequential decision making, knowledge graphs, and reinforcement learning. His work is published in reputed conferences in IEEE, KR, AAAI, AAMAS, and ECML.
+					</p>
+					</p>
+				</div>
+			</div>
+
+			<div class = 'bio'>
+				<img class = 'image' src = './images/manas.jpg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="https://manasgaur.github.io">Manas Gaur</a></p>
+					<p class = 'name'> <a href="mailto:manas@email.sc.edu?subject=KGC '22 KiRL: Request for Information">Contact</a>| <a href="https://twitter.com/manasgaur90">@manasgaur90</a></p>
+					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
+					<p class = 'bio-text'>Manas Gaur is a Ph.D. candidate at the Artificial Intelligence Institute and a visiting researcher at Alan Turing Institute. Earlier, he has been a data science for social good fellow with the University of Chicago and an AI for social good fellow with Dataminr Inc. Manas's research at the interface of AI and Knowledge Graphs introduces a novel paradigm termed Knowledge-infused Learning (KiL). KiL has been proven to provide explainable and interpretable frameworks for conversational AI, domain adaptation, recommender systems, and learning to rank problems. Further, its tangible outcomes have been covered by many media outlets.  Currently, his research focuses on applying KiL to mental healthcare, crisis informatics, digital security, and conversational assistance.
+					</p>
+					</p>
+				</div>
+			</div>
+
+			<div class = 'bio'>
+				<img class = 'image' src = './images/Qi.jpeg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="https://qizhg.github.io/">Qi Zhang</a></p>
+					<p class = 'name'> <a href="mailto:qz5@cse.sc.edu?subject=KGC '22 KiRL: Request for Information">Contact</a></p>
+					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
+					<p class = 'bio-text'>Qi Zhang is an assistant professor of the Computer Science and Engineering department and the Artificial Intelligence Institute at the University of South Carolina. He received his Ph.D. from the University of Michigan in 2021. His research aims for solutions for coordinating systems of decision-making agents operating in uncertain, dynamic environments. As hand-engineered solutions for such environments often fall short, he used ideas from planning and reinforcement learning to develop and analyze algorithms that autonomously coordinate agents in an effective, trustworthy, and communication-efficient manner. In particular, he has been working on social commitments for trustworthy coordination, communication learning, and language emergence among coordinated agents and applications of (multi-agent) reinforcement learning in intelligent transportation systems, dialogue systems, and multi-robot systems.
+					</p>
+					</p>
+				</div>
+			</div>
+
+			<div class = 'bio'>
+				<img class = 'image' src = './images/amit.jpg'>
+				<div class = 'info'>
+					<p class = 'name'><a href="http://aiisc.ai/amit">Amit Sheth</a></p>
+					<p class = 'name'><a href="https://twitter.com/amit_p">@amit_p</a></p>
+					<p class = 'name'>Artificial Intelligence Institute, University of South Carolina
+					<p class = 'bio-text'>Prof. Amit Sheth is an Educator, Researcher, and Entrepreneur. 
+						He is the founding director of the university-wide Artificial Intelligence 
+						Institute at the University of South Carolina (#AIISC). Previously , 
+						he was the LexisNexis Ohio Eminent Scholar and the executive director of 
+						Ohio Center of Excellence in Knowledge-enabled Computing. He is a Fellow 
+						of IEEE, AAAI, and AAAS. He has organized 75+ international events 
+						(general/program chair, organization committee chair), 65+ keynotes, 
+						given many well-attended tutorials and is among the well-cited computer 
+						scientists. He has founded three companies by licensing his university 
+						research outcomes, including the first Semantic Web company in 1999 that 
+						pioneered technology similar to what is found today in Google Semantic 
+						Search and Knowledge Graph. Several commercial products and deployed 
+						systems have resulted from his research. 
+					</p>
+					</p>
+				</div>
+			</div>
+
+			<div class = 'pin'>
+				<img class = 'titlelogo' src = './images/logo.png'>
+				<p class = 'title'>References</p>
+			</div>
+			<ol><p class = 'text-small'>
+				<li class = 'text-small'><p class = 'text-small'>
+					Sheth, Amit, Manas Gaur, Kaushik Roy, and Keyur Faldu. "Knowledge-intensive language understanding for explainable ai." IEEE Internet Computing 25, no. 5 (2021): 19-24.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Sheth, Amit, Manas Gaur, Ugur Kursuncu, and Ruwan Wickramarachchi. "Shades of knowledge-infused learning for enhancing deep learning." IEEE Internet Computing 23, no. 6 (2019): 54-63.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Gaur, Manas, Keyur Faldu, and Amit Sheth. "Semantics of the black-box: Can knowledge graphs help make deep learning systems more interpretable and explainable?." IEEE Internet Computing 25, no. 1 (2021): 51-59.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Roy, Kaushik, Qi Zhang, Manas Gaur, and Amit Sheth. "Knowledge infused policy gradients with upper confidence bound for relational bandits." In Joint European Conference on Machine Learning and Knowledge Discovery in Databases, pp. 35-50. Springer, Cham, 2021.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Gaur, Manas, Kalpa Gunaratna, Vijay Srinivasan, and Hongxia Jin. "ISEEQ: Information Seeking Question Generation using Dynamic Meta-Information Retrieval and Knowledge Graphs." arXiv preprint arXiv:2112.07622 (2021).
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Goebel, Randy, Ajay Chander, Katharina Holzinger, Freddy Lecue, Zeynep Akata, Simone Stumpf, Peter Kieseberg, and Andreas Holzinger. "Explainable AI: the new 42?." In International cross-domain conference for machine learning and knowledge extraction, pp. 295-303. Springer, Cham, 2018.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Kursuncu, Ugur, Manas Gaur, and Amit Sheth. "Knowledge infused learning (k-il): Towards deep incorporation of knowledge in deep learning." arXiv preprint arXiv:1912.00512 (2019).
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Gyrard, Amelie, Manas Gaur, Saeedeh Shekarpour, Krishnaprasad Thirunarayan, and Amit Sheth. "Personalized Health Knowledge Graph." In CEUR workshop proceedings, vol. 2317, p. 5. 2018.
+				</p></li>
+				<li class = 'text-small'><p class = 'text-small'>
+					Li, Xiao-Hui, Caleb Chen Cao, Yuhan Shi, Wei Bai, Han Gao, Luyu Qiu, Cong Wang et al. "A survey of data-driven and knowledge-aware explainable ai." IEEE Transactions on Knowledge and Data Engineering 34, no. 1 (2020): 29-49.
+				</p></li>
+			</p></ol>
+			<br>
+
+			<!--footer-->
+			<div class = "follow-us">
+                <p class = "follow-us-text">FOLLOW US ON</p>
+                <a href="https://twitter.com/amit_p?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter"></a>
+                <a href="https://www.facebook.com/AIIUofSC/" class="fa fa-facebook"></a>
+                <a href="https://www.youtube.com/c/aiisc" class="fa fa-youtube"></a>
+                <a href="https://www.linkedin.com/company/kno-e-sis-center/" class="fa fa-linkedin"></a>
+            </div>
+			<div class = 'footer'>
+				<p class = 'title-medium'>© 2022 Artificial Intelligence Institute - University of South Carolina</p>
+			</div>
+			<br>
+		</div>
+    </body>
+</html>
