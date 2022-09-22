@@ -1,0 +1,588 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Tutorial: Neuro-symbolic AI for Mental Healthcare</title>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="https://aiisc.ai/kiwo-icwsm/images/ai_institute_logo.png" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<style>
+		ul>li{
+			margin-top: 2%;
+		}
+	</style>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<h2>
+									<a href="index.html" class="logo"><strong>Tutorial: Neuro-symbolic AI for Mental Healthcare</strong></a>
+
+									</h2>
+								
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h2 id="abstract">ABSTRACT</h2>
+									</header>
+
+									<span style="background-color:black;" class="image main"><img src="https://www.aimlsystems.org/2022/images/aiml_white.png"   alt="" /></span>
+
+
+									<p>
+										Artificial Intelligence (AI) systems for mental healthcare (MHCare)
+										have been ever-growing after realizing the importance of early
+
+										interventions for patients with chronic mental health (MH) condi-
+										tions. Social media (SocMedia) emerged as the go-to platform for
+
+										supporting patients seeking MHCare. The creation of peer-support
+										groups without social stigma has resulted in patients transitioning
+										from clinical settings to SocMedia supported interactions for quick
+										help. Researchers started exploring SocMedia content in search
+										of cues that showcase correlation or causation between different
+										MH conditions to design better interventional strategies. User-level
+										Classification-based AI systems were designed to leverage diverse
+
+										SocMedia data from various MH conditions, to predict MH condi-
+										tions. Subsequently, researchers created classification schemes to
+
+										measure the severity of each MH condition. Such ad-hoc schemes,
+										engineered features, and models not only require a large amount of
+										data but fail to allow clinically acceptable and explainable reasoning
+										over the outcomes. To improve Neural-AI for MHCare, infusion of
+
+										clinical symbolic knowledge that clinicans use in decision mak-
+										ing is required. An impactful use case of Neural-AI systems in
+
+										MH is conversational systems. These systems require coordination
+
+										between classification and generation to facilitate humanistic con-
+										versation in conversational agents (CA). Current CAs with deep
+
+										language models lack factual correctness, medical relevance, and
+										safety in their generations, which intertwine with unexplainable
+										statistical classification techniques. This lecture-style tutorial will
+										demonstrate our investigations into Neuro-symbolic methods of
+										infusing clinical knowledge to improve the outcomes of Neural-AI
+										systems to improve interventions for MHCare:
+										
+										<ul>
+											<li>
+												(a) We will discuss
+										the use of diverse clinical knowledge in creating specialized datasets
+
+										to train Neural-AI systems effectively. 
+
+											</li>
+											<br>
+											<li>
+												(b) Patients with cardiovas-
+										cular disease express MH symptoms differently based on genderdifferences. We will show that knowledge-infused Neural-AI sys-
+										tems can identify gender-specific MH symptoms in such patients.
+											</li>
+											<br>
+											<li>
+												(c) We will describe strategies for infusing clinical process knowl-
+										edge as heuristics and constraints to improve language models in
+
+										generating relevant questions and responses.
+											</li>
+											<br>
+										</ul>
+
+										
+
+										
+
+										
+									</p>
+									
+									<hr class="major" />
+
+									<h2 id="schedule">1 TUTORIAL SCHEDULE AND ACTIVITIES</h2>
+									
+									<p>The tutorial will cover methodologies for classification, generation,
+										and multi-task learning. Although we use MH has the use case,
+										other application domains where domain and process knowledge
+										are critical in decision making will benefit from the methods we
+										will discuss. Six modules of the tutorial are:</p>
+									
+
+									<ul>
+										<li>
+											<strong>(15 mins) Introduction with Use Cases:</strong> We will begin the
+session motivating the need for Knowledge-infusion based
+neuro-symbolic AI technqiues for use in MHCare. Real-world
+examples will be used to demonstrate limitations in current
+statistical and data-driven AI Systems. This will highlight
+the necessity of duality between data and knowledge for
+developing explainable AI systems [16], as opposted to the
+contemporary statistical AI and data driven approaches.
+										</li>
+										<br>
+										<li>
+											<strong>
+												(30 mins) Explainable Data Creation:
+											</strong>
+											 Explainable data refers
+
+to resources that leverage guidelines created by subject mat-
+ter experts (SMEs) in labeling samples of the datasets. For in-
+stance, “Reddit C-SSRS Dataset” uses SME-created Columbia
+
+Suicide Severity Rating Scale as the scheme to annotate posts
+from users writing on r/SuicideWatch subreddit [2, 6, 9]. We
+will discuss four such datasets.
+										</li>
+										<br>
+										<li>
+										<strong>(30 mins) Knowledge-infusion for Classification: </strong>	Clas-
+sification problems in MHCare require end-user clinician
+
+to retrospect on the models’ outcomes and reason on it for
+explanations, followed by documting the basis of decision
+
+(diagnosis, treatment plan) made by the clinician. If the clas-
+sification scheme is not grounded in clinical knowledge, it
+
+would subject to varied interpretations and wrongful con-
+clusions. In this module, we will discuss the use of expert
+
+curated ontologies as the source of knowledge to be infused
+in machine learning classifiers. Further, we will introduce
+novel evaluation metrics for assessing the effectiveness of
+the classifiers [2, 3, 13].
+									</li>
+									<br>
+
+									<li>
+										<strong>
+											(25 mins) Knowledge-infusion for Language Generation
+in Conversational Systems:
+										</strong>
+										 Drawing on the findings from
+
+the infusion in classification-based AI systems, we will in-
+vestigate parallel methods in generation-based AI systems
+
+for conversational AI. In MHCare, question and response
+generation are not simply conditional on the user query or
+posts but rather retrieval of knowledge passages, context in
+previous generated question or response, knowledge context disambiguation, and logical coherence is equally important
+for consistent and conceptual-flow-based conversations. We
+will discuss methods to achieve conceptual flow on MHCare
+datasets [1, 5]. We will discuss the benefit evaluation metrics
+based on pre-trained language models to assess AI systems
+for generation.
+									</li>
+									<br>
+
+									<li>
+										<strong>
+											(25 mins) Process Knowledge-infused Learning: 
+										</strong>
+										While
+covering “knowledge-infusion for generation” we will be
+
+focusing on making deep language models capable of gener-
+ating questions and responses by designing new constraint-
+based optimization functions [14]. Whereas, in this module,
+
+we will enforce logical coherence constraints in deep lan-
+guage models using (a) process knowledge-guided dataset
+
+[8], and (b) constraint-based optimization function [12]. We
+
+introduce novel evaluation metrics to better judge the per-
+formance of AI System.
+									</li>
+									<br>
+
+									<li>
+										<strong>
+											(30 mins) Knowledge-aware Multi-task Learning:
+										</strong>
+										 We de-
+sign a multi-task learning framework for identifying MH
+
+symptoms that consider gender language infused in user
+social media posts using (a) how we built a massive data set
+for task adaptation, (b) how knowledge aware task adaptive
+models can help decision making process for clinicians, (c)
+how to formulate a knowledge aware transformer model and
+the sources of knowledge used in the design, and (d) how
+our model provides the clinically relevant outcome [11].
+									</li>
+
+									</ul>
+
+									
+					<p>
+						Some of the previous and related tutorials: (a) Knowledge-infused
+Reinforcement Learning, (b) Explainable AI using Knowledge Graphs
+[4], (c) Knowledge In-Wisdom Out-Explainable Data for AI [15], (d)
+Knowledge-infused Deep Learning [7], and (e) Knowledge-infused
+Learning for Autonomous Driving.
+					</p>
+
+				
+
+					<h2 id="bios">2 TUTORIAL ORGANIZER BIOS</h2>
+
+
+				
+					
+					<div>
+
+						<h4>Kaushik Roy:</h4>
+						<div style="display: flex;gap:30px">
+
+							<p>
+								<div class="image">
+									<img src="images/Kaushik.jpg" height="150" alt="" />
+								</div>
+								<p>
+									
+																							He is a Ph.D. student at Artificial Intelligence Insti-
+									tute at the University of South Carolina (AIISC). He completed his
+			
+									master’s in computer science at Indiana University Bloomington
+									and has worked at UT Dallas’s starling lab. His research interests
+			
+									include statistical relational artificial intelligence, sequential deci-
+									sion making, knowledge graphs, and reinforcement Learning. His
+			
+									work is published in reputed conferences in IEEE, KR, AAAI, and
+									ECML-PKDD. For more details, please visit his webpage.
+																</p>
+							</p>
+
+						</div>
+						<hr>
+						<br>
+						<h4>Usha Lokala:</h4>
+
+						<div style="display: flex;gap:30px">
+
+							<p>
+								<div class="image">
+									<img src="images/Usha.jpg" height="150" alt="" />
+								</div>
+								<p>
+									
+									She is a Ph.D. student at AIISC. Her research
+
+									interests include ontology engineering, knowledge graphs and nat-
+									ural language processing. Her interdisciplinary research funded by
+									
+									NIH, NIDA, and NSF applies ontology, deep learning, and natural
+									
+									language processing in the domain of Public Health, Addiction, So-
+									cial Media Analysis and Age related Cognition. Her work has been
+									
+									published in reputed conferences and Journals (IEEE, Drug and
+									Alcohol Dependence, WWW, CPDD, AAAI ICWSM, JMIR, PLOS
+									One). [10]’s work on public health addictions won second prize
+									in Opioid Challenge at SBP BRiMS 2018, a computational social
+									science conference. For more details, please visit her webpage.
+																</p>
+							</p>
+
+						</div>
+						<hr>
+						<br>
+						<h4>Manas Gaur:</h4>
+
+						<div style="display: flex;gap:30px">
+
+							<p>
+								<div class="image">
+									<img src="images/Manas.jpg" height="150" alt="" />
+								</div>
+								<p>
+									
+									He is an Assistant Professor at the University
+									of Maryland Baltimore County (UMBC) Department of Computer
+									
+									Science. His research expertise uses knowledge graphs, artificial in-
+									telligence, and natural language processing methods for knowledge-
+									intensive language understanding applications such as conversa-
+									tional AI, summarization, and recommender systems. Before UMBC,
+									
+									I was a senior research scientist in the AI Center in Samsung Re-
+									search America, a visiting researcher at Alan Turing Institute, and a
+									
+									Ph.D. student with Dr. Amit Sheth in the AIISC. His work has been
+									covered through media articles, podcast interviews, and invited
+									keynotes. For more details, please visit his webpage.
+																</p>
+							</p>
+
+						</div>
+
+						<hr>
+						<br>
+						<h4>Amit Sheth:</h4>
+
+						<div style="display: flex;gap:30px">
+
+							<p>
+								<div class="image">
+									<img src="images/Amit.jpg" height="150" alt="" />
+								</div>
+								<p>
+									
+									 He is an Educator, Researcher, and Entrepreneur.
+
+									He is the founding director of AIISC and NCR Chair at The Univer-
+									sity of South Carolina. Previously , he was the Lexis-Nexis Ohio Emi-
+									nent Scholar and the executive director of Ohio Center of Excellence
+									
+									in Knowledge-enabled Computing. He is a Fellow of IEEE, AAAI,
+									
+									ACM, and AAAS. He has organized >100 international events (gen-
+									eral/program chair, organization committee chair), >70 keynotes,
+									
+									given >45 many well-attended tutorials and is among the well-cited
+									computer scientists. He has founded three companies by licensing
+									his university research outcomes, including the first Semantic Web
+									company in 1999 that pioneered technology similar to what is found
+									today in Google Semantic Search and Knowledge Graph. Several
+									commercial products and deployed systems have resulted from his
+									research. For more details, please visit his webpage.
+																</p>
+							</p>
+
+						</div>
+						<br>
+						<br>
+						<hr>
+						<br>
+						<br>
+						
+					<h2 id="audience">3 TUTORIAL AUDIENCE AND PREREQUISITES</h2>
+					<p>This tutorial will bring researchers in academic, industry, and
+
+						healthcare practitioners at the confluence of knowledge represen-
+						tation, reasoning, semantic linking, NLP, and deep learning. Since
+						
+						it is a lecture style tutorial, basic understanding of AI machinery,
+						machine learning (ML), and deep learning, and natural language
+						
+						processing (NLP) is assumed. This will allow the audience to appre-
+						ciate the limitations in statistical AI in MHCare and follow through
+						
+						the advancement in AI, reaching towards Neuro-symbolic AI in
+						general and for MHCare in particular. The tutorial will cover basics
+						and advanced methodologies in machine learning, deep learning,
+						
+						and NLP/NLU/NLG with sufficient examples. Newcomers inter-
+						ested in AI/ML systems for healthcare, will learn the current state
+						
+						of AI/ML systems for MHCare. Expert attendees will appreciate
+						
+						methodologies and datasets presented in tutorial as promising, re-
+						liable, and practical approaches to overcoming familiar technical
+						
+						obstacles in social good domains. We encourage other researchers
+						to use our datasets and approach to provide additional analysis, to
+						further our understanding of knowledge-infused AI systems for
+						MHCare and other domains.</p>
+						
+						<br>
+						<br>
+						<hr>
+						<br>
+						<br>
+						<h2 id="acknowledge">4 ACKNOWLEDGEMENT</h2>
+						<p>We acknowledge partial support from National Science Foundation
+							(NSF) awards #1761931 and #2133842.</p>
+
+							<br>
+							<br>
+							<hr>
+							<br>
+							<br>
+						<h2 id="reference">REFERENCES</h2>
+
+						<ul style="list-style-type:none;">
+							<li>
+								[1] Amanuel Alambo, Manas Gaur, Usha Lokala, Ugur Kursuncu, Krishnaprasad
+Thirunarayan, Amelie Gyrard, Amit Sheth, Randon S Welton, and Jyotishman
+Pathak. 2019. Question answering for suicide risk assessment using reddit. In
+Proc. of 13th IEEE ICSC.
+							</li>
+							<li>
+								[2] Manas Gaur, Amanuel Alambo, Joy Prakash Sain, Ugur Kursuncu, Krishnaprasad
+Thirunarayan, Ramakanth Kavuluru, Amit Sheth, Randy Welton, and JyotishmanPathak. 2019. Knowledge-aware assessment of severity of suicide risk for early
+intervention. In Proc. of 30th ACM WWW.
+							</li>
+							<li>
+								[3] Manas Gaur, Vamsi Aribandi, Amanuel Alambo, Ugur Kursuncu, Krishnaprasad
+
+Thirunarayan, Jonathan Beich, Jyotishman Pathak, and Amit Sheth. 2021. Charac-
+terization of time-variant and time-invariant assessment of suicidality on Reddit
+
+using C-SSRS. PloS one (2021).
+							</li>
+							<li>
+								[4] Manas Gaur, Ankit Desai, Keyur Faldu, and Amit Sheth. 2020. Explainable AI
+Using Knowledge Graphs. In ACM CoDS-COMAD Conference.
+							</li>
+							<li>
+								[5] Manas Gaur, Kalpa Gunaratna, Vijay Srinivasan, and Hongxia Jin. 2022. Iseeq: In-
+formation seeking question generation using dynamic meta-information retrieval
+
+and knowledge graphs. In Proc. of AAAI.
+							</li>
+							<li>
+								[6] Manas Gaur, Ugur Kursuncu, Amanuel Alambo, Amit Sheth, Raminta Daniu-
+laityte, Krishnaprasad Thirunarayan, and Jyotishman Pathak. 2018. " Let Me Tell
+
+You About Your Mental Health!" Contextualized Classification of Reddit Posts to
+DSM-5 for Web-based Intervention. In Proc. of 27th ACM CIKM.
+							</li>
+							<li>
+								[7] Manas Gaur, Ugur Kursuncu, Amit Sheth, Ruwan Wickramarachchi, and Shweta
+Yadav. 2020. Knowledge-infused deep learning. In Proc. 31st ACM HT.
+							</li>
+							<li>
+								[8] Shrey Gupta, Anmol Agarwal, Manas Gaur, Kaushik Roy, Vignesh Narayanan,
+
+Ponnurangam Kumaraguru, and Amit Sheth. 2022. Learning to Automate Follow-
+up Question Generation using Process Knowledge for Depression Triage on
+
+Reddit Posts. arXiv preprint arXiv:2205.13884 (2022).
+							</li>
+							<li>
+								[9] Usha Lokala, Raminta Daniulaityte, Francois Lamy, Manas Gaur, Krishnaprasad
+Thirunarayan, Ugur Kursuncu, and Amit P Sheth. 2020. Dao: An ontology for
+
+substance use epidemiology on social media and dark web. JMIR Public Health
+and Surveillance (2020).
+							</li>
+							<li>
+								[10] Usha Lokala, Francois R Lamy, Raminta Daniulaityte, Amit Sheth, Ramzi W
+Nahhas, Jason I Roden, Shweta Yadav, and Robert G Carlson. 2019. Global trends,
+local harms: availability of fentanyl-type drugs on the dark web and accidental
+overdoses in Ohio. Computational and mathematical organization theory (2019).
+							</li>
+							<li>
+								[11] Usha Lokala, Aseem Srivastava, Triyasha Ghosh Dastidar, Tanmoy Chakraborty,
+Md Shad Akhtar, Maryam Panahiazar, and Amit Sheth. 2022. A Computational
+Approach to Understand Mental Health from Reddit: Knowledge-Aware Multitask
+Learning Framework. In Proc. of ICWSM.
+							</li>
+							<li>
+								[12] Kaushik Roy, Manas Gaur, Qi Zhang, and Amit Sheth. 2022. Process Knowledge-
+infused Learning for Suicidality Assessment on Social Media. arXiv preprint
+
+arXiv:2204.12560 (2022).
+							</li>
+							<li>
+								[13] Ramit Sawhney, Atula Tejaswi Neerkaje, and Manas Gaur. 2022. A Risk-Averse
+Mechanism for Suicidality Assessment on Social Media. ACL (2022).
+							</li>
+							<li>
+								[14] Amit Sheth, Manas Gaur, Kaushik Roy, Revathy Venkataraman, and Vedant Khan-
+delwal. 2022. Process Knowledge-Infused AI: Towards User-level Explainability,
+
+Interpretability, and Safety. arXiv preprint arXiv:2206.13349 (2022).
+							</li>
+							<li>
+								[15] Amit Sheth, Kaushik Roy, Manas Gaur, and Usha Lokala. 2021. Tutorial on
+Knowledge In-Wisdom Out-Explainable Data for AI in Cyber Social Threats and
+Public Health. (2021).
+							</li>
+							<li>
+								[16] Amit Sheth and Krishnaprasad Thirunarayan. 2021. The Duality of Data and
+Knowledge Across the Three Waves of AI. IT Professional (2021).
+							</li>
+						</ul>
+
+
+
+						
+					</div>
+
+				
+					
+
+					
+					
+			
+
+												
+
+										
+								</section>
+
+
+						</div>
+					</div>
+
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!-- <section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section> -->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<span style="background-color:#f5f6f7;" class="image main"><img src="https://aiisc.ai/assets/img/logo.png"   alt="" /></span>
+
+									<ul>
+										<li><a href="#abstract">ABSTRACT</a></li>
+										<li><a href="#schedule">1 TUTORIAL SCHEDULE AND ACTIVITIES</a></li>
+										<li><a href="#bios">2 TUTORIAL ORGANIZER BIOS</a></li>
+										<li><a href="#audience">3 TUTORIAL AUDIENCE AND PREREQUISITES</a></li>
+										<li><a href="#acknowledge">4 ACKNOWLEDGEMENT</a></li>
+										<li><a href="#reference">REFERENCES</a></li>
+
+										
+									</ul>
+								</nav>
+
+					
+
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
