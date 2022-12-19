@@ -320,6 +320,23 @@ ul.nostyle i {
 #cta2 h2 > span {
   color: #45aed6;
 }
+#bike {
+  background: #242a33 url(../images/cta2/cta2-bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  color: #fff;
+  padding-top: 70px;
+}
+#bike .btn {
+  margin-top: 10px;
+}
+#bike h2 {
+  color: #fff;
+  font-size: 44px;
+  line-height: 1;
+}
+#bike h2 > span {
+  color: #45aed6;
+}
 #features {
   padding: 100px 0;
 }
