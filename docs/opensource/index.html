@@ -192,7 +192,24 @@
 
     <div class="container">
 
+      
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#Tools">Tools</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Onto">Ontologies and Data sets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pastProjects">Past Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#stnd">Standards</a>
+        </li>
  
+      
+      </ul>
+   
 
 
       <div class="content clearfix">
@@ -246,7 +263,11 @@
     </ul>
 
 
+
+
     <h2 id="Onto">Ontologies and Data sets</h2>
+
+    <h4>Active</h4>
 
     <ul>
       <li>
@@ -271,7 +292,7 @@
   </ul>
   <ul>
     <li>
-    <strong> <a href="http://127.0.0.1:5500/docs/opensource/DAO-Access-Request.pdf" target="_blank" rel="noopener noreferrer">Drug Abuse Ontology (DAO) : </a> </strong>
+    <strong> <a href="./DAO-Access-Request.pdf" target="_blank" rel="noopener noreferrer">Drug Abuse Ontology (DAO) : </a> </strong>
     
     DAO provides a powerful framework and a useful resource that can be expanded and adapted to a wide range of substance use and mental health domains to help advance big data analytics of web-based data for substance use epidemiology research. <br>
     <br>
@@ -282,11 +303,16 @@
     
     All publications that used this ontology in any form should cite the work through the following:
     Lokala U, Lamy F, Daniulaityte R, Gaur M, Gyrard A, Thirunarayan K, Kursuncu U, Sheth A, Drug Abuse Ontology to Harness Web-Based Data for Substance Use Epidemiology Research: Ontology Development Study
-    , JMIR Public Health and Surveillance. 10/05/2022:24938
+    
+
+    <a href="https://publichealth.jmir.org/2022/12/e24938" target="_blank" rel="noopener noreferrer">
+      <br>
+      JMIR Public Health and Surveillance. 10/05/2022:24938</a>
+
     </li>
     <br>
 
-    About DAO:<a href="http://wiki.aiisc.ai/index.php/DAO" target="_blank">DAO</a>
+    About DAO:<a href="http://wiki.aiisc.ai/index.php/DAO" target="_blank">DAO Wikipedia page</a>
     <br>
     
   
@@ -383,6 +409,7 @@
     
     </ul>
 
+    <h4>Archived</h4>
  
     <ul><li><strong>SoCS Ontology for Crisis Coordination (SOCC)</strong>: We extend the concepts of domain knowledge­-driven models, MOAC- Management Of A Crisis ontology (Limbu 2012), and UNOCHA's HXL- Humanitarian Exchange Language (Keßler et al. 2013) ontology, with required but missing concepts for organizing data during crisis response coordination for seeker and supplier behavior, and indicators of resource needs using a lexicon. For example, the 'shelter' class contains words 'emergency center,' 'tent,' and 'shelter,' along with lexical alternatives. For the present demonstration, we focus on three resource categories: food, shelter and medical needs. Thus, we endeavor to exploit a minimum, but always expandable subset that provides the maximum coverage while controlling false alarms. For creating lexicons of indicator words for concepts, we relied on various documents collected via interactions with domain experts (Flach et al. 2013), our Community Emergency Response Team (CERT) training, Rural Domestic Preparedness Consortium training, and publically available references (Homeland Security 2010; FEMA 2012; OCHA,Verity 2011). Using a first aid handbook (Swienton and Subbarao 2012), we created an extensive 'medical' subset of emergency indicators, where we identified words which pertained specifically to first aid or injuries and included those words along with variations in tense (i.e., breath, breathing, breathes) and common abbreviations (i.e. mouth to mouth, mouth 2 mouth, CPR). A local expert with FEMA experience augmented the model with additional indicators and provided anecdotal context. The current model with food, medical, and shelter resource indicators contain 43 concepts and 45 relationships. We created this domain model in the OWL language using the Protégé ontology editor (Protégé 2013). Each type of disaster is listed as an entity type with indicators for that disaster listed as individuals under a corresponding indicator entity. Therefore a relationship is declared stating that a particular disaster concept, say Flood, relates by property 'has_a_positive_indicator', with 'Flood_i' indicator entity, that includes all words under that heading. Each disaster has a declared negative relationship with the negative indicator list (e.g., 'erotic' under sexual words indicators) under the entity name Negative_Indicator_i. Finally resources are declared as individuals under the appropriate entity in the same way, but relationships are not explicitly stated with any disaster in order to provide flexibility. [Read more: <a href="https://web.archive.org/web/20150606110927/http://knoesis.wright.edu/library/resource.php?id=1865" target="_blank"> Purohit et al., JCSCW 2014</a>]
     <ul><li>Available at: <a href="https://web.archive.org/web/20150606110927/http://twitris.knoesis.org/images/datasets-and-models/Disaster-domain-model-v1.rdfxml.owl" target="_blank">SOCC ontology</a></li>
@@ -431,7 +458,7 @@
     </ul></div>
     <div>
 
-      <h3>Past Projects</h3>
+      <h3 id="pastProjects">Past Projects</h3>
       <ul><li>Projects: <a href="https://web.archive.org/web/20150606110927/http://lsdis.cs.uga.edu/projects/meteor-s/">METEOR-S</a> <span class="pi_highlight">[PI: Prof. <a href="https://web.archive.org/web/20150606110927/http://knoesis.org/amit">Amit Sheth</a>]</span></li>
       <li><strong>MobiCloud: </strong> MobiCloud is a Domain Specific Language (DSL) based platform agnostic application development paradigm for cloud-mobile hybrid applications. A cloud-mobile hybrid is simply an application that partially runs on the mobile device and in the cloud. MobiCloud makes it extremely easy to develop these applications and deploy them to clouds and mobile devices.</li>
       <li><strong>Twarql: </strong> Twarql investigate the representation of tweets as RDF in order to enable flexibility in handling the information overload of those interested in collectively analyzing social media for sensemaking. Twarql source can be accessed at <a href="https://web.archive.org/web/20150606110927/https://sourceforge.net/projects/twarql/">https://sourceforge.net/projects/twarql/</a> and available under the BSD licence.</li>
