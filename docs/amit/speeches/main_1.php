@@ -60,9 +60,9 @@
 
 <li>"Semantic Technology in the Real World: Experiences and Lessons based on Commercialization of Academic Research &amp; Industry Applications."&nbsp;<em>Dagstuhl Seminar on Semantic Interoperability and Integration</em>. Dagstuhl, Germany, Sept. 21, 2004.</li>
 
-<li>"Semantic Web Technology Ontology Testbed." <em>Ontology in Action Workshop</em>. Banff, Canada, Jun. 21, 2004.</li>
+<li>"Semantic Web Technology Ontology Testbed." <em>Ontology in Action Workshop</em>. Banff, Canada, Jun. 21, 2004 .</li>
 
-<li>"Semantic Visualization: Interfaces for exploring and exploiting ontology, knowledgebase, heterogeneous content and complex relationships." <em>NASA Virtual Iron Bird Workshop</em>, Monterey, CA, Apr. 2, 2004.</li>
+<li>"Semantic Visualization : Interfaces for exploring and exploiting ontology, knowledgebase, heterogeneous content and complex relationships." <em>NASA Virtual Iron Bird Workshop</em>, Monterey, CA, Apr. 2, 2004.</li>
 
 <li>"Ontology-driven Integration and Analysis for Semantic Applications in Business Intelligence and National Security." <em>Ontology and Semantic Web Technical Exchange Meeting</em>, MITRE Corporation, McLean, VA, Jun. 12&ndash;13, 2003.</li>
 
