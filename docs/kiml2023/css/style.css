@@ -1,4 +1,8 @@
 /* Base */
+li{
+  margin: 3vh auto;
+}
+
 body {
   line-height: 1.7;
   color: #cfcfd1;
@@ -619,9 +623,16 @@ h1, h2, h3, h4, h5,
         font-size: 6rem; } }
   .site-hero .caption {
     color: #fff; }
-    @media (min-width: 768px) {
-      .site-hero .caption {
-        font-size: 1.7rem; } }
+    @media (max-width: 768px) {
+      .site-section
+      {
+        padding: 5.5rem 0;
+       
+        /* font-size: 2rem;  */
+        /* display: none; */
+      } 
+      
+      }
 
 .btn-custom {
   text-transform: uppercase;

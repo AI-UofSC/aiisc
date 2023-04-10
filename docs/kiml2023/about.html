@@ -35,7 +35,7 @@
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-11 col-xl-2">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">KiML<span class="text-primary">KDD2020</span> </a></h1>
+            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">KiML<span class="text-primary">KDD2023</span> </a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -55,7 +55,7 @@
       </div>
     </header>
 
-    <div class="site-section site-hero inner">
+    <!-- <div class="site-section site-hero inner">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-10">
@@ -64,9 +64,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div >
+    <div class="site-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-lg-4 ">
@@ -92,16 +92,29 @@
                 </div>
               </div>
               <div class="col-lg-8 mt-5 pl-lg-5" data-aos="fade-up" data-aos-delay="200">
+              
                 <p align="justify">
                   This workshop aims to accelerate our pace towards building responsible, intelligent systems by integrating knowledge into contemporary AI and data science methods in two prominent applications: Computer Vision (CV; learning to see) and Natural Language Processing (NLP; learning to read). Along with these two applications, the workshop will lay focus on four areas: 
 
                 </p>
-               
+                <br>
+                <div style="display:flex;gap:30px;justify-content: center;">
+                
+                  <a href="#neuro">Neuro</a>
+                  <p>-</p>
+                  <a href="#Deeper">Deeper Forms of Knowledge Infusion in AI</a>
+                  <p>-</p>
+                  <a href="#Benchmarking">Benchmarking Datasets and Resources</a>
+                  <p>-</p>
+                  <a href="#Evaluation">Evaluation/Measurement</a>
+                  
+                </div>
+                <br>
           
                 </div>
         </div>
         <div class="row mb-5">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400"><span class="text-primary">NeuroSymbolic AI</span></div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400"><span class="text-primary" id ="neuro">NeuroSymbolic AI</span></div>
           <div class="col-lg-8 pl-lg-5" data-aos="fade-up" data-aos-delay="500">
             <p align="justify">
               NeuroSymbolic AI techniques offer a promising approach for the development of trustworthy, explainable, and scalable AI systems. By leveraging both statistical and symbolic AI, these techniques aim to address the limitations of each approach while combining their strengths. The result is a system that can integrate expert-created knowledge with learned components, providing a more comprehensive and effective solution. Additionally, the use of symbolic components expressed in user-specific vocabulary opens us many new avenues of explanation generation, unavailable to purely Blackbox AI methods.   
@@ -110,11 +123,11 @@
           </div>
         </div>
         <div class="row mb-5">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400"><span class="text-primary">Methods</span></div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400"><span class="text-primary" id="Deeper">Deeper Forms of Knowledge Infusion in AI</span></div>
           <div class="col-lg-8 pl-lg-5" data-aos="fade-up" data-aos-delay="500">
             <p align="justify">
 
-              Deeper Forms of Knowledge Infusion in AI: The use of multiple forms of knowledge is beneficial in introducing human-like learning and reasoning capabilities in Blackbox AI models. There are four significant forms of knowledge: general purpose (e.g., Wikipedia, Wikidata), commonsense (e.g., ConceptNet), linguistic (e.g., WordNet), and domain specific (e.g., Cyber Threat Intelligence, Unified Medical Language System). These different forms of knowledge can manifest themselves in either improving the representations of BlackBox AI models or serving as constraints to steer the outcome to desired behavior. In addition, deep knowledge infusion can benefit approaches like Reinforcement Learning, Active Learning, and others. In this theme, the workshop looks at research incorporating multiple forms of AI knowledge. 
+              The use of multiple forms of knowledge is beneficial in introducing human-like learning and reasoning capabilities in Blackbox AI models. There are four significant forms of knowledge: general purpose (e.g., Wikipedia, Wikidata), commonsense (e.g., ConceptNet), linguistic (e.g., WordNet), and domain specific (e.g., Cyber Threat Intelligence, Unified Medical Language System). These different forms of knowledge can manifest themselves in either improving the representations of BlackBox AI models or serving as constraints to steer the outcome to desired behavior. In addition, deep knowledge infusion can benefit approaches like Reinforcement Learning, Active Learning, and others. In this theme, the workshop looks at research incorporating multiple forms of AI knowledge. 
 
 
             </p>
@@ -123,12 +136,12 @@
         </div>
 
         <div class="row mb-5">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400"><span class="text-primary">Resource</span></div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400"><span class="text-primary" id="Benchmarking">Benchmarking Datasets and Resources</span></div>
           <div class="col-lg-8 pl-lg-5" data-aos="fade-up" data-aos-delay="500">
             <p align="justify">
 
 
-              Benchmarking Datasets and Resources: CV datasets like CLEVER and CLEVERER and NLP datasets like CAMS, PRIMATE, and DiaSafety, have motivated the need for AI models to either be explainable or safe. For various research problems, specialized datasets are required to ensure the trustworthiness of AI behaviors. Unfortunately, there is a lack of benchmarking datasets and machine-understandable resources (e.g., lexicons, ontologies) that assess the Neurosymbolic behavior of models with knowledge infusion. This would also enable us to identify the areas where we desperately need benchmarking. 
+           CV datasets like CLEVER and CLEVERER and NLP datasets like CAMS, PRIMATE, and DiaSafety, have motivated the need for AI models to either be explainable or safe. For various research problems, specialized datasets are required to ensure the trustworthiness of AI behaviors. Unfortunately, there is a lack of benchmarking datasets and machine-understandable resources (e.g., lexicons, ontologies) that assess the Neurosymbolic behavior of models with knowledge infusion. This would also enable us to identify the areas where we desperately need benchmarking. 
 
 
             </p>
@@ -137,7 +150,7 @@
         </div>
 
         <div class="row mb-5">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400"><span class="text-primary">Evaluation/Measurement</span></div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400"><span class="text-primary" id="Evaluation">Evaluation/Measurement</span></div>
           <div class="col-lg-8 pl-lg-5" data-aos="fade-up" data-aos-delay="500">
             <p align="justify">
 
@@ -149,12 +162,9 @@
             
           </div>
         </div>
-
-       
-
       </div>
 
-      <div class="row mb-5">
+      <!-- <div class="row mb-5">
         <div class="col-lg-4 ">
           <div class="site-section-heading" data-aos="fade-up" data-aos-delay="100">
             <h2>Relevance and Target Audience</h2>
@@ -182,179 +192,33 @@ We therefore foresee a group of people attending the workshop who fall under the
           </div>
           
 
-    </div>
+    </div> -->
 
 
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-lg-4 mb-5">
-            <div class="site-section-heading" data-aos="fade-up">
-              <h2 class="text-center">Organizing Committee</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="row" style="justify-content: center;">
-
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimony text-center">
-              <figure>
-                <img style="aspect-ratio: 1/1;object-fit: contain;" src="https://media.licdn.com/dms/image/D4E03AQGngw5awp78yg/profile-displayphoto-shrink_400_400/0/1665073351767?e=1685577600&v=beta&t=72X94vQbiE3lqBAeEuiD2odYF5jjQhKInBweU4U0Ris" alt="Image" class="img-fluid">
-              </figure>
-              <blockquote>
-                <p class="author mb-0"> Manas Gaur
-                 
-                  <!-- <i class="fa fa-linkedin-square" style="font-size:36px;color:red"></i></a> 
-                  <a href="https://twitter.com/manasgaur90" class="fa fa-twitter" style="font-size:36px;color:red"></a></p>
-                 -->
-                 <br>
-                 <br>
-                  <p>University of Maryland Baltimore County, USA</p>
-         
-                <p><a href="mailto:mgaur@email.sc.edu">mgaur@email.sc.edu</a></p>
-              </blockquote>
-              <i class="fa fa-linkedin-square" style="font-size:36px;color:red"></i></a> &nbsp;
-              <a href="https://twitter.com/manasgaur90" class="fa fa-twitter" style="font-size:36px;color:red"></a></p>
-            
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimony text-center">
-              <figure>
-                <img style="aspect-ratio: 1/1;object-fit: contain;" src="https://www.turing.ac.uk/sites/default/files/styles/people/public/2022-10/efy_tsamoura.jpg?itok=qA3A6h15" alt="Image" class="img-fluid">
-              </figure>
-              <blockquote>
-                <p class="author mb-0">Efi Tsamour
-                 
-                  <!-- <i class="fa fa-linkedin-square" style="font-size:36px;color:red"></i></a> 
-                  <a href="https://twitter.com/manasgaur90" class="fa fa-twitter" style="font-size:36px;color:red"></a></p>
-                 -->
-
-                 <br>
-                 <br>
-                  <p>Samsung AI, Cambridge,and Alan Turing Institute, UK </p>
-         
-                <p><a href="mailto:efi.tsamoura@samsung.com">efi.tsamoura@samsung.com</a></p>
-              </blockquote>
-              <!-- <i class="fa fa-linkedin-square" style="font-size:36px;color:red"></i></a> &nbsp;
-              <a href="https://twitter.com/manasgaur90" class="fa fa-twitter" style="font-size:36px;color:red"></a></p>
-             -->
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimony text-center">
-              <figure>
-                <img style="aspect-ratio: 1/1;object-fit: contain;" src="https://media.licdn.com/dms/image/C4D03AQH_lRv65E2hXA/profile-displayphoto-shrink_400_400/0/1516576770060?e=1685577600&v=beta&t=tbd86ADZgGUeL7_J0F601SwoVGRxB_Rh7ZTZTXajH-k" alt="Image" class="img-fluid">
-              </figure>
-              <blockquote>
-                <p class="author mb-0">Sarath Sreedharan
-                 
-                  <!-- <i class="fa fa-linkedin-square" style="font-size:36px;color:red"></i></a> 
-                  <a href="https://twitter.com/manasgaur90" class="fa fa-twitter" style="font-size:36px;color:red"></a></p>
-                 -->
-                 <br>
-                 <br>
-                  <p>Colorado State University, <br> USA</p>
-                  <!-- <br> -->
-                <!-- <p>University of South Carolina</p> -->
-                <p><a href="mgaur@email.sc.edu">sarath.sreedharan@colostate.edu
-                </a></p>
-                <!-- <br> -->
-              </blockquote>
-            <a href="https://www.linkedin.com/in/sarath-sreedharan/">  <i class="fa fa-linkedin-square" style="font-size:36px;color:red"></i></a> &nbsp;
-              <a href="https://twitter.com/sarath_ssreedh" class="fa fa-twitter" style="font-size:36px;color:red"></a></p>
-            
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimony text-center">
-              <figure>
-                <img style="aspect-ratio: 1/1;object-fit: contain;" src="https://media.licdn.com/dms/image/C4D03AQGpbv6Dgl4rvg/profile-displayphoto-shrink_400_400/0/1566393206092?e=1685577600&v=beta&t=MWjWQCAVJKq6iF29_yxH7tQnFPwcCUPXVy7XQN0rNUE" alt="Image" class="img-fluid">
-              </figure>
-              <blockquote>
-                <p class="author mb-0"> Sudip Mittal
-                 
-                  <!-- <i class="fa fa-linkedin-square" style="font-size:36px;color:red"></i></a> 
-                  <a href="https://twitter.com/manasgaur90" class="fa fa-twitter" style="font-size:36px;color:red"></a></p>
-                 -->
-                 <br>
-                 <br>
-                  <p>Mississippi State University, <br> USA</p>
-                <!-- <p>USA</p> -->
-                <p><a href="mailto:mittal@cse.msstate.edu">mittal@cse.msstate.edu</a></p>
-              </blockquote>
-            <a href="https://www.linkedin.com/in/sudipmittal/">  <i class="fa fa-linkedin-square" style="font-size:36px;color:red"></i></a> &nbsp;
-              <a href="https://twitter.com/sudipmittal" class="fa fa-twitter" style="font-size:36px;color:red"></a></p>
-            
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimony text-center">
-              <figure>
-                <img style="aspect-ratio: 1/1;object-fit: contain;" src="https://media.licdn.com/dms/image/C5603AQHeKOksuoE-Ng/profile-displayphoto-shrink_200_200/0/1609966736212?e=1686182400&v=beta&t=gEYQwUnAHXiyKJiGAffgNGG-L8lf4RmozGxmsj0BLbM" alt="Image" class="img-fluid">
-              </figure>
-              <blockquote>
-                <p class="author mb-0"> Kaushik Roy
-                 
-                  <!-- <i class="fa fa-linkedin-square" style="font-size:36px;color:red"></i></a> 
-                  <a href="https://twitter.com/manasgaur90" class="fa fa-twitter" style="font-size:36px;color:red"></a></p>
-                 -->
-                 <br>
-                 <br>
-                  <p>Artificial Intelligence Institute <br> University of South Carolina</p>
-                <p></p>
-                <p><a href="mailto:kauroy1994@gmail.com">kauroy1994@gmail.com</a></p>
-              </blockquote>
-             <a href="https://www.linkedin.com/in/kaushik-roy-b8a323ab/"><i class="fa fa-linkedin-square" style="font-size:36px;color:red"></i></a> &nbsp;
-              <a href="https://twitter.com/kaushikunal" class="fa fa-twitter" style="font-size:36px;color:red"></a></p>
-            
-            </div>
-          </div>
-
-          
-
-          
-
-          
-
-          
-
-          
-
-       
-
-
-      </div>
-    </div>
-
-
-
-
+  </div>
 
     <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md-4">
-            <h2 class="footer-heading text-uppercase mb-4">Workshop</h2>
-            <p>Knowledge-infused Mining and Learning For Social Impact</p>
-            <p><i>Advancing Decision Making in Health, Crisis Response, and Finance</i></p>
-          </div>
+         <div class="col-md-4">
+  <h2 class="footer-heading text-uppercase mb-4">Location</h2>
+  <p>
+    <a href="https://goo.gl/maps/Yi6RCWBFjJACakNe7" target="_blank">
+      Long beach convention and entertainment center,
+300 East Ocean Boulevard Long Beach, CA 90802 
+    </a>
+  </p>
+</div>
           <div class="col-md-3 ml-auto">
             <h2 class="footer-heading text-uppercase mb-4">Quick Links</h2>
             <ul class="list-unstyled">
               <li><a href="about.html">About Us</a></li>
               <li><a href="speakers.html">Speakers</a></li>
-              <li><a href="mailto:mgaur@email.sc.edu?Subject=KiML-KDD2020%20Query:" target="_top">Contact</a></li>
+              <li><a href="mailto:mgaur@email.sc.edu?Subject=KiML-KDD2023%20Query:" target="_top">Contact</a></li>
             </ul>
           </div>
-          <div class="col-md-4">
+           <div class="col-md-4">
             <h2 class="footer-heading text-uppercase mb-4">Connect with Us</h2>
             <p>
               <a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
@@ -362,7 +226,22 @@ We therefore foresee a group of people attending the workshop who fall under the
               <a href="#" class="p-2"><span class="icon-youtube"></span></a>
               <a href="#" class="p-2"><span class="icon-instagram"></span></a>
             </p>
+          </div><div class="col-md-12" >
+            <h2 class="footer-heading text-uppercase mb-4">Collaborators</h2>
+           <div style="display: flex; justify-content: space-around;">
+
+          
+            <div>
+            <img src="./samsung.jpg" alt="">
+           </div>
+           <div>
+            <img src="./colorado.png" alt="">
+           </div>
+           <div>
+            <img src="./umbc.jpg" alt="">
+           </div>
           </div>
+        </div>
         </div>
         <div class="row">
 
@@ -379,7 +258,7 @@ We therefore foresee a group of people attending the workshop who fall under the
       </div>
     </footer>
 
-  </div>
+
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
