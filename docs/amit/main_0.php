@@ -33,6 +33,14 @@
 </div>
 
 <div class="w3-display-container mySlides">
+  <img src="amit sheth_talk photo_tedxuofsc_1.jpg" style="width:100%">
+  
+	  <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
+		As a Leader: As a leader, he built three world-class academic research organizations (LSDIS, Kno.e.sis, AI Institute of South Carolina), translated research innovations into significant economic activities, and served on many scientific advisory committees and company boards.
+	  </div>
+</div>
+
+<div class="w3-display-container mySlides">
   <img src="sheth-researcher.jpg" style="width:100%">
 
 	  <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
