@@ -1,0 +1,664 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Examining emerging capabilities and mitigating potential risks of VLLMs</title>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="https://aiisc.ai/kiwo-icwsm/images/ai_institute_logo.png" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<style>
+		ul>li{
+			margin-top: 2%;
+			color: #000;
+		}
+		p{
+			color: #000;
+			text-align: justify;
+		}
+	</style>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<h2>
+									<a href="index.html" class="logo"><strong>Examining emerging
+										capabilities and mitigating
+										potential risks of VLLMs</strong></a>
+
+									</h2>
+								
+								</header>
+
+							<!-- Content -->
+								<section>
+									<div style="font-weight: 800;font-size:medium">
+
+										
+
+									</div>
+									
+									<header class="main">
+										<h2 id="abstract">ABSTRACT</h2>
+									</header>
+
+									<!-- <span style="background-color:black;" class="image main"><img src="./images/abstract.png"   alt="" /></span> -->
+
+									<p>
+										The emergence of very large language models
+(VLLMs) has dramatically altered the trajectory of
+progress in AI and its applications. With the release
+of ChatGPT, that excitement has now transcended
+boundaries from AI researchers to the common
+man; indeed it asserts we are living in an exciting
+time of scientific proliferation. However, we see two
+divergent community views on VLLMs. Believers
+in the magical powers of VLLMs claim that VLLMs
+are autodidactic in learning a wide gamut of new
+capabilities – referred to as "emerging capabilities"
+in the community – an effect that gets pronounced
+with model size and dataset scale. On the other
+hand, critics are not yet prepared to acknowledge
+the self-learning power of VLLMs; they criticize it
+as only a statistical learner and out several flaws
+– hallucination being the most prominent one. In
+this forum, we want to bring together both com-
+munities – the believers and the critics, to explore
+exciting tasks together: (i) CT2 - Counter Turing
+Test: AI-Generated Text Detection, and (ii) - HILT
+HallucinatIon eLiciaTion through automatic detection and mitigation. Expect this to be an exciting
+forum to discuss, debate, and explore exciting scientific pathways for the future.
+									</p>
+									<hr class="major" />
+
+									<h2 id="schedule">1) Rationale - Why does AI need to be
+										civilized? - Call for Papers (CFP)</h2>
+									
+
+										<p>
+											Advances in AI during the past couple of years
+have led to AI systems becoming immensely more
+powerful than ever before. While their applications
+for social good cannot be overstated, as an unintended by-product, risks of misuse have also been
+exacerbated. This prompted an open petition letter
+<a href="https://www.overleaf.com/project/641a4e37c41c86921947e0a9#cite.aihalt2023" target="_blank" rel="noopener noreferrer">(Marcus and of Life Institute, 2023)</a> (led by <a href="https://en.wikipedia.org/wiki/Gary_Marcus" target="_blank" rel="noopener noreferrer">Gary
+Marcus</a>) by the nonprofit Future of Life Institute,
+calling for all AI labs to immediately pause for at
+least 6 months "moratorium" the training of AI systems more powerful than GPT-4. The letter has
+(18K+ and still counting) signatures from technologists and luminaries, which include Yoshua Bengio,
+Stuart Russell, Elon Musk, Steve Wozniak, and
+Andrew Yang. It also includes policy leaders such
+as Rachel Bronson, president of the Bulletin of
+the Atomic Scientists, a science-oriented advocacy
+group known for its warnings against humanity-ending nuclear war. On the other hand, the op-
+posing campaign, which doesn’t believe in halting
+scientific progress, has powerful people too, including Bill Gates (gat, 2023), Andrew Ng (aih, 2023),
+Yann LeCun (aih, 2023) and many others. Furthermore, both the United States (whi, 2023) and the
+European Union (eua, 2023) governments have
+recently proposed regulatory frameworks for AI.
+This is a significant time in the history of scientific development. In this forum, we will discuss
+and debate emerging capabilities and mitigating
+potential risks and limitations of VLLMs. Call for
+papers includes, but is not limited to: • unique
+emerging abilities of VLLM; • negative, position,
+and full paper on potential risks of VLLMs; • ethics
+and VLLMs; • making VLLMs more responsible;
+• detection AI-generated content; • mitigation of
+harmful hallucinations.
+										</p>
+
+									
+									
+
+									
+
+				
+
+					<h2 id="bios">2) Two Shared Tasks</h2>
+
+					
+
+					<p>
+						Shared tasks are an effective way to attract re-
+search attention to any emerging area. We will
+host two shared tasks: (i) CT <sup>2</sup>, and (ii) HILT . The
+findings of CT<sup>2</sup> will mitigate misusage risks, while HILT
+endeavors to make VLLMs more humansensitive and responsible.
+					</p>
+
+
+					<h3>2.1) CT<sup>2</sup> - Counter Turing Test for
+						AI-Generated Text Detection</h3>
+						
+
+						<p>
+							With the emergence of ChatGPT, the risk of AI-
+generated content has reached an alarming apoca-
+lypse. ChatGPT has been declared banned by the
+school system in NYC (Rosenblatt, 2023), Google
+ads (Grant and Metz, 2022), and Stack Overflow
+(Makyen and Olson, 1969), while scientific conferences like ACL (Chairs, 2023) and ICML (Foundation, 2023) have released new policies deterring
+the usage of ChatGPT for scientific writing. After
+the initial skepticism, ChatGPT has been seen as a
+listed author in scientific papers (Kung et al., 2023;
+O’Connor et al., 2022), while Elsevier (Elsevier,
+2023) and Springer (Springer, 2023) have adopted
+more inclusive guidelines on the use of ChatGPT
+for scientific writing.
+						</p>
+						<p>
+							Indeed, detecting AI-generated text has sud-
+denly emerged as a concern that needs immediate
+attention. While watermarking as a potential so-
+lution to the problem is being studied by OpenAI
+(Wiggers, 2022b), a handful of systems that detect
+AI-generated text such as GPT-2 output detector
+(Wiggers, 2022a), GLTR (Strobelt et al., 2022),
+GPTZero (Tian, 2022), DetectGPT (Mitchell et al.,
+2023), etc. have recently been orange observed in
+practical use. To address the inevitable question
+of ownership attribution for AI-generated artifacts,
+the US Copyright Office (Office, 2023) released a
+statement stating that if the content is traditional elements of authorship produced by a machine, the
+work lacks human authorship and the office will not
+register it for copyright. Given this cynosural spotlight on generative AI, AI-generated text detection
+is a topic that needs a thorough investigation. In
+this regard, there are three families of techniques
+proposed so far:
+						</p>
+
+						<ul>
+							<li>
+								<strong>Watermarking :</strong> <span>
+									First introduced in (Aaronson,
+2022), watermarking AI-generated text involves
+embedding an imperceptible code or signal to ver-
+ify the author of a particular text with certainty.
+(Kirchenbauer et al., 2023) proposed this by select-
+ing the next token pseudorandomly (rather than
+simply choosing the one with the highest probabil-
+ity) using a cryptographic pseudorandom function
+whose key is only possessed by the LLM maker.
+It would be remiss not to mention the most obvious pitfall of this approach, which is that if the text
+is altered or modified in any way, detecting the
+watermark proves to be a difficult task.
+								</span>
+							</li>
+							<li>
+								<strong>
+									Negative log likelihood (NLL) :
+								</strong>
+								<span>
+									NLL-based implementations such as DetectGPT (Mitchell et al.,
+2023) have demonstrated the detection of AI-generated text by comparing log-likelihood of generated tokens after perturbing the input text by
+replacing some tokens with others. If the new,
+perturbed version of the text lies in the negative
+curvature regions of log-likelihood, it was likely
+generated by AI. The limitation of this approach
+is that it requires access to the log probabilities of
+the text in order to work which implies that knowledge of which LLM was used to generate the text
+is essential;
+								</span>
+							</li>
+							<li><strong>Perplexity and Burstiness:</strong>
+								<span>
+									GPTZero (Tian,
+2022), an example of a detection technique based
+on perplexity and burstiness, has demonstrated
+that a text with lower perplexity (a measure of how
+predictable the text is), and with lower burstiness
+(the measure of how uniform text is) has a high
+probability of being generated by an AI. The limitations here are that GPTZero also requires access
+to log probabilities of text as well as the fact that
+it approximates perplexity values using a linear
+model.
+
+								</span><br>
+								<span>
+									Although AI-generated text detection has suddenly received immense attention, Liang et al.
+(Liang et al., 2023) suggest that available AI-generated text detectors consistently misclassify non-
+native English writing samples as AI-generated,
+whereas native writing samples are accurately
+identified, highlighting the ethical implications of deploying AI-generated content detectors and risking
+misrepresentation. This implies that a community
+effort is needed to tackle the issue of detectors
+penalizing under-represented sub-population(s).
+In our recent publication, "Counter Turing Test
+CT 2: AI-Generated Text Detection Challenges"
+(Chakraborty et al., 2023), we introduce a benchmark for evaluating the robustness of AGTD techniques. Our results clearly show the vulnerabilities
+of current AGTD methods. As discussions on AI
+policy intensify, assessing the detectability of content produced by LLMs is vital. To this end, we
+present the AI Detectability Index (ADI) for quantitative ranking based on detectability.
+								</span>
+								<br>
+								<span>The CT<sup>2</sup>  task will be the first of its kind in bringing together researchers in advancing the area of
+									detecting AI-assisted generated text.</span>
+							</li>
+						</ul>
+						
+						<h4>
+							2.1.1)  Data to be released and the task
+						</h4>
+					<p>
+						CT<sup>2</sup> will consist of three sub-tasks. We will be
+releasing 100K data points, consisting of (i) prompt,
+(ii) human-written text, and (iii) AI-generated text
+by 15 different LLMs.
+					</p>
+					<ul>
+						<li><strong>Task A : </strong>
+						given a set of human-generated text documents vs. AI-generated text documents participants need to design techniques to detect AI-generated text. Indeed, human-written text vs.
+AI-generated text would be parallel, which means
+they will be on the same topic. In this task, we
+will let participants know that the generated text is
+from GPT, OPT, BERT, XLNet, etc. As such, this
+is an LLM-specific AI detection task.
+</li>
+<li><strong>Task B:</strong>
+	 in this task, we will not tell people which
+the generated text is using which LLM. Participants need to design techniques which is LLM
+agnostic.
+</li>
+<li>
+	<strong>Task C:</strong>
+	 In this task, we will offer AI-assisted writing, i.e., AI-generated text interlaced with minor
+	edits by another language model and human, as
+	input. Given the intricacies and challenges of AI-assisted writing, it would be the hardest task to
+	attempt.
+	
+</li>
+</ul>
+
+<h3>
+	2.2) HILT: HallucinatIon eLiciaTion
+through automatic detection and
+mitigation
+</h3>
+
+<p>
+	With the recent and rapid advances in the areas
+of LLMs and Generative AI, the pre-eminent and
+ubiquitous concern is of hallucination. We release
+large-scale first-of-its-kind human-annotated data
+with detailed annotations on - intrinsic vs. extrinsic hallucinations, and degree of hallucination, and
+we ask participants to come up with either black-box factuality Assessment and/or evidence-based
+fact-checking. First, we define categories of hallucinations:
+</p>
+
+<ul>
+	<li>
+		<strong>Intrinsic Hallucination:</strong> Intrinsic hallucination
+			refers to the phenomenon when an LLM gener-
+			ates text that topically slightly deviates from the
+			input and/or has a lack of grounding in reality. For
+			example, given a prompt “USA on Ukraine war ”
+			an LLM generates “U.S. President Barack Obama
+			says the U.S. will not put troops in Ukraine”. We
+			can see a clear case of intrinsic hallucination as
+			the US president during the Ukraine-Russia war is
+			Joe Biden, not Barack Obama, contradicting the
+			reality.
+	</li>
+	<li>
+	<strong>Extrinsic Hallucination : </strong>	We define extrinsic hal-
+lucination to be the generated output from an LLM
+that cannot be verified, or contradicted from the
+source content provided as prompt. For exam-
+ple, we provide a prompt stating “North Korea has
+conducted six underground nuclear tests, and a
+seventh may be on the way.”, and the resulting output generated by the model was “The international
+community has condemned North Korea’s nuclear
+tests, with the UN Security Council imposing a
+range of sanctions in response. The US and other
+world powers have urged North Korea to abandon
+its nuclear weapons program and to comply with
+international law.” As the source input makes no
+reference to the U.S. or U.N. Security Council imposing any sanctions, the claimed imposition of
+sanctions cannot be verified from the input alone.
+<br> <br>
+Next, based on the degree of hallucination, we
+categorize it into three levels: (i) Mild: At this
+level, hallucination can be categorized as minor
+and the generated output may just contain innocu-
+ous errors or inconsistencies in the text. The generated text will not significantly impact its coher-
+ence, (ii) Moderate: Moderate hallucination will
+involve more significant errors or distortions in the
+generated text. The text may contain nonsensical phrases or ideas that deter from the topic at
+hand., (iii) Alarming: Alarming hallucinations in
+LLM entail a drastic deviation from the intended
+output. Such deviations can also be offensive and
+incongruous with the desired output. In our recent
+publication, "The Troubling Emergence of Hallucination in Large Language Models – An Extensive
+Definition, Quantification, and Prescriptive Remedi-
+ations" (Rawte et al., 2023), we offer a fine-grained
+discourse on profiling hallucination based on its degree, orientation, and category, along with offering
+strategies for alleviation.
+	</li>
+</ul>
+
+<h4>2.2.1) Detection Methods</h4>
+<p>
+	There are mainly two broad ways: (i) Black-box
+factuality assessment: Black-box hallucination
+detection approaches, such as SelfCheckGPT
+(Manakul et al., 2023), endeavor to fact-check models without utilizing an external database of facts.
+In the case of SelfCheckGPT, it has the capacity
+to fact-check models in a zero-resource fashion by
+evaluating if the generated facts have similarities or
+if they contradict each other. (ii) Evidence-based
+fact checking: Evidence-based fact-checking,
+such as LLM-Augmenter (Peng et al., 2023), leverages the use of task-specific databases or similar
+reliable resources that contain accurate facts.
+</p>
+
+<h4>2.2.2) Data to be released and the task</h4>
+
+<p>
+	We will be releasing 20K annotated data manually
+labelled at sentence level on -i) intrinsic vs. extrinsic hallucination, and ii) degree of hallucination
+mild, moderate, and alarming
+</p>
+
+<ul>
+	<li>
+		<strong>Task A : </strong>Given an AI-generated text and associated prompt the task is to detect hallucination
+		at the sentence level. For the competition purpose overall hallucination detection accuracy will
+		be considered averaged over sub-categories like
+		intrinsic and extrinsic.
+	</li>
+	<li>
+		<strong>Task B:</strong>This task is to propose hallucination mitigation techniques. While evidence-based fact-
+		checking is well studied in the fact-checking community (Thorne et al., 2018; Wang, 2017; Garg
+		and Sharma, 2020; Kwiatkowski et al., 2019; Jiang
+		et al., 2020; Gupta and Srikumar, 2021; Onoe
+		et al., 2021; Aly et al., 2021), here in this forum
+		we are mainly interested in black-box factuality
+		assessment. However, teams can use external
+		resources to mitigate hallucination and will be considered in the evidence-based mitigation group.
+		We will request participants to report such experiments in their reports. Since it is hard to assess
+		whether the reformed text still has hallucinations,
+		Task B will mostly be an academic exercise.
+	</li>
+</ul>
+
+					<div>
+
+						<h3 id="topic">3) Invited Talks & Panel [tentative]</h3>
+
+						<p><strong>Talks:</strong> We wish to have 3 speakers from industry/academia, people who have experience in build-
+						ing LLMs. We (tentatively) plan to invite Prof. Yejin
+						Choi, University of Washington and Allen Institute for Artificial Intelligence; (confirmed) Dr. Vin-
+						odkumar Prabhakaran, Senior Research Scientist, Google LLC, co-author of PaLM (Chowdhery
+						et al., 2022); and Nick Ryder who is a principal
+						researcher at is the co-author of the GPT3 (Brown
+						et al., 2020), works at OpenAI.</p>
+						
+						
+						<h3 id="workshop">4) Workshop Organizers</h3>
+						
+						<style>
+							table {
+							  width: 100%;
+							  border-collapse: collapse;
+							}
+						  
+							th, td {
+							  padding: 15px;
+							  text-align: left;
+							  width: 30%;
+							}
+						  
+							img {
+							  margin-right: 10px;
+							}
+						  </style>
+						  
+						  <table border="1">
+							<thead>
+							  <tr>
+								<th>Name</th>
+								<th>Web, Email, GScholar</th>
+								<th>Research Interest & Organizing activities</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>
+								  <img src="images/passport_amitava.jpg" width="150" valign="top" /><br />
+								  Dr. Amitava Das
+								</td>
+								<td>
+								  <a href="http://www.amitavadas.com">Web</a><br />
+								  <a href="mailto:amitava.das2@wipro.com">Email</a><br />
+								  <a href="https://scholar.google.co.in/citations?hl=en&user=HYpfhaEAAAAJ">Google Scholar</a>
+								</td>
+								<td>
+								  Dr. Amitava Das is a Research Associate Professor at AIISC, UofSC, USA, and an advisory scientist at Wipro AI Labs, Bangalore, India.
+								  <br />
+								  <u><strong>Research interests:</strong></u> Code-Mixing and Social Computing.
+								  <br />
+								  <u><strong>Organizing Activities [selective]:</strong></u>
+								  <br />
+								  - <a href="https://aiisc.ai/defactify/">DEFACTIFY 1.0 @AAAI2022</a>
+								  <br />
+								  - <a href="https://defactify.com/">DEFACTIFY 2.0 @AAAI2023</a>
+								  <br />
+								  - <a href="http://www.amitavadas.com/Memotion.html">Memotion @SemEval2020</a>
+								  <br />
+								  - <a href="http://www.amitavadas.com/SentiMix.html">SentiMix @SemEval2020</a>
+								  <br />
+								  - <a href="https://code-switching.github.io/2020/">Computational Approaches to Linguistic Code-Switching @ LREC 2020</a>
+								  <br />
+								  - <a href="http://lcs2.iiitd.edu.in/CONSTRAINT-2021/">CONSTRAINT @AAAI2021</a>
+								</td>
+							  </tr>
+							  <tr>
+								<td>
+								  <img src="images/Amit.jpg" width="150" valign="top" /><br />
+								  Dr. Amit Sheth
+								</td>
+								<td>
+								  <a href="http://amit.aiisc.ai/">Web</a><br />
+								  <a href="mailto:amit@sc.edu">Email</a><br />
+								  <a href="https://scholar.google.com/citations?user=2T3H4ekAAAAJ">Google Scholar</a>
+								</td>
+								<td>
+								  Dr. Amit Sheth is the NCR Chair and a Professor of CSE at the University of South Carolina. He founded the Artificial Intelligence Institute, which now has nearly 50 researchers. He is a fellow of IEEE, ACM, AAAS, and AAAI. His significant awards include the 2023 IEEE Wallace McDowell award.
+								  <br />
+								  <u><strong>Research interests:</strong></u> Organized over 50 workshops, given over 50 tutorials, nearly 100 keynotes on Neurosymbolic AI, Knowledge Graphs, NLP/NLU, AI for Social Good, etc.
+								  <br />
+								  <u><strong>Organizing Activities [selective]:</strong></u>
+								  <br />
+								  - <a href="http://cysoc.aiisc.ai/">Cysoc2021 @ ICWSM2021</a>
+								  <br />
+								  - <a href="http://emoji2021.aiisc.ai/">Emoji2021 @ICWSM2021</a>
+								  <br />
+								  - <a href="https://aiisc.ai/KiL2021/index.html">KiLKGC 2021 @KGC21</a>
+								</td>
+							  </tr>
+							  <tr>
+								<td>
+								  <img src="images/aman.jpg" width="150" valign="top" /><br />
+								  Aman Chadha
+								</td>
+								<td>
+								  <a href="https://www.aman.info">Web</a><br />
+								  <a href="mailto:hi@aman.ai">Email</a><br />
+								  <a href="http://scholar.aman.ai">Google Scholar</a>
+								</td>
+								<td>
+								  Aman Chadha is an Applied Science Manager at Amazon Alexa AI and a Researcher at Stanford AI.
+								  <br />
+								  <u><strong>Research interests:</strong></u> Multimodal AI, On-device AI, and Human-Centered AI.
+								</td>
+							  </tr>
+							  <tr>
+								<td>
+								  <img src="images/vinija.png" width="150" valign="top" /><br />
+								  Vinija Jain
+								</td>
+								<td>
+								  <a href="https://vinija.ai/">Web</a><br />
+								  <a href="mailto:vinija@gmail.com">Email</a><br />
+								  <a href="https://scholar.google.com/citations?user=oYaD1NcAAAAJ&hl=en&oi=ao">Google Scholar</a>
+								</td>
+								<td>
+								  Vinija Jain is a Machine Learning Lead at Amazon Music and a Researcher at Stanford AI.
+								  <br />
+								  <u><strong>Research interests:</strong></u> Recommender Systems and NLP.
+								</td>
+							  </tr>
+							</tbody>
+						  </table>
+						  
+							
+
+				
+
+
+						
+					
+								
+					
+
+
+								
+						<h2 id="reference">BIBLOGRAPHICAL REFERENCES</h2>
+
+
+
+<div class="csl-bib-body">
+	<ul>
+		
+	
+  <li data-csl-entry-id="watermark" class="csl-entry">Aaronson, S. (2022). <i>My Projects at OpenAI</i>. https://scottaaronson.blog/?p=6823</li>
+  <li data-csl-entry-id="Aly21Feverous" class="csl-entry">Aly, R., Guo, Z., Schlichtkrull, M. S., Thorne, J., Vlachos, A., Christodoulopoulos, C., Cocarascu, O., &#38; Mittal, A. (2021a). <i>FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information</i>.</li>
+  <li data-csl-entry-id="https://doi.org/10.48550/arxiv.2106.05707" class="csl-entry">Aly, R., Guo, Z., Schlichtkrull, M., Thorne, J., Vlachos, A., Christodoulopoulos, C., Cocarascu, O., &#38; Mittal, A. (2021b). <i>FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information</i>. https://arxiv.org/abs/2106.05707</li>
+  <li data-csl-entry-id="gatesaihalt" class="csl-entry"><i>Bill Gates says calls to pause AI won’t “solve challenges.”</i> (2023). https://www.reuters.com/technology/bill-gates-says-calls-pause-ai-wont-solve-challenges-2023-04-04/</li>
+  <li data-csl-entry-id="whitehouseaibill" class="csl-entry"><i>Blueprint for an AI Bill of Rights: Making Automated Systems Work For Tge American People</i>. (2023). https://www.whitehouse.gov/ostp/ai-bill-of-rights/</li>
+  <li data-csl-entry-id="NEURIPS2020_1457c0d6" class="csl-entry">Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D., Wu, J., Winter, C., … Amodei, D. (2020). Language Models are Few-Shot Learners. In H. Larochelle, M. Ranzato, R. Hadsell, M. F. Balcan, &#38; H. Lin (Eds.), <i>Advances in Neural Information Processing Systems</i> (Vol. 33, pp. 1877–1901). Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf</li>
+  <li data-csl-entry-id="chairs_2023" class="csl-entry">Chairs, P. (2023). ACL 2023 policy on Ai Writing Assistance. In <i>ACL 2023</i>. https://2023.aclweb.org/blog/ACL-2023-policy/</li>
+  <li data-csl-entry-id="chakraborty2023ct2" class="csl-entry">Chakraborty, M., Tonmoy, S. M. T. I., Zaman, S. M. M., Sharma, K., Barman, N. R., Gupta, C., Gautam, S., Kumar, T., Jain, V., Chadha, A., Sheth, A. P., &#38; Das, A. (2023). <i>Counter Turing Test CT^2: AI-Generated Text Detection is Not as Easy as You May Think – Introducing AI Detectability Index</i>.</li>
+  <li data-csl-entry-id="chowdhery2022palm" class="csl-entry">Chowdhery, A., Narang, S., Devlin, J., Bosma, M., Mishra, G., Roberts, A., Barham, P., Chung, H. W., Sutton, C., Gehrmann, S., Schuh, P., Shi, K., Tsvyashchenko, S., Maynez, J., Rao, A., Barnes, P., Tay, Y., Shazeer, N., Prabhakaran, V., … Fiedel, N. (2022). <i>PaLM: Scaling Language Modeling with Pathways</i>.</li>
+  <li data-csl-entry-id="elsevier_chatgpt" class="csl-entry">Elsevier. (2023). <i>The Use of AI and AI-assisted Technologies in Scientific Writing</i>. https://www.elsevier.com/about/policies/publishing-ethics?fbclid=IwAR2DBcQShp05yS7y7BT0LUxZBTVLego78m4j2tOKshCiWlCcXQpwHADka1s#Authors</li>
+  <li data-csl-entry-id="foundation_2023" class="csl-entry">Foundation, N. I. P. S. (2023). In <i>ICML 2023</i>. Clarification on Large Language Model Policy LLM. https://icml.cc/Conferences/2023/llm-policy</li>
+  <li data-csl-entry-id="9337152" class="csl-entry">Garg, S., &#38; Sharma, D. K. (2020). <i>New Politifact: A Dataset for Counterfeit News</i>. 17–22. https://doi.org/10.1109/SMART50582.2020.9337152</li>
+  <li data-csl-entry-id="grant_metz_2022" class="csl-entry">Grant, N., &#38; Metz, C. (2022). A new chat bot is a “code red” for google’s search business. In <i>The New York Times</i>. The New York Times. https://www.nytimes.com/2022/12/21/technology/ai-chatgpt-google-search.html</li>
+  <li data-csl-entry-id="https://doi.org/10.48550/arxiv.2106.09248" class="csl-entry">Gupta, A., &#38; Srikumar, V. (2021). <i>X-FACT: A New Benchmark Dataset for Multilingual Fact Checking</i>. https://arxiv.org/abs/2106.09248</li>
+  <li data-csl-entry-id="jiang2020hover" class="csl-entry">Jiang, Y., Bordia, S., Zhong, Z., Dognin, C., Singh, M., &#38; Bansal., M. (2020). <i>HoVer: A Dataset for Many-Hop Fact Extraction And Claim Verification</i>. https://aclanthology.org/2020.findings-emnlp.309.pdf</li>
+  <li data-csl-entry-id="kirchenbauer2023watermark" class="csl-entry">Kirchenbauer, J., Geiping, J., Wen, Y., Katz, J., Miers, I., &#38; Goldstein, T. (2023). <i>A Watermark for Large Language Models</i>.</li>
+  <li data-csl-entry-id="https://doi.org/10.48550/arxiv.1804.08559" class="csl-entry">Kumar, S., &#38; Shah, N. (2018). <i>False Information on Web and Social Media: A Survey</i>. arXiv. https://doi.org/10.48550/ARXIV.1804.08559</li>
+  <li data-csl-entry-id="kung2023performance" class="csl-entry">Kung, T. H., Cheatham, M., Medenilla, A., Sillos, C., De Leon, L., Elepaño, C., Madriaga, M., Aggabao, R., Diaz-Candido, G., Maningo, J., &#38; others. (2023). Performance of ChatGPT on USMLE: Potential for AI-assisted medical education using large language models. <i>PLoS Digital Health</i>, <i>2</i>(2), e0000198.</li>
+  <li data-csl-entry-id="kwiatkowski-etal-2019-natural" class="csl-entry">Kwiatkowski, T., Palomaki, J., Redfield, O., Collins, M., Parikh, A., Alberti, C., Epstein, D., Polosukhin, I., Devlin, J., Lee, K., Toutanova, K., Jones, L., Kelcey, M., Chang, M.-W., Dai, A. M., Uszkoreit, J., Le, Q., &#38; Petrov, S. (2019). Natural Questions: A Benchmark for Question Answering Research. <i>Transactions of the Association for Computational Linguistics</i>, <i>7</i>, 452–466. https://doi.org/10.1162/tacl_a_00276</li>
+  <li data-csl-entry-id="liang2023gpt" class="csl-entry">Liang, W., Yuksekgonul, M., Mao, Y., Wu, E., &#38; Zou, J. (2023). <i>GPT detectors are biased against non-native English writers</i>.</li>
+  <li data-csl-entry-id="makyen_olson_1969" class="csl-entry">Makyen, M., &#38; Olson, P. (1969). Temporary policy: Chatgpt is banned. In <i>Meta Stack Overflow</i>. https://meta.stackoverflow.com/questions/421831/temporary-policy-chatgpt-is-banned</li>
+  <li data-csl-entry-id="manakul2023selfcheckgpt" class="csl-entry">Manakul, P., Liusie, A., &#38; Gales, M. J. (2023). <i>SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models</i>. https://arxiv.org/abs/2303.08896</li>
+  <li data-csl-entry-id="aihalt2023" class="csl-entry">Marcus, G., &#38; of Life Institute, F. (2023). <i>Pause Giant AI Experiments: An Open Letter</i>. https://futureoflife.org/open-letter/pause-giant-ai-experiments/</li>
+  <li data-csl-entry-id="mitchell2023detectgpt" class="csl-entry">Mitchell, E., Lee, Y., Khazatsky, A., Manning, C. D., &#38; Finn, C. (2023). Detectgpt: Zero-shot machine-generated text detection using probability curvature. <i>ArXiv Preprint ArXiv:2301.11305</i>.</li>
+  <li data-csl-entry-id="o2022open" class="csl-entry">O’Connor, S., &#38; others. (2022). Open artificial intelligence platforms in nursing education: Tools for academic progress or abuse? <i>Nurse Education in Practice</i>, <i>66</i>, 103537–103537.</li>
+  <li data-csl-entry-id="copyright_2023" class="csl-entry">Office, C. (2023, March). Copyright Registration Guidance: Works Containing Material Generated by Artificial Intelligence. <i>U.S. Copyright Office, Library of Congress.</i> https://public-inspection.federalregister.gov/2023-05321.pdf</li>
+  <li data-csl-entry-id="onoe2021creak" class="csl-entry">Onoe, Y., Zhang, M. J. Q., Choi, E., &#38; Durrett, G. (2021a). CREAK: A Dataset for Commonsense Reasoning over Entity Knowledge. <i>OpenReview</i>.</li>
+  <li data-csl-entry-id="https://doi.org/10.48550/arxiv.2109.01653" class="csl-entry">Onoe, Y., Zhang, M. J. Q., Choi, E., &#38; Durrett, G. (2021b). <i>CREAK: A Dataset for Commonsense Reasoning over Entity Knowledge</i>. https://doi.org/10.48550/ARXIV.2109.01653</li>
+  <li data-csl-entry-id="peng2023LLMAugmenter" class="csl-entry">Peng, B., Galley, M., He, P., Cheng, H., Xie, Y., Hu, Y., Huang, Q., Liden, L., Yu, Z., &#38; andJianfeng Gao, W. C. (2023). <i>Check Your Facts and Try Again: Improving Large Language Models with External Knowledge and Automated Feedback</i>.</li>
+  <li data-csl-entry-id="euaiproposal" class="csl-entry"><i>Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL LAYING DOWN HARMONISED RULES ON ARTIFICIAL INTELLIGENCE (ARTIFICIAL INTELLIGENCE ACT) AND AMENDING CERTAIN UNION LEGISLATIVE ACTS</i>. (2023). https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%5C%253A52021PC0206</li>
+  <li data-csl-entry-id="rawte2023hallucination" class="csl-entry">Rawte, V., Chakraborty, S., Agnibh Pathak, A. S., Tonmoy, S. M. T. I., Aman Chadha, A. P. S., &#38; Das, A. (2023). <i>The Troubling Emergence of Hallucination in Large Language Models – An Extensive Definition, Quantification, and Prescriptive Remediations</i>.</li>
+  <li data-csl-entry-id="rosenblatt_2023" class="csl-entry">Rosenblatt, K. (2023, January). CHATGPT banned from New York City public schools’ devices and Networks. <i>NBCNews.Com</i>. https://www.nbcnews.com/tech/tech-news/new-york-city-public-schools-ban-chatgpt-devices-networks-rcna64446</li>
+  <li data-csl-entry-id="schuster-etal-2021-get" class="csl-entry">Schuster, T., Fisch, A., &#38; Barzilay, R. (2021). Get Your Vitamin C! Robust Fact Verification with Contrastive Evidence. <i>Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</i>, 624–643. https://www.aclweb.org/anthology/2021.naacl-main.52</li>
+  <li data-csl-entry-id="shu2018fakenewsnet" class="csl-entry">Shu, K., Mahudeswaran, D., Wang, S., Lee, D., &#38; Liu, H. (2018). FakeNewsNet: A Data Repository with News Content, Social Context and Dynamic Information for Studying Fake News on Social Media. <i>ArXiv Preprint ArXiv:1809.01286</i>.</li>
+  <li data-csl-entry-id="10.1145/3137597.3137600" class="csl-entry">Shu, K., Sliva, A., Wang, S., Tang, J., &#38; Liu, H. (2017). Fake News Detection on Social Media: A Data Mining Perspective. <i>SIGKDD Explor. Newsl.</i>, <i>19</i>(1), 22–36. https://doi.org/10.1145/3137597.3137600</li>
+  <li data-csl-entry-id="10.1145/3289600.3290994" class="csl-entry">Shu, K., Wang, S., &#38; Liu, H. (2019). Beyond News Contents: The Role of Social Context for Fake News Detection. <i>Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining</i>, 312–320. https://doi.org/10.1145/3289600.3290994</li>
+  <li data-csl-entry-id="springer_chatgpt" class="csl-entry">Springer. (2023). <i>Guidance on the use of Large Language Models (LLM) e.g. ChatGPT</i>. https://www.springer.com/journal/10584/updates/24013930</li>
+  <li data-csl-entry-id="gltr" class="csl-entry">Strobelt, H., Gehrmann, S., &#38; Rush, A. (2022). <i>Giant Language model Test Room</i>. http://gltr.io/dist/index.html</li>
+  <li data-csl-entry-id="thorne-vlachos-2021-evidence" class="csl-entry">Thorne, J., &#38; Vlachos, A. (2021). Evidence-based Factual Error Correction. <i>Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)</i>, 3298–3309. https://doi.org/10.18653/v1/2021.acl-long.256</li>
+  <li data-csl-entry-id="thorne-etal-2018-fever" class="csl-entry">Thorne, J., Vlachos, A., Christodoulopoulos, C., &#38; Mittal, A. (2018). <i>FEVER: a Large-scale Dataset for Fact Extraction and VERification</i>. 809–819. https://doi.org/10.18653/v1/N18-1074</li>
+  <li data-csl-entry-id="GPTZero" class="csl-entry">Tian, E. (2022). <i>GPTZero</i>. https://gptzero.me/</li>
+  <li data-csl-entry-id="vo2020facts" class="csl-entry">Vo, N., &#38; Lee, K. (2020). Where Are the Facts? Searching for Fact-checked Information to Alleviate the Spread of Fake News. <i>Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP 2020)</i>.</li>
+  <li data-csl-entry-id="wang-2017-liar" class="csl-entry">Wang, W. Y. (2017). <i>Liar, Liar Pants on Fire: A New Benchmark Dataset for Fake News Detection</i>. 422–426. https://doi.org/10.18653/v1/P17-2067</li>
+  <li data-csl-entry-id="2019TabFactA" class="csl-entry">Wenhu Chen, &#38; Wang, W. Y. (2020, April). TabFact : A Large-scale Dataset for Table-based Fact Verification. <i>International Conference on Learning Representations (ICLR)</i>.</li>
+  <li data-csl-entry-id="gpt-od" class="csl-entry">Wiggers, K. (2022a). <i>GPT-2 Output Detector Demo</i>. https://openai-openai-detector.hf.space/</li>
+  <li data-csl-entry-id="tc-gpt" class="csl-entry">Wiggers, K. (2022b). <i>OpenAI’s attempts to watermark AI text hit limits</i>. https://techcrunch.com/2022/12/10/openais-attempts-to-watermark-ai-text-hit-limits</li>
+  <li data-csl-entry-id="aihaltopposition" class="csl-entry"><i>Yann LeCun and Andrew Ng: Why the 6-month AI Pause is a Bad Idea</i>. (2023). https://www.youtube.com/watch?v=BY9KV8uCtj4&#38;ab_channel=DeepLearningAI</li>
+</ul>
+</div>
+
+
+						
+					</div>
+
+				
+					
+
+					
+					
+			
+
+												
+
+										
+								</section>
+
+
+						</div>
+					</div>
+
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!-- <section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section> -->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<span style="background-color:#f5f6f7;" class="image main"><img src="https://aiisc.ai/assets/img/logo.png"   alt="" /></span>
+
+									<ul>
+										<li><a href="#abstract">ABSTRACT</a></li>
+										<li><a href="#schedule">1) Rationale - Why does AI need to be civilized? - Call for Papers (CFP)</a></li>
+										<li><a href="#bios">2) Two Shared Tasks</a></li>
+										<li><a href="#topic">3) Invited Talks & Panel [tentative]</a></li>
+										<li><a href="#workshop">4) Workshop Organizers</a></li>
+										<li><a href="#reference">BIBLOGRAPHICAL REFERENCES</a></li>
+
+										
+									</ul>
+								</nav>
+
+					
+
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
