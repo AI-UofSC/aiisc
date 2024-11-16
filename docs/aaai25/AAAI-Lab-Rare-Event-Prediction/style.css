@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+header {
+    background-color: #530000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 14px 20px;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #530000;
+    transition: background-color 0.3s;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #530000;
+}
+
+.biography {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px;
+}
+
+.biography .bio-image {
+    margin-right: 20px;
+}
+
+.biography .bio-image img {
+    width: 100px; /* Adjust the size of the image */
+    height: 100px;
+    object-fit: cover; /* Ensures image aspect ratio is preserved */
+    border-radius: 50%; /* Makes the image round */
+}
+
+.biography .bio-text {
+    flex: 1;
+}
+
+.biography h3 {
+    color: #530000;
+    font-size: 20px;
+}
+
+.biography p {
+    font-size: 16px;
+}
+
+.biography p a {
+    color: #530000;
+    text-decoration: none;
+}
+
+.biography p a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* General header styling */
+header {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+
+}
+
+/* Center the content */
+.header-content {
+    position: relative;
+}
+
+/* Container for logos */
+.left-logos, .right-logos {
+    position: absolute;
+    bottom: 10px;  /* Position the logos at the bottom of the header */
+    display: flex;
+    gap: 15px;  /* Space between logos */
+}
+
+.left-logos {
+    left: 20px;  /* Align the left logos to the left side with space from margin */
+}
+
+.right-logos {
+    right: 20px;  /* Align the right logos to the right side with space from margin */
+}
+
+/* Logo size */
+.left-logos img, .right-logos img {
+    width: 200px;  /* Increased width of the logos */
+    height: 100px;  /* Increased height of the logos */
+}
+
+#biographies .bio-image img {
+            width: 150px; /* Set the width of the image */
+            height: 150px; /* Set the height of the image */
+            object-fit: cover; /* Ensures images keep their aspect ratio */
+            border-radius: 50%; /* Optional: Makes images circular */
+        }
