@@ -1,10 +1,7 @@
 <?php
 
-if(isset($_REQUEST['page'])){
-	$page = $_REQUEST['page'];
-}else{
-	$page = 0;
-}
+$page = 0;
+
 include("plugin.php");
 include($root."globals.php");
 include($root."top.php");
