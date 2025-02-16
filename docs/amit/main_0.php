@@ -195,11 +195,11 @@ function showDivs(n) {
 
 <!-- As an entreprenuer... ends -->
 
-<a href ="http://knoesis.org/projects/funding" target="_blank" title="Click the image for more funding details."><img src="http://knoesis.org/resources/images/KnoesisNov2016.png" style="width:100%;"/></a>
+<a href ="https://engineering-computer-science.wright.edu/lab/knoesis/projects" target="_blank" title="Click the image for more funding details."></a>
 
 <p>
 Three page vita overview <a href="http://knoesis.org/amit/Microsoft Word - 3page-Summary-Jan2018.docx.pdf">[PDF],</a>a CV <a href="http://knoesis.org/amit/Microsoft Word - Amit-Sheth-Vita-Jan31-2018.docx.pdf">[PDF] </a> and find additional information at <a href="http://www.linkedin.com/in/amitsheth">http://www.linkedin.com/in/amitsheth</a>
 <p>
 
 <p>For information on past and current grants, visit <a href="http://knoesis.org/amit/projects/">Dr. Sheth's project page</a>, the <a href=
-"http://knoesis.org/projects/funding">Kno.e.sis Center's funding page</a>, and <a href="http://grantome.com/search?q=@author%20%20Amit%20Sheth">Grantome</a>.</p>
+"https://engineering-computer-science.wright.edu/lab/knoesis/projects">Kno.e.sis Center's funding page</a>, and <a href="http://grantome.com/search?q=@author%20%20Amit%20Sheth">Grantome</a>.</p>
