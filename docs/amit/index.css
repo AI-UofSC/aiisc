@@ -15,9 +15,12 @@
 	
 /* General CSS Rules */
 
-	@media screen and (max-width 600px) {
-		w3-display-bottommiddle: display: none;
+	@media screen and (max-width: 600px) { 
+		.w3-display-bottommiddle { 
+			display: none; 
+		} 
 	}
+
 
 	a,
 	a:active,
