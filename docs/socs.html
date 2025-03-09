@@ -31,93 +31,6 @@
       line-height: 2em;
     }
     
-    body{
-      margin-top: 8%;
-    }
-    
-    @media (max-width: 1600px) { 
-    
-    body{
-      margin-top: 8%;
-    }
-    
-      }
-    
-      @media (max-width: 1300px) { 
-    
-    body{
-      margin-top: 12%;
-    }
-    
-      }
-    
-    @media (max-width: 1030px) { 
-    
-    body{
-      margin-top: 12%;
-    }
-    
-      }
-    
-    
-    @media (max-width: 770px) { 
-    
-    body{
-       
-      margin-top: 15%;
-    }
-      }
-      @media (max-width: 545px) { 
-    
-    body{
-       
-      margin-top: 22%;
-    }
-      }
-    
-      @media (max-width: 415px) { 
-    
-    body{
-       
-      margin-top: 28%;
-    }
-      }
-    
-      @media (max-width: 376px) { 
-    
-    body{
-       
-      margin-top: 32%;
-    }
-      }
-    
-    
-      @media (max-width: 360px) { 
-    
-    body{
-       
-      margin-top: 32%;
-    }
-      }
-    
-    
-      @media (max-width: 320px) { 
-    
-    body{
-       
-      margin-top: 36%;
-    }
-      }
-    
-      
-      @media (max-width: 282px) { 
-    
-    body{
-       
-      margin-top: 42%;
-    }
-      }
-    
     
       </style>
         
@@ -127,7 +40,7 @@
     <div class="container d-flex align-items-center">
 
       
-      <h1 class="logo me-auto"><a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>&nbsp;&nbsp;AIISC</h1>
+      <h1 class="logo me-auto"><a href="index.html" class="logo me-auto"><img src="assets/img/brain-logo.png"  alt="" class="img-fluid"></a>&nbsp;&nbsp;IRT-AI</h1>
 
 
       <!-- <nav id="navbar" class="navbar" class="shadow p-3 mb-5 bg-body rounded">
@@ -304,3 +217,15 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var header = document.getElementById("header");
+    var screen = document.getElementById("screen");
+    if (header && screen) {
+        // Get the height of the header without extra padding or margin
+        var headerHeight = header.getBoundingClientRect().height;
+        screen.style.marginTop = headerHeight + "px"; // Add space only for the header height
+    }
+  });
+</script>

@@ -10,7 +10,7 @@
 	
 
   <!-- Favicons -->
-  <link href="assets/img/logo1.png" rel="icon">
+  <link href="assets/img/brain-logo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -71,7 +71,7 @@
     <div class="container d-flex align-items-center">
 
       
-      <h1 class="logo me-auto"><a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>&nbsp;&nbsp;AIISC</h1>
+      <h1 class="logo me-auto"><a href="index.html" class="logo me-auto"><img src="assets/img/brain-logo.png"  alt="" class="img-fluid"></a>&nbsp;&nbsp;IRT-AI</h1>
       <!-- Uncomment below if you prefer to use an image logo -->
 
       <nav id="navbar" class="navbar" class="shadow p-3 mb-5 bg-body rounded">
@@ -280,3 +280,15 @@ Rationale: During the last decade, both the field of studies - NLP and CV have m
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var header = document.getElementById("header");
+    var screen = document.getElementById("screen");
+    if (header && screen) {
+        // Get the height of the header without extra padding or margin
+        var headerHeight = header.getBoundingClientRect().height;
+        screen.style.marginTop = headerHeight + "px"; // Add space only for the header height
+    }
+  });
+</script>
