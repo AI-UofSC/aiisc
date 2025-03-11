@@ -359,15 +359,8 @@ h1, h2, h3, h4, h5, h6 {
 #hero h2 {
   color: #fff;
   margin-bottom: 20px;
-  font-size: 48px;
-  font-weight: 700;
-}
-
-#hero h3 {
-  color: #fff;
-  margin-bottom: 20px;
   font-size: 40px;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 #hero p {
