@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Curriculum</title>
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --card:#111524;
+      --card2:#0f1320;
+      --border:rgba(255,255,255,.10);
+      --muted:rgba(255,255,255,.70);
+      --muted2:rgba(255,255,255,.55);
+      --text:rgba(255,255,255,.92);
+      --accent:#7cdbff;
+      --accent2:#a8ffcf;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1100px 700px at 25% -10%, rgba(124,219,255,.18), transparent 55%),
+                  radial-gradient(900px 600px at 110% 10%, rgba(168,255,207,.16), transparent 50%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{ color:inherit; text-decoration:none; }
+    .container{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 42px 18px 70px;
+    }
+
+    /* Header */
+    .header{
+      display:flex;
+      gap:18px;
+      align-items:flex-end;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    h1{
+      margin:0;
+      font-size: clamp(28px, 3.2vw, 40px);
+      letter-spacing:-.02em;
+    }
+    .sub{
+      margin:10px 0 0;
+      color:var(--muted2);
+      max-width: 720px;
+      line-height:1.4;
+    }
+    .badges{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 3px rgba(124,219,255,.10);
+    }
+
+    /* Cards */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card + .card{ margin-top: 18px; }
+    .card-header{
+      padding: 18px 18px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+    }
+    .card-title{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      min-width: 240px;
+      flex:1;
+    }
+    .icon{
+      width:44px; height:44px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      display:flex; align-items:center; justify-content:center;
+      flex:none;
+    }
+    .icon svg{ width:20px; height:20px; opacity:.9; }
+    .module-name{
+      margin:0;
+      font-size: 18px;
+      letter-spacing:-.01em;
+    }
+    .goal{
+      margin: 6px 0 0;
+      color: var(--muted2);
+      line-height:1.4;
+      font-size: 14px;
+    }
+    .tags{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .tag{
+      font-size: 12px;
+      color: var(--muted);
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .card-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .btn{
+      appearance:none;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      cursor:pointer;
+      transition: .15s ease;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.22); }
+    .btn.primary{
+      border-color: rgba(124,219,255,.40);
+      background: rgba(124,219,255,.12);
+    }
+    .btn:disabled{
+      cursor:not-allowed;
+      opacity:.55;
+      transform:none;
+    }
+
+    .card-body{ padding: 16px 18px 18px; display:grid; gap:14px; }
+
+    /* Roadmap */
+    .roadmap{
+      margin-top: 18px;
+      padding: 16px 18px;
+    }
+    .roadmap-title{
+      margin:0;
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing:.02em;
+      text-transform:none;
+    }
+    .pillrow{
+      margin-top: 10px;
+      display:flex; flex-wrap:wrap; gap:8px;
+      align-items:center;
+    }
+    .pill{
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      padding: 6px 10px;
+      border-radius: 999px;
+      white-space:nowrap;
+    }
+    .arrow{ color: rgba(255,255,255,.35); }
+
+    /* Search */
+    .searchbar{
+      margin: 16px 0 22px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .searchbox{
+      flex: 1;
+      min-width: 260px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.03);
+      padding: 10px 14px;
+    }
+    .searchbox input{
+      width:100%;
+      border:none;
+      outline:none;
+      background: transparent;
+      color: var(--text);
+      font-size: 14px;
+    }
+    .hint{
+      font-size: 12px;
+      color: var(--muted2);
+    }
+
+    /* Sections inside module */
+    .section{
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.10);
+      border-radius: 16px;
+      overflow:hidden;
+    }
+    .section-head{
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .section-head h4{
+      margin:0;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing:.01em;
+    }
+    .section-body{ padding: 12px 14px; }
+
+    /* Lessons accordion */
+    .lesson{
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .lesson:first-child{ border-top:none; }
+    .lesson summary{
+      list-style:none;
+      cursor:pointer;
+      padding: 12px 14px;
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      align-items:flex-start;
+    }
+    .lesson summary::-webkit-details-marker{ display:none; }
+    .lesson-title{
+      font-weight: 600;
+      font-size: 14px;
+      line-height:1.35;
+    }
+    .lesson-meta{
+      font-size: 12px;
+      color: var(--muted2);
+      white-space:nowrap;
+      margin-top: 2px;
+    }
+    .lesson-content{
+      padding: 0 14px 14px;
+      display:grid;
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
+    .lesson-notes{
+      color: var(--muted2);
+      font-size: 13px;
+      line-height:1.45;
+    }
+    .lesson-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+    }
+
+    /* Lists */
+    ul{ margin:0; padding-left: 18px; }
+    li{ color: var(--muted2); margin: 6px 0; font-size: 13px; line-height:1.4; }
+
+    /* Footer */
+    .footer{
+      margin-top: 22px;
+      padding: 16px 18px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .footer p{ margin:0; color: var(--muted2); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>AI Curriculum</h1>
+        <p class="sub">
+          A shareable syllabus page with lesson resources, transcript links, tools, and hands-on activities.
+        </p>
+      </div>
+      <div class="badges">
+        <span class="badge"><span class="dot"></span> Student-friendly</span>
+        <span class="badge"><span class="dot"></span> Ethics-aware</span>
+      </div>
+    </div>
+
+    <div class="card roadmap">
+      <div class="card-header">
+        <div>
+          <p class="roadmap-title">Learning Path</p>
+          <div id="roadmapPills" class="pillrow"></div>
+        </div>
+        <div class="card-actions">
+          <button class="btn" id="backToTopBtn" type="button">Back to top</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="searchbar">
+      <div class="searchbox">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" stroke="rgba(255,255,255,.65)" stroke-width="2"/>
+          <path d="M21 21l-4.35-4.35" stroke="rgba(255,255,255,.65)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input id="searchInput" placeholder="Search modules, lessons, or keywords (e.g., vectors, supervised, ethics)" />
+      </div>
+      <div class="hint">Tip: paste transcript links later — the “Add transcript” button will automatically become “Open transcript.”</div>
+    </div>
+
+    <div id="modules"></div>
+
+    <div class="card footer">
+      <div class="card-header" style="border-bottom:none; padding: 16px 18px;">
+        <div>
+          <p style="margin:0; font-size: 13px; font-weight:600;">Share this page</p>
+          <p style="margin-top:6px;">
+            Drop this file into your existing HTML site and link to it. Each lesson supports both a resource link and a transcript link.
+          </p>
+        </div>
+        <div class="card-actions">
+          <button class="btn primary" type="button" onclick="window.scrollTo({top:0, behavior:'smooth'})">Back to top</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const ROADMAP = "Foundations → Math → ML → DL → NLP → Ethics → Symbolic → Neuro-Symbolic (C3AN) → Enterprise AI → Hands-on → Capstone";
+
+    // If you don't have transcripts yet, leave transcriptUrl as "".
+    const MODULES = [
+      {
+        id: "foundations",
+        number: 1,
+        title: "Foundations of AI",
+        goal: "Build intuition about what AI is and how it fits into the modern world.",
+        tags: ["Intro", "Society", "KissanAI"],
+        lessons: [
+          {
+            id: "what-is-ai",
+            title: "What is AI? (history, types, real-world applications)",
+            resourceUrl: "https://drive.google.com/file/d/1zz3DWRJmJA0CXLscKTCuphoHKDTNH1_Q/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "Overview + examples; set the mental model for the course."
+          },
+          {
+            id: "ai-vs-ml-dl",
+            title: "AI vs. Machine Learning vs. Deep Learning",
+            resourceUrl: "https://drive.google.com/file/d/1ycsmQ8S95zGN1Z8AO_0NaDwFqIm_F-Yc/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "Clarifies key terms and where each fits."
+          },
+          {
+            id: "data-fuel",
+            title: "Data as the fuel of AI (examples from everyday life) ← KissanAI",
+            resourceUrl: "",
+            transcriptUrl: "",
+            notes: "Where data comes from, and why quality matters."
+          },
+          {
+            id: "ai-in-society",
+            title: "AI in society (uses, risks, biases, ethics) ← KissanAI",
+            resourceUrl: "",
+            transcriptUrl: "",
+            notes: "Impact + responsibility."
+          }
+        ],
+        activities: [
+          "Watch AI in action (Google Lens, ChatGPT, or an image-classifier demo).",
+          "Discuss an ethical dilemma: Should self-driving cars prioritize passengers or pedestrians?"
+        ]
+      },
+
+      {
+        id: "math-logic",
+        number: 2,
+        title: "Math and Logic Behind AI",
+        goal: "Build confidence with the math that drives AI — in a visual, non-intimidating way.",
+        tags: ["Data", "Probability", "Linear Algebra", "Logic"],
+        lessons: [
+          {
+            id: "what-is-data",
+            title: "2.1.1 — What is Data?",
+            resourceUrl: "https://drive.google.com/file/d/1Py8-I9mUS-yrcwbp2l0TFbrCi3igAiJg/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "9th grade integration: patterns + how we represent information."
+          },
+          {
+            id: "patterns-in-data",
+            title: "2.1.2 — Patterns in Data",
+            resourceUrl: "https://drive.google.com/file/d/1JmGAtO_F8jZCaoAOIcvAx_USoqZ6UfTO/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "How patterns become signals a model can learn."
+          },
+          {
+            id: "prob-stats",
+            title: "2.2.1 — Probability, statistics, and averages (real-life examples)",
+            resourceUrl: "https://drive.google.com/file/d/1plE2MeOr2HbIrlvf7Uuo94HveS_tD5GU/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "10th grade: uncertainty, averages, distributions, and intuition."
+          },
+          {
+            id: "vectors-matrices",
+            title: "2.3.1 — Understanding Vectors and Matrices",
+            resourceUrl: "https://drive.google.com/file/d/1Jn2QTV6zZXFh23jtynxXJMKOalltohHz/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "11th/12th: vectors, matrices, and why they matter in ML."
+          },
+          {
+            id: "ai-see-math",
+            title: "2.3.2 — The Math that Lets AI See (vectors and matrices)",
+            resourceUrl: "https://drive.google.com/file/d/1cYBdWi7SaYftaKpAocrh48h0SBG2T_PA/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "Connecting math to images and features."
+          },
+          {
+            id: "if-then",
+            title: "2.4.1 — If-Then: Code you already know",
+            resourceUrl: "https://drive.google.com/file/d/14pQH0RO2URMeyVHK5ooyuH6X7rGvmKi_/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "Logic foundations: rules, conditions, decision-making."
+          },
+          {
+            id: "secret-smart-tech",
+            title: "2.4.2 — Secret Behind Smart Tech",
+            resourceUrl: "https://drive.google.com/file/d/1MTQfOa63RVI1PGBte6pmcLFWuc1fLKeJ/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "Bridges logical thinking into modern AI systems."
+          }
+        ],
+        activities: [
+          "Visualize a small dataset in Google Sheets or Python.",
+          "Predict outcomes manually: e.g., which fruit is heavier from size/color."
+        ]
+      },
+
+      {
+        id: "ml-basics",
+        number: 3,
+        title: "Machine Learning Basics",
+        goal: "Help them build and train simple models.",
+        tags: ["Supervised", "Unsupervised", "Features", "Labels"],
+        tools: [
+          { name: "Teachable Machine (Google)", url: "https://teachablemachine.withgoogle.com/" },
+          { name: "Scikit-learn (Python)", url: "https://scikit-learn.org/stable/" }
+        ],
+        lessons: [
+          {
+            id: "how-computers-learn",
+            title: "3.1.1 — How computers learn",
+            resourceUrl: "https://drive.google.com/file/d/1CaXp8_MtLHaqlxH1CzzKcANb7b-G3BPZ/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "A friendly overview of learning from examples."
+          },
+          {
+            id: "supervised",
+            title: "3.1.2 — Supervised Learning",
+            resourceUrl: "https://drive.google.com/file/d/1bZ8PtZr0n969w6QWIQb2EOnjnpFHnzVH/view?usp=sharing",
+            transcriptUrl: "",
+            notes: "Inputs/outputs, labels, examples."
+          },
+          {
+            id: "unsupervised",
+            title: "3.1.3 — Unsupervised Learning",
+            resourceUrl: "https://drive.google.com/file/d/1OJXxWuzvrQhxgjY8iRpLZFISWLhGPFrO/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "Finding structure when you don’t have labels."
+          },
+          {
+            id: "train-v-test-notebooklm",
+            title: "3.3.1 — Training vs. Testing (NotebookLM)",
+            resourceUrl: "https://drive.google.com/file/d/1B5kHar_4XyqBmmx6sfZRT-eT4lL82uaq/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "Why we split data and how we measure learning."
+          },
+          {
+            id: "train-v-test-animaker",
+            title: "3.3.2 — Training vs. Testing (Animaker)",
+            resourceUrl: "https://drive.google.com/file/d/1YEWOwz0TetZ8lIBkRi7jXo_-ed6X5BOJ/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "Same concept with a different explanation style."
+          },
+          {
+            id: "train-v-test-animaker-3d",
+            title: "3.3.3 — Training vs. Testing (Animaker 3D)",
+            resourceUrl: "https://drive.google.com/file/d/1BbFracS5_izwrEWm9JkJRDE4Ch-a3j5W/view?usp=share_link",
+            transcriptUrl: "",
+            notes: "Alternate visual explanation."
+          },
+          {
+            id: "common-algos",
+            title: "Common algorithms: Linear regression, Decision trees, k-means clustering",
+            resourceUrl: "",
+            transcriptUrl: "",
+            notes: "Optional add-on lesson or quick demo block."
+          }
+        ],
+        activities: [
+          "Train a model to recognize hand gestures or categorize plant species."
+        ]
+      },
+
+      {
+        id: "deep-learning",
+        number: 4,
+        title: "Deep Learning & Neural Networks",
+        goal: "Give a visual understanding of how neural networks work.",
+        tags: ["Neural Nets", "CNN", "Vision"],
+        tools: [
+          { name: "TensorFlow Playground", url: "https://playground.tensorflow.org/" },
+          { name: "TensorFlow Lite", url: "https://www.tensorflow.org/lite" },
+          { name: "Edge Impulse", url: "https://www.edgeimpulse.com/" }
+        ],
+        lessons: [
+          { id: "neurons-layers", title: "What is a neuron and a layer?", resourceUrl: "", transcriptUrl: "", notes: "Keep it visual, with simple diagrams." },
+          { id: "seeing-hearing", title: "How computers ‘see’ images and ‘hear’ sounds", resourceUrl: "", transcriptUrl: "", notes: "Pixels/audio → numbers → features." },
+          { id: "cnn-intro", title: "Introduction to convolutional neural networks (CNNs)", resourceUrl: "", transcriptUrl: "", notes: "Filters, edges, patterns; intuitive animation recommended." }
+        ],
+        activities: [
+          "Build a simple image classifier using webcam data."
+        ]
+      },
+
+      {
+        id: "nlp",
+        number: 5,
+        title: "Natural Language Processing (NLP)",
+        goal: "Show how machines understand and generate language.",
+        tags: ["Tokens", "Embeddings", "Chatbots"],
+        tools: [
+          { name: "Hugging Face", url: "https://huggingface.co/" },
+          { name: "Cohere", url: "https://cohere.com/" },
+          { name: "ChatGPT", url: "https://chatgpt.com/" }
+        ],
+        lessons: [
+          { id: "tokens-embeddings", title: "Word embeddings and tokenization (intuitive explanation)", resourceUrl: "", transcriptUrl: "", notes: "Words → vectors; similarity; context." },
+          { id: "sentiment-chatbots", title: "Chatbots and sentiment analysis", resourceUrl: "", transcriptUrl: "", notes: "Classification + generation." },
+          { id: "translation-speech", title: "Translation and speech recognition basics", resourceUrl: "", transcriptUrl: "", notes: "High-level pipeline; examples." }
+        ],
+        activities: [
+          "Use ChatGPT, Hugging Face, or Cohere to create a mini chatbot."
+        ]
+      },
+
+      {
+        id: "ai-for-good",
+        number: 6,
+        title: "AI for Good: Social Impact Projects",
+        goal: "Encourage creativity and purpose.",
+        tags: ["Impact", "Teams", "Projects"],
+        themes: [
+          "Agriculture (predict crop diseases with images)",
+          "Healthcare (detect cough patterns, measure heartbeats)",
+          "Environment (classify trash, monitor air quality)",
+          "Education (personal learning assistants)"
+        ],
+        lessons: [
+          { id: "project-briefing", title: "Project ideation + problem framing", resourceUrl: "", transcriptUrl: "", notes: "Pick a problem, define users, define data, define success." }
+        ],
+        activities: [
+          "Build a capstone ‘AI for Good’ project proposal in small teams."
+        ]
+      },
+
+      {
+        id: "ethics",
+        number: 7,
+        title: "Ethics, Privacy, and Future of AI",
+        goal: "Develop critical thinkers who use AI responsibly.",
+        tags: ["Bias", "Privacy", "Deepfakes", "Careers"],
+        lessons: [
+          { id: "bias", title: "Bias in data and models", resourceUrl: "", transcriptUrl: "", notes: "Where bias comes from; how to mitigate; examples." },
+          { id: "privacy", title: "Privacy and data protection", resourceUrl: "", transcriptUrl: "", notes: "Data minimization; consent; security basics." },
+          { id: "misinformation", title: "Misinformation, deepfakes, and fairness", resourceUrl: "", transcriptUrl: "", notes: "How to detect; how to respond." },
+          { id: "careers", title: "Careers in AI and future opportunities", resourceUrl: "", transcriptUrl: "", notes: "Roles, skills, pathways; local examples." }
+        ],
+        activities: [
+          "Roleplay an AI ethics board deciding if a facial-recognition app should be deployed."
+        ]
+      },
+
+      {
+        id: "capstone",
+        number: 8,
+        title: "Capstone Project",
+        goal: "Let them apply everything they learned.",
+        tags: ["Demo", "Poster", "Presentation"],
+        examples: [
+          "AI that helps sort recycling",
+          "Chatbot tutor for students",
+          "AI plant monitor for school garden",
+          "Emotion detection using webcam"
+        ],
+        lessons: [
+          { id: "capstone-structure", title: "Capstone structure + rubric", resourceUrl: "", transcriptUrl: "", notes: "Define milestones: data, model, evaluation, ethics, presentation." }
+        ],
+        activities: [
+          "Students present their work as posters or demos."
+        ]
+      }
+    ];
+
+    function safeDomain(url){
+      try { return new URL(url).hostname.replace("www.",""); }
+      catch { return ""; }
+    }
+
+    function el(tag, attrs={}, children=[]){
+      const node = document.createElement(tag);
+      Object.entries(attrs).forEach(([k,v])=>{
+        if(k === "class") node.className = v;
+        else if(k.startsWith("on") && typeof v === "function") node.addEventListener(k.slice(2).toLowerCase(), v);
+        else if(v !== null && v !== undefined) node.setAttribute(k, v);
+      });
+      (Array.isArray(children) ? children : [children]).forEach(c=>{
+        if(c === null || c === undefined) return;
+        node.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+      });
+      return node;
+    }
+
+    function iconSvg(kind){
+      // simple inline icons (no external libs)
+      const icons = {
+        book: `<svg viewBox="0 0 24 24" fill="none"><path d="M4 19a2 2 0 0 0 2 2h13" stroke="rgba(255,255,255,.75)" stroke-width="2" stroke-linecap="round"/><path d="M6 3h13v18H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="rgba(255,255,255,.75)" stroke-width="2"/></svg>`,
+        sparkle: `<svg viewBox="0 0 24 24" fill="none"><path d="M12 2l1.2 5.2L18 9l-4.8 1.8L12 16l-1.2-5.2L6 9l4.8-1.8L12 2Z" stroke="rgba(255,255,255,.75)" stroke-width="2" stroke-linejoin="round"/></svg>`,
+        shield: `<svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4Z" stroke="rgba(255,255,255,.75)" stroke-width="2"/></svg>`,
+      };
+      return icons[kind] || icons.book;
+    }
+
+    function renderRoadmap(){
+      const steps = ROADMAP.split("→").map(s=>s.trim());
+      const wrap = document.getElementById("roadmapPills");
+      wrap.innerHTML = "";
+      steps.forEach((s,i)=>{
+        wrap.appendChild(el("span",{class:"pill"}, s));
+        if(i < steps.length-1) wrap.appendChild(el("span",{class:"arrow"}, "→"));
+      });
+    }
+
+    function linkBtn(url, label, primary=false){
+      if(!url){
+        return el("button",{class:`btn ${primary?'primary':''}`, disabled:"true", type:"button"}, label);
+      }
+      const b = el("a",{
+        class:`btn ${primary?'primary':''}`,
+        href:url,
+        target:"_blank",
+        rel:"noreferrer"
+      }, label);
+      return b;
+    }
+
+    function renderModules(list){
+      const root = document.getElementById("modules");
+      root.innerHTML = "";
+
+      if(!list.length){
+        root.appendChild(
+          el("div",{class:"card"},[
+            el("div",{class:"card-header"},[
+              el("div",{class:"card-title"},[
+                el("div",{class:"icon", title:"No results"},[
+                  (()=>{ const d=document.createElement("div"); d.innerHTML = iconSvg("book"); return d.firstChild; })()
+                ]),
+                el("div",{},[
+                  el("p",{class:"module-name"}, "No results"),
+                  el("p",{class:"goal"}, "Try a different keyword.")
+                ])
+              ])
+            ])
+          ])
+        );
+        return;
+      }
+
+      list.forEach(m=>{
+        const jumpId = `module-${m.id}`;
+
+        const icon = el("div",{class:"icon"},(()=>{
+          const d=document.createElement("div");
+          // vary icon slightly by module number
+          d.innerHTML = (m.number === 7 ? iconSvg("shield") : (m.number === 4 ? iconSvg("sparkle") : iconSvg("book")));
+          return [d.firstChild];
+        })());
+
+        const titleBlock = el("div",{},[
+          el("p",{class:"module-name"}, `${m.number}. ${m.title}`),
+          el("p",{class:"goal"}, `Goal: ${m.goal}`),
+          el("div",{class:"tags"}, (m.tags||[]).map(t=>el("span",{class:"tag"}, t)))
+        ]);
+
+        const header = el("div",{class:"card-header"},[
+          el("div",{class:"card-title"},[icon, titleBlock]),
+          el("div",{class:"card-actions"},[
+            el("button",{class:"btn", type:"button", onclick:()=>document.getElementById(jumpId)?.scrollIntoView({behavior:"smooth", block:"start"})}, "Jump to lessons")
+          ])
+        ]);
+
+        const body = el("div",{class:"card-body"});
+
+        if(m.themes?.length){
+          body.appendChild(el("div",{class:"section"},[
+            el("div",{class:"section-head"},[
+              el("h4",{}, "Themes"),
+              el("span",{class:"tag"}, `${m.themes.length}`)
+            ]),
+            el("div",{class:"section-body"},[
+              el("ul",{}, m.themes.map(x=>el("li",{}, x)))
+            ])
+          ]));
+        }
+
+        if(m.examples?.length){
+          body.appendChild(el("div",{class:"section"},[
+            el("div",{class:"section-head"},[
+              el("h4",{}, "Capstone Examples"),
+              el("span",{class:"tag"}, `${m.examples.length}`)
+            ]),
+            el("div",{class:"section-body"},[
+              el("div",{class:"tags"}, m.examples.map(x=>el("span",{class:"tag"}, x)))
+            ])
+          ]));
+        }
+
+        if(m.tools?.length){
+          body.appendChild(el("div",{class:"section"},[
+            el("div",{class:"section-head"},[
+              el("h4",{}, "Tools"),
+              el("span",{class:"tag"}, `${m.tools.length}`)
+            ]),
+            el("div",{class:"section-body"},[
+              el("div",{class:"lesson-actions"},
+                m.tools.map(t=>{
+                  const label = `${t.name} · ${safeDomain(t.url)}`;
+                  return linkBtn(t.url, label, false);
+                })
+              )
+            ])
+          ]));
+        }
+
+        // Lessons section (accordion via <details>)
+        const lessonsWrap = el("div",{class:"section", id:jumpId},[
+          el("div",{class:"section-head"},[
+            el("h4",{}, "Lessons & Resources"),
+            el("span",{class:"tag"}, `${(m.lessons||[]).length} lesson${(m.lessons||[]).length===1?'':'s'}`)
+          ]),
+          el("div",{class:"section-body", style:"padding:0;"},[
+            ...((m.lessons||[]).map(l=>{
+              const details = el("details",{class:"lesson"},[
+                el("summary",{},[
+                  el("div",{},[
+                    el("div",{class:"lesson-title"}, l.title),
+                    el("div",{class:"lesson-meta"},
+                      l.resourceUrl ? safeDomain(l.resourceUrl) : "Resource pending"
+                    )
+                  ]),
+                  el("div",{class:"lesson-meta"}, "View")
+                ]),
+                el("div",{class:"lesson-content"},[
+                  el("div",{class:"lesson-notes"}, l.notes || ""),
+                  el("div",{class:"lesson-actions"},[
+                    linkBtn(l.resourceUrl, "Open lesson", true),
+                    linkBtn(l.transcriptUrl, l.transcriptUrl ? "Open transcript" : "Add transcript", false)
+                  ])
+                ])
+              ]);
+              return details;
+            }))
+          ])
+        ]);
+        body.appendChild(lessonsWrap);
+
+        if(m.activities?.length){
+          body.appendChild(el("div",{class:"section"},[
+            el("div",{class:"section-head"},[
+              el("h4",{}, "Hands-on Activity"),
+              el("span",{class:"tag"}, `${m.activities.length}`)
+            ]),
+            el("div",{class:"section-body"},[
+              el("ul",{}, m.activities.map(a=>el("li",{}, a)))
+            ])
+          ]));
+        }
+
+        const card = el("div",{class:"card"},[header, body]);
+        root.appendChild(card);
+      });
+    }
+
+    function filterModules(q){
+      const s = (q||"").trim().toLowerCase();
+      if(!s) return MODULES;
+      return MODULES.filter(m=>{
+        const inModule =
+          m.title.toLowerCase().includes(s) ||
+          m.goal.toLowerCase().includes(s) ||
+          (m.tags||[]).join(" ").toLowerCase().includes(s);
+        const inLessons = (m.lessons||[]).some(l=> (l.title||"").toLowerCase().includes(s));
+        const inThemes = (m.themes||[]).join(" ").toLowerCase().includes(s);
+        const inExamples = (m.examples||[]).join(" ").toLowerCase().includes(s);
+        return inModule || inLessons || inThemes || inExamples;
+      });
+    }
+
+    // init
+    renderRoadmap();
+    renderModules(MODULES);
+
+    document.getElementById("searchInput").addEventListener("input", (e)=>{
+      renderModules(filterModules(e.target.value));
+    });
+
+    document.getElementById("backToTopBtn").addEventListener("click", ()=>{
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  </script>
+</body>
+</html>
