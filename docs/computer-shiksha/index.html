@@ -6,25 +6,28 @@
   <title>AI Curriculum</title>
   <style>
     :root{
-      --bg:#0b0d12;
-      --card:#111524;
-      --card2:#0f1320;
-      --border:rgba(255,255,255,.10);
-      --muted:rgba(255,255,255,.70);
-      --muted2:rgba(255,255,255,.55);
-      --text:rgba(255,255,255,.92);
-      --accent:#7cdbff;
-      --accent2:#a8ffcf;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      /* Light mode palette */
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --card2:#f3f5fb;
+      --border:rgba(15,23,42,.12);
+      --muted:rgba(15,23,42,.72);
+      --muted2:rgba(15,23,42,.58);
+      --text:rgba(15,23,42,.92);
+      --accent:#2563eb;   /* blue */
+      --accent2:#16a34a;  /* green */
+      --shadow: 0 10px 28px rgba(2,6,23,.10);
       --radius: 18px;
     }
+
     *{ box-sizing:border-box; }
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1100px 700px at 25% -10%, rgba(124,219,255,.18), transparent 55%),
-                  radial-gradient(900px 600px at 110% 10%, rgba(168,255,207,.16), transparent 50%),
-                  var(--bg);
+      background:
+        radial-gradient(1100px 700px at 25% -10%, rgba(37,99,235,.12), transparent 55%),
+        radial-gradient(900px 600px at 110% 10%, rgba(22,163,74,.10), transparent 50%),
+        var(--bg);
       color:var(--text);
     }
     a{ color:inherit; text-decoration:none; }
@@ -50,7 +53,7 @@
     .sub{
       margin:10px 0 0;
       color:var(--muted2);
-      max-width: 720px;
+      max-width: 820px;
       line-height:1.4;
     }
     .badges{
@@ -65,7 +68,7 @@
       gap:8px;
       padding: 8px 12px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,.04);
+      background: rgba(2,6,23,.02);
       border-radius: 999px;
       font-size: 13px;
       color: var(--muted);
@@ -73,12 +76,12 @@
     .dot{
       width:10px; height:10px; border-radius:999px;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 0 3px rgba(124,219,255,.10);
+      box-shadow: 0 0 0 3px rgba(37,99,235,.10);
     }
 
     /* Cards */
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      background: linear-gradient(180deg, rgba(2,6,23,.02), rgba(2,6,23,.01));
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -87,7 +90,7 @@
     .card + .card{ margin-top: 18px; }
     .card-header{
       padding: 18px 18px 12px;
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid rgba(15,23,42,.06);
       display:flex;
       justify-content:space-between;
       gap:14px;
@@ -105,11 +108,11 @@
       width:44px; height:44px;
       border-radius: 16px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,.03);
+      background: rgba(2,6,23,.02);
       display:flex; align-items:center; justify-content:center;
       flex:none;
     }
-    .icon svg{ width:20px; height:20px; opacity:.9; }
+    .icon svg{ width:20px; height:20px; opacity:.95; }
     .module-name{
       margin:0;
       font-size: 18px;
@@ -130,8 +133,8 @@
     .tag{
       font-size: 12px;
       color: var(--muted);
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(2,6,23,.02);
+      border: 1px solid rgba(15,23,42,.10);
       padding: 6px 10px;
       border-radius: 999px;
     }
@@ -144,8 +147,8 @@
     }
     .btn{
       appearance:none;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(15,23,42,.16);
+      background: rgba(2,6,23,.02);
       color: var(--text);
       padding: 9px 12px;
       border-radius: 999px;
@@ -156,10 +159,10 @@
       gap:8px;
       align-items:center;
     }
-    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.22); }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(15,23,42,.24); }
     .btn.primary{
-      border-color: rgba(124,219,255,.40);
-      background: rgba(124,219,255,.12);
+      border-color: rgba(37,99,235,.35);
+      background: rgba(37,99,235,.10);
     }
     .btn:disabled{
       cursor:not-allowed;
@@ -170,16 +173,12 @@
     .card-body{ padding: 16px 18px 18px; display:grid; gap:14px; }
 
     /* Roadmap */
-    .roadmap{
-      margin-top: 18px;
-      padding: 16px 18px;
-    }
+    .roadmap{ margin-top: 18px; padding: 16px 18px; }
     .roadmap-title{
       margin:0;
       font-size: 14px;
       color: var(--muted);
       letter-spacing:.02em;
-      text-transform:none;
     }
     .pillrow{
       margin-top: 10px;
@@ -189,13 +188,13 @@
     .pill{
       font-size: 12px;
       color: var(--muted);
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(15,23,42,.12);
+      background: rgba(2,6,23,.02);
       padding: 6px 10px;
       border-radius: 999px;
       white-space:nowrap;
     }
-    .arrow{ color: rgba(255,255,255,.35); }
+    .arrow{ color: rgba(15,23,42,.35); }
 
     /* Search */
     .searchbar{
@@ -213,8 +212,8 @@
       align-items:center;
       gap:10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(15,23,42,.16);
+      background: rgba(2,6,23,.02);
       padding: 10px 14px;
     }
     .searchbox input{
@@ -228,22 +227,24 @@
     .hint{
       font-size: 12px;
       color: var(--muted2);
+      max-width: 520px;
     }
 
     /* Sections inside module */
     .section{
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(0,0,0,.10);
+      border: 1px solid rgba(15,23,42,.10);
+      background: rgba(2,6,23,.02);
       border-radius: 16px;
       overflow:hidden;
     }
     .section-head{
       padding: 12px 14px;
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid rgba(15,23,42,.06);
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:12px;
+      flex-wrap:wrap;
     }
     .section-head h4{
       margin:0;
@@ -254,9 +255,7 @@
     .section-body{ padding: 12px 14px; }
 
     /* Lessons accordion */
-    .lesson{
-      border-top: 1px solid rgba(255,255,255,.06);
-    }
+    .lesson{ border-top: 1px solid rgba(15,23,42,.06); }
     .lesson:first-child{ border-top:none; }
     .lesson summary{
       list-style:none;
@@ -269,7 +268,7 @@
     }
     .lesson summary::-webkit-details-marker{ display:none; }
     .lesson-title{
-      font-weight: 600;
+      font-weight: 650;
       font-size: 14px;
       line-height:1.35;
     }
@@ -295,6 +294,59 @@
       gap:10px;
       flex-wrap:wrap;
       justify-content:flex-start;
+      align-items:center;
+    }
+
+    /* Subsection row (non-video header like “2.1 — …”) */
+    .subsection{
+      padding: 12px 14px;
+      border-top: 1px solid rgba(15,23,42,.06);
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      background: rgba(255,255,255,.60);
+    }
+    .subsection:first-child{ border-top:none; }
+    .subsection .left{ display:flex; flex-direction:column; gap:4px; }
+    .subsection .title{
+      font-weight: 650;
+      font-size: 13px;
+      line-height:1.35;
+    }
+    .subsection .note{
+      font-size: 12px;
+      color: var(--muted2);
+      line-height:1.35;
+    }
+    .subsection .badge-mini{
+      font-size: 11px;
+      color: var(--muted);
+      background: rgba(2,6,23,.02);
+      border: 1px solid rgba(15,23,42,.10);
+      padding: 6px 10px;
+      border-radius: 999px;
+      white-space:nowrap;
+    }
+
+    /* Preview */
+    .preview{
+      border: 1px solid rgba(15,23,42,.12);
+      background: rgba(255,255,255,.70);
+      border-radius: 14px;
+      overflow:hidden;
+    }
+    .preview iframe{
+      width:100%;
+      height: 360px;
+      border:0;
+      display:block;
+    }
+    .preview-note{
+      padding: 10px 12px;
+      font-size: 12px;
+      color: var(--muted2);
+      border-top: 1px solid rgba(15,23,42,.06);
     }
 
     /* Lists */
@@ -302,16 +354,7 @@
     li{ color: var(--muted2); margin: 6px 0; font-size: 13px; line-height:1.4; }
 
     /* Footer */
-    .footer{
-      margin-top: 22px;
-      padding: 16px 18px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .footer p{ margin:0; color: var(--muted2); font-size: 12px; }
+    .footer{ margin-top: 22px; }
   </style>
 </head>
 <body>
@@ -320,23 +363,21 @@
       <div>
         <h1>AI Curriculum</h1>
         <p class="sub">
-          A shareable syllabus page with lesson resources, transcript links, tools, and hands-on activities.
+          A shareable syllabus page with lesson resources, optional transcript links, preview windows, and hands-on activities.
         </p>
       </div>
       <div class="badges">
         <span class="badge"><span class="dot"></span> Student-friendly</span>
         <span class="badge"><span class="dot"></span> Ethics-aware</span>
+        <span class="badge"><span class="dot"></span> Preview-enabled</span>
       </div>
     </div>
 
     <div class="card roadmap">
-      <div class="card-header">
+      <div class="card-header" style="border-bottom:none;">
         <div>
           <p class="roadmap-title">Learning Path</p>
           <div id="roadmapPills" class="pillrow"></div>
-        </div>
-        <div class="card-actions">
-          <button class="btn" id="backToTopBtn" type="button">Back to top</button>
         </div>
       </div>
     </div>
@@ -344,22 +385,24 @@
     <div class="searchbar">
       <div class="searchbox">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" stroke="rgba(255,255,255,.65)" stroke-width="2"/>
-          <path d="M21 21l-4.35-4.35" stroke="rgba(255,255,255,.65)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" stroke="rgba(15,23,42,.55)" stroke-width="2"/>
+          <path d="M21 21l-4.35-4.35" stroke="rgba(15,23,42,.55)" stroke-width="2" stroke-linecap="round"/>
         </svg>
-        <input id="searchInput" placeholder="Search modules, lessons, or keywords (e.g., vectors, supervised, ethics)" />
+        <input id="searchInput" placeholder="Search modules, lessons, or keywords (e.g., vectors, supervised, ethics, knowledge graphs)" />
       </div>
-      <div class="hint">Tip: paste transcript links later — the “Add transcript” button will automatically become “Open transcript.”</div>
+      <div class="hint">
+        Tip: previews use Google Drive’s embed viewer. If a preview doesn’t load, “Open lesson” still works.
+      </div>
     </div>
 
     <div id="modules"></div>
 
     <div class="card footer">
-      <div class="card-header" style="border-bottom:none; padding: 16px 18px;">
+      <div class="card-header" style="border-bottom:none;">
         <div>
-          <p style="margin:0; font-size: 13px; font-weight:600;">Share this page</p>
-          <p style="margin-top:6px;">
-            Drop this file into your existing HTML site and link to it. Each lesson supports both a resource link and a transcript link.
+          <p style="margin:0; font-size: 13px; font-weight:650;">Share this page</p>
+          <p style="margin-top:6px; color:var(--muted2); line-height:1.45;">
+            Drop this file into your existing HTML site and link to it. Subsections (e.g., “2.1”, “3.1”) are headers — videos only show buttons when a link exists.
           </p>
         </div>
         <div class="card-actions">
@@ -372,7 +415,27 @@
   <script>
     const ROADMAP = "Foundations → Math → ML → DL → NLP → Ethics → Symbolic → Neuro-Symbolic (C3AN) → Enterprise AI → Hands-on → Capstone";
 
-    // If you don't have transcripts yet, leave transcriptUrl as "".
+    // ---- Drive helpers (for preview if resourceUrl is a Google Drive link) ----
+    function driveIdFromUrl(url){
+      try{
+        const u = new URL(url);
+        const m1 = u.pathname.match(/\/file\/d\/([^/]+)/);
+        if(m1 && m1[1]) return m1[1];
+        const id = u.searchParams.get("id");
+        if(id) return id;
+        return "";
+      }catch{ return ""; }
+    }
+    function drivePreviewUrl(url){
+      const id = driveIdFromUrl(url);
+      if(!id) return "";
+      return `https://drive.google.com/file/d/${id}/preview`;
+    }
+
+    // ---- Data model ----
+    // items inside lessons[] can be:
+    //  - { kind:"section", title:"2.1 — ...", note:"..." }
+    //  - { kind:"video", title:"...", resourceUrl:"...", duration:"...", notes:"...", transcriptUrl:"" }
     const MODULES = [
       {
         id: "foundations",
@@ -381,38 +444,20 @@
         goal: "Build intuition about what AI is and how it fits into the modern world.",
         tags: ["Intro", "Society", "KissanAI"],
         lessons: [
-          {
-            id: "what-is-ai",
-            title: "What is AI? (history, types, real-world applications)",
-            resourceUrl: "https://drive.google.com/file/d/1zz3DWRJmJA0CXLscKTCuphoHKDTNH1_Q/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "Overview + examples; set the mental model for the course."
-          },
-          {
-            id: "ai-vs-ml-dl",
-            title: "AI vs. Machine Learning vs. Deep Learning",
-            resourceUrl: "https://drive.google.com/file/d/1ycsmQ8S95zGN1Z8AO_0NaDwFqIm_F-Yc/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "Clarifies key terms and where each fits."
-          },
-          {
-            id: "data-fuel",
-            title: "Data as the fuel of AI (examples from everyday life) ← KissanAI",
-            resourceUrl: "",
-            transcriptUrl: "",
-            notes: "Where data comes from, and why quality matters."
-          },
-          {
-            id: "ai-in-society",
-            title: "AI in society (uses, risks, biases, ethics) ← KissanAI",
-            resourceUrl: "",
-            transcriptUrl: "",
-            notes: "Impact + responsibility."
-          }
+          { kind:"video", id:"what-is-ai", title:"What is AI? (history, types, real-world applications)", duration:"5:15",
+            resourceUrl:"https://drive.google.com/file/d/1zz3DWRJmJA0CXLscKTCuphoHKDTNH1_Q/view?usp=share_link",
+            transcriptUrl:"", notes:"Overview + examples; set the mental model for the course." },
+          { kind:"video", id:"ai-vs-ml-dl", title:"AI vs. Machine Learning vs. Deep Learning", duration:"5:33",
+            resourceUrl:"https://drive.google.com/file/d/1ycsmQ8S95zGN1Z8AO_0NaDwFqIm_F-Yc/view?usp=share_link",
+            transcriptUrl:"", notes:"Clarifies key terms and where each fits." },
+          { kind:"video", id:"data-fuel", title:"Data as the fuel of AI (examples from everyday life) ← KissanAI", duration:"",
+            resourceUrl:"", transcriptUrl:"", notes:"Where data comes from, and why quality matters." },
+          { kind:"video", id:"ai-in-society", title:"AI in society (uses, risks, biases, ethics) ← KissanAI", duration:"",
+            resourceUrl:"", transcriptUrl:"", notes:"Impact + responsibility." },
         ],
         activities: [
-          "Watch AI in action (Google Lens, ChatGPT, or an image-classifier demo).",
-          "Discuss an ethical dilemma: Should self-driving cars prioritize passengers or pedestrians?"
+          "Watch AI in action — e.g., Google Lens, ChatGPT, or an image classifier demo.",
+          "Discuss ethical dilemmas (e.g., “Should self-driving cars prioritize passengers or pedestrians?”)"
         ]
       },
 
@@ -421,61 +466,40 @@
         number: 2,
         title: "Math and Logic Behind AI",
         goal: "Build confidence with the math that drives AI — in a visual, non-intimidating way.",
-        tags: ["Data", "Probability", "Linear Algebra", "Logic"],
+        tags: ["9th Grade", "10th Grade", "11th/12th Grade", "Probability", "Linear Algebra", "Logic"],
         lessons: [
-          {
-            id: "what-is-data",
-            title: "2.1.1 — What is Data?",
-            resourceUrl: "https://drive.google.com/file/d/1Py8-I9mUS-yrcwbp2l0TFbrCi3igAiJg/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "9th grade integration: patterns + how we represent information."
-          },
-          {
-            id: "patterns-in-data",
-            title: "2.1.2 — Patterns in Data",
-            resourceUrl: "https://drive.google.com/file/d/1JmGAtO_F8jZCaoAOIcvAx_USoqZ6UfTO/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "How patterns become signals a model can learn."
-          },
-          {
-            id: "prob-stats",
-            title: "2.2.1 — Probability, statistics, and averages (real-life examples)",
-            resourceUrl: "https://drive.google.com/file/d/1plE2MeOr2HbIrlvf7Uuo94HveS_tD5GU/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "10th grade: uncertainty, averages, distributions, and intuition."
-          },
-          {
-            id: "vectors-matrices",
-            title: "2.3.1 — Understanding Vectors and Matrices",
-            resourceUrl: "https://drive.google.com/file/d/1Jn2QTV6zZXFh23jtynxXJMKOalltohHz/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "11th/12th: vectors, matrices, and why they matter in ML."
-          },
-          {
-            id: "ai-see-math",
-            title: "2.3.2 — The Math that Lets AI See (vectors and matrices)",
-            resourceUrl: "https://drive.google.com/file/d/1cYBdWi7SaYftaKpAocrh48h0SBG2T_PA/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "Connecting math to images and features."
-          },
-          {
-            id: "if-then",
-            title: "2.4.1 — If-Then: Code you already know",
-            resourceUrl: "https://drive.google.com/file/d/14pQH0RO2URMeyVHK5ooyuH6X7rGvmKi_/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "Logic foundations: rules, conditions, decision-making."
-          },
-          {
-            id: "secret-smart-tech",
-            title: "2.4.2 — Secret Behind Smart Tech",
-            resourceUrl: "https://drive.google.com/file/d/1MTQfOa63RVI1PGBte6pmcLFWuc1fLKeJ/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "Bridges logical thinking into modern AI systems."
-          }
+          { kind:"section", id:"m-21", title:"2.1 — Patterns and relationships in data", note:"← 9th Grade integration" },
+          { kind:"video", id:"what-is-data", title:"2.1.1 — What is Data?", duration:"2:54",
+            resourceUrl:"https://drive.google.com/file/d/1Py8-I9mUS-yrcwbp2l0TFbrCi3igAiJg/view?usp=share_link",
+            transcriptUrl:"", notes:"Patterns + how we represent information." },
+          { kind:"video", id:"patterns-in-data", title:"2.1.2 — Patterns in Data", duration:"2:02",
+            resourceUrl:"https://drive.google.com/file/d/1JmGAtO_F8jZCaoAOIcvAx_USoqZ6UfTO/view?usp=share_link",
+            transcriptUrl:"", notes:"How patterns become signals a model can learn." },
+
+          { kind:"section", id:"m-22", title:"2.2 — Probability, statistics, and averages", note:"← 10th" },
+          { kind:"video", id:"prob-stats", title:"2.2.1 — Probability, statistics, and averages: Understanding data with real-life examples", duration:"3:11",
+            resourceUrl:"https://drive.google.com/file/d/1plE2MeOr2HbIrlvf7Uuo94HveS_tD5GU/view?usp=share_link",
+            transcriptUrl:"", notes:"Uncertainty, averages, and intuition." },
+
+          { kind:"section", id:"m-23", title:"2.3 — Basics of linear algebra (vectors, matrices)", note:"← 11th & 12th" },
+          { kind:"video", id:"vectors-matrices", title:"2.3.1 — Understanding Vectors and Matrices", duration:"2:01",
+            resourceUrl:"https://drive.google.com/file/d/1Jn2QTV6zZXFh23jtynxXJMKOalltohHz/view?usp=share_link",
+            transcriptUrl:"", notes:"Vectors, matrices, and why they matter in ML." },
+          { kind:"video", id:"ai-see-math", title:"2.3.2 — The Math that Lets AI See (vectors and matrices)", duration:"6:32",
+            resourceUrl:"https://drive.google.com/file/d/1cYBdWi7SaYftaKpAocrh48h0SBG2T_PA/view?usp=share_link",
+            transcriptUrl:"", notes:"Connecting math to images and features." },
+
+          { kind:"section", id:"m-24", title:"2.4 — Logic and decision-making", note:"← 11th & 12th" },
+          { kind:"video", id:"if-then", title:"2.4.1 — If-Then: Code you already know", duration:"6:13",
+            resourceUrl:"https://drive.google.com/file/d/14pQH0RO2URMeyVHK5ooyuH6X7rGvmKi_/view?usp=share_link",
+            transcriptUrl:"", notes:"Logic foundations: rules, conditions, decision-making." },
+          { kind:"video", id:"secret-smart-tech", title:"2.4.2 — Secret Behind Smart Tech", duration:"7:29",
+            resourceUrl:"https://drive.google.com/file/d/1MTQfOa63RVI1PGBte6pmcLFWuc1fLKeJ/view?usp=share_link",
+            transcriptUrl:"", notes:"Bridges logical thinking into modern AI systems." },
         ],
         activities: [
-          "Visualize a small dataset in Google Sheets or Python.",
-          "Predict outcomes manually: e.g., which fruit is heavier from size/color."
+          "Visualize a dataset in Google Sheets or Python.",
+          "Predict outcomes manually (e.g., which fruit is heavier from size/color)."
         ]
       },
 
@@ -484,61 +508,55 @@
         number: 3,
         title: "Machine Learning Basics",
         goal: "Help them build and train simple models.",
-        tags: ["Supervised", "Unsupervised", "Features", "Labels"],
+        tags: ["Supervised", "Unsupervised", "Features", "Labels", "Train/Test"],
         tools: [
           { name: "Teachable Machine (Google)", url: "https://teachablemachine.withgoogle.com/" },
           { name: "Scikit-learn (Python)", url: "https://scikit-learn.org/stable/" }
         ],
         lessons: [
-          {
-            id: "how-computers-learn",
-            title: "3.1.1 — How computers learn",
-            resourceUrl: "https://drive.google.com/file/d/1CaXp8_MtLHaqlxH1CzzKcANb7b-G3BPZ/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "A friendly overview of learning from examples."
-          },
-          {
-            id: "supervised",
-            title: "3.1.2 — Supervised Learning",
-            resourceUrl: "https://drive.google.com/file/d/1bZ8PtZr0n969w6QWIQb2EOnjnpFHnzVH/view?usp=sharing",
-            transcriptUrl: "",
-            notes: "Inputs/outputs, labels, examples."
-          },
-          {
-            id: "unsupervised",
-            title: "3.1.3 — Unsupervised Learning",
-            resourceUrl: "https://drive.google.com/file/d/1OJXxWuzvrQhxgjY8iRpLZFISWLhGPFrO/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "Finding structure when you don’t have labels."
-          },
-          {
-            id: "train-v-test-notebooklm",
-            title: "3.3.1 — Training vs. Testing (NotebookLM)",
-            resourceUrl: "https://drive.google.com/file/d/1B5kHar_4XyqBmmx6sfZRT-eT4lL82uaq/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "Why we split data and how we measure learning."
-          },
-          {
-            id: "train-v-test-animaker",
-            title: "3.3.2 — Training vs. Testing (Animaker)",
-            resourceUrl: "https://drive.google.com/file/d/1YEWOwz0TetZ8lIBkRi7jXo_-ed6X5BOJ/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "Same concept with a different explanation style."
-          },
-          {
-            id: "train-v-test-animaker-3d",
-            title: "3.3.3 — Training vs. Testing (Animaker 3D)",
-            resourceUrl: "https://drive.google.com/file/d/1BbFracS5_izwrEWm9JkJRDE4Ch-a3j5W/view?usp=share_link",
-            transcriptUrl: "",
-            notes: "Alternate visual explanation."
-          },
-          {
-            id: "common-algos",
-            title: "Common algorithms: Linear regression, Decision trees, k-means clustering",
-            resourceUrl: "",
-            transcriptUrl: "",
-            notes: "Optional add-on lesson or quick demo block."
-          }
+          { kind:"section", id:"ml-31", title:"3.1 — Supervised vs. unsupervised learning", note:"Core ML training paradigms." },
+          { kind:"video", id:"how-computers-learn", title:"3.1.1 — How computers learn", duration:"5:44",
+            resourceUrl:"https://drive.google.com/file/d/1CaXp8_MtLHaqlxH1CzzKcANb7b-G3BPZ/view?usp=share_link",
+            transcriptUrl:"", notes:"A friendly overview of learning from examples." },
+          { kind:"video", id:"supervised", title:"3.1.2 — Supervised Learning", duration:"5:15",
+            resourceUrl:"https://drive.google.com/file/d/1bZ8PtZr0n969w6QWIQb2EOnjnpFHnzVH/view?usp=sharing",
+            transcriptUrl:"", notes:"Inputs/outputs, labels, examples." },
+          { kind:"video", id:"unsupervised", title:"3.1.3 — Unsupervised Learning", duration:"4:48",
+            resourceUrl:"https://drive.google.com/file/d/1OJXxWuzvrQhxgjY8iRpLZFISWLhGPFrO/view?usp=share_link",
+            transcriptUrl:"", notes:"Finding structure when you don’t have labels." },
+
+          { kind:"section", id:"ml-33", title:"3.3 — Features and labels", note:"What models look at vs what they’re trying to predict." },
+          { kind:"video", id:"features-what-ai-looks-at", title:"3.3.1 — Features: what AI looks at", duration:"4:06",
+            resourceUrl:"https://drive.google.com/file/d/1WGc0S954o_B_4AWO9rxo_2fzblkmZ3D7/view?usp=share_link",
+            transcriptUrl:"", notes:"Feature intuition: signals that matter." },
+          { kind:"video", id:"labels-architecture", title:"3.3.2 — The architecture of Labels", duration:"4:34",
+            resourceUrl:"https://drive.google.com/file/d/17PiFtoEhh3M4mXbGW7sqz47isCy61xVz/view?usp=share_link",
+            transcriptUrl:"", notes:"Why labels matter, and how we define correct outputs." },
+
+          { kind:"section", id:"ml-tt", title:"3.3 — Training and testing data", note:"Why we split data and how we measure learning." },
+          { kind:"video", id:"train-v-test-notebooklm", title:"3.3.1 — Training vs. Testing (NotebookLM)", duration:"4:59",
+            resourceUrl:"https://drive.google.com/file/d/1B5kHar_4XyqBmmx6sfZRT-eT4lL82uaq/view?usp=share_link",
+            transcriptUrl:"", notes:"Train/test split and evaluation intuition." },
+          { kind:"video", id:"train-v-test-animaker", title:"3.3.2 — Training vs. Testing (Animaker)", duration:"2:50",
+            resourceUrl:"https://drive.google.com/file/d/1YEWOwz0TetZ8lIBkRi7jXo_-ed6X5BOJ/view?usp=share_link",
+            transcriptUrl:"", notes:"Same concept with a different explanation style." },
+          { kind:"video", id:"train-v-test-animaker-3d", title:"3.3.3 — Training vs. Testing (Animaker 3D)", duration:"2:57",
+            resourceUrl:"https://drive.google.com/file/d/1BbFracS5_izwrEWm9JkJRDE4Ch-a3j5W/view?usp=share_link",
+            transcriptUrl:"", notes:"Alternate visual explanation." },
+
+          { kind:"section", id:"ml-34", title:"3.4 — Common algorithms (regression, trees, clustering)", note:"Concrete examples of prediction + grouping." },
+          { kind:"video", id:"how-prediction-works", title:"3.4.1 — How prediction really works", duration:"7:12",
+            resourceUrl:"https://drive.google.com/file/d/1j7jDVjKdhW_lpKidWmt-PrzFe0u6VcMq/view?usp=share_link",
+            transcriptUrl:"", notes:"What it means to predict: patterns → outputs." },
+          { kind:"video", id:"linear-regression", title:"3.4.2 — Linear regression", duration:"4:46",
+            resourceUrl:"https://drive.google.com/file/d/1p3qgZT0qoPFEZGp1DH8NCMzzw7aaVeBG/view?usp=share_link",
+            transcriptUrl:"", notes:"Regression intuition and examples." },
+          { kind:"video", id:"decision-trees", title:"3.4.3 — Decision Trees", duration:"5:20",
+            resourceUrl:"https://drive.google.com/file/d/1kU9CCpNDWoe7LV8E8sbEKhojD8NU86_a/view?usp=share_link",
+            transcriptUrl:"", notes:"Rule-like splits; interpretability." },
+          { kind:"video", id:"kmeans", title:"3.4.4 — K-means Clustering: Grouping similar things", duration:"3:36",
+            resourceUrl:"https://drive.google.com/file/d/1H6gPFbc1PFGhEBPsCzgFmjwVGeHi26kX/view?usp=share_link",
+            transcriptUrl:"", notes:"Grouping by similarity; clusters as structure." }
         ],
         activities: [
           "Train a model to recognize hand gestures or categorize plant species."
@@ -550,16 +568,30 @@
         number: 4,
         title: "Deep Learning & Neural Networks",
         goal: "Give a visual understanding of how neural networks work.",
-        tags: ["Neural Nets", "CNN", "Vision"],
+        tags: ["Neural Nets", "Vision", "Perception"],
         tools: [
           { name: "TensorFlow Playground", url: "https://playground.tensorflow.org/" },
           { name: "TensorFlow Lite", url: "https://www.tensorflow.org/lite" },
           { name: "Edge Impulse", url: "https://www.edgeimpulse.com/" }
         ],
         lessons: [
-          { id: "neurons-layers", title: "What is a neuron and a layer?", resourceUrl: "", transcriptUrl: "", notes: "Keep it visual, with simple diagrams." },
-          { id: "seeing-hearing", title: "How computers ‘see’ images and ‘hear’ sounds", resourceUrl: "", transcriptUrl: "", notes: "Pixels/audio → numbers → features." },
-          { id: "cnn-intro", title: "Introduction to convolutional neural networks (CNNs)", resourceUrl: "", transcriptUrl: "", notes: "Filters, edges, patterns; intuitive animation recommended." }
+          { kind:"section", id:"dl-41s", title:"4.1 — Explainer: Neural Networks", note:"Conceptual overview of neurons, layers, learning." },
+          { kind:"video", id:"dl-41", title:"4.1 — Explainer: Neural Networks", duration:"",
+            resourceUrl:"https://drive.google.com/file/d/1j7AIh4ooGSI6hoc6ItxD29c0Qqr4x3K4/view?usp=sharing",
+            transcriptUrl:"", notes:"Neurons, layers, and learning (visual)." },
+
+          { kind:"video", id:"dl-42", title:"4.2 — From Pixel to Person", duration:"",
+            resourceUrl:"https://drive.google.com/file/d/1c2-ILkiVSIOoHmdyUOFs3DgbmYhqVkpB/view?usp=sharing",
+            transcriptUrl:"", notes:"How images become features → recognition." },
+          { kind:"video", id:"dl-43", title:"4.3 — How AI Sees and Heards", duration:"",
+            resourceUrl:"https://drive.google.com/file/d/16nELPioh69c9oN-0zN6d0BwpFrtN0hwZ/view?usp=drive_link",
+            transcriptUrl:"", notes:"Perception pipelines for vision/audio." },
+          { kind:"video", id:"dl-44", title:"4.4 — How computers learned to see", duration:"",
+            resourceUrl:"https://drive.google.com/file/d/1XN1iO-hteaVW-lMzaCV5FRaVEQ02PGVu/view?usp=drive_link",
+            transcriptUrl:"", notes:"From classic CV to deep learning intuition." },
+          { kind:"video", id:"dl-45", title:"4.5 — Numerical Perception", duration:"",
+            resourceUrl:"https://drive.google.com/file/d/1TFdvV5F_78K4HwhiLZBHzsWl8uU9OeH_/view?usp=drive_link",
+            transcriptUrl:"", notes:"Everything becomes numbers: tensors, activations, embeddings." }
         ],
         activities: [
           "Build a simple image classifier using webcam data."
@@ -571,80 +603,210 @@
         number: 5,
         title: "Natural Language Processing (NLP)",
         goal: "Show how machines understand and generate language.",
-        tags: ["Tokens", "Embeddings", "Chatbots"],
+        tags: ["Tokens", "Embeddings", "Prompting", "RAG", "LLMs"],
         tools: [
           { name: "Hugging Face", url: "https://huggingface.co/" },
-          { name: "Cohere", url: "https://cohere.com/" },
           { name: "ChatGPT", url: "https://chatgpt.com/" }
         ],
         lessons: [
-          { id: "tokens-embeddings", title: "Word embeddings and tokenization (intuitive explanation)", resourceUrl: "", transcriptUrl: "", notes: "Words → vectors; similarity; context." },
-          { id: "sentiment-chatbots", title: "Chatbots and sentiment analysis", resourceUrl: "", transcriptUrl: "", notes: "Classification + generation." },
-          { id: "translation-speech", title: "Translation and speech recognition basics", resourceUrl: "", transcriptUrl: "", notes: "High-level pipeline; examples." }
+          { kind:"video", id:"nlp-51", title:"5.1 — Tokens: Breaking Languages into Pieces", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=15MxxqTULWBG58vFcKFqVS1HipJOb93IT",
+            transcriptUrl:"", notes:"Tokenization intuition + quick experiments." },
+          { kind:"video", id:"nlp-52", title:"5.2 — Embeddings", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=10j4NLnnw044ofED0MFVPIR9yj2BEvIDA",
+            transcriptUrl:"", notes:"Words/sentences as vectors; similarity." },
+          { kind:"video", id:"nlp-53", title:"5.3 — How Machines See Language", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1dLTjDUWHA2Y5gqGF2yVdtRp2u__XsWVJ",
+            transcriptUrl:"", notes:"Representations → models → meaning." },
+          { kind:"video", id:"nlp-54", title:"5.4 — Prompting and Retrieval: Steering a Prediction Machine", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1dhf2rxp5CjxXEvtUMKM4KjXTR07lt40w",
+            transcriptUrl:"", notes:"Prompting + retrieval as control knobs." },
+          { kind:"video", id:"nlp-55", title:"5.5 — Language: Fluent Doesn’t Mean Correct", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1sfw5upYxWBZSjm8ExFlshKXh4BrPTE1h",
+            transcriptUrl:"", notes:"Hallucinations, confidence, and verification." },
         ],
-        activities: [
-          "Use ChatGPT, Hugging Face, or Cohere to create a mini chatbot."
-        ]
-      },
-
-      {
-        id: "ai-for-good",
-        number: 6,
-        title: "AI for Good: Social Impact Projects",
-        goal: "Encourage creativity and purpose.",
-        tags: ["Impact", "Teams", "Projects"],
         themes: [
-          "Agriculture (predict crop diseases with images)",
-          "Healthcare (detect cough patterns, measure heartbeats)",
-          "Environment (classify trash, monitor air quality)",
-          "Education (personal learning assistants)"
-        ],
-        lessons: [
-          { id: "project-briefing", title: "Project ideation + problem framing", resourceUrl: "", transcriptUrl: "", notes: "Pick a problem, define users, define data, define success." }
+          "Core: tokens & embeddings, word similarity, language modeling, instruction following",
+          "Modern: transformers & attention (conceptually), LLM capabilities & limits, RAG intuition",
+          "Demos: tokenization experiment, word analogy with embeddings, prompt techniques",
+          "Mini-project: analyze sentiment in text using a model"
         ],
         activities: [
-          "Build a capstone ‘AI for Good’ project proposal in small teams."
+          "Tokenization experiment: compare how different texts break into tokens.",
+          "Mini-project: run sentiment analysis on short reviews (positive/negative)."
         ]
       },
 
       {
-        id: "ethics",
-        number: 7,
-        title: "Ethics, Privacy, and Future of AI",
+        id: "ethics-risks",
+        number: 6,
+        title: "Drawbacks, Risks, & Ethics",
         goal: "Develop critical thinkers who use AI responsibly.",
-        tags: ["Bias", "Privacy", "Deepfakes", "Careers"],
+        tags: ["Hallucinations", "Bias", "Privacy", "Misinformation", "Responsible AI"],
         lessons: [
-          { id: "bias", title: "Bias in data and models", resourceUrl: "", transcriptUrl: "", notes: "Where bias comes from; how to mitigate; examples." },
-          { id: "privacy", title: "Privacy and data protection", resourceUrl: "", transcriptUrl: "", notes: "Data minimization; consent; security basics." },
-          { id: "misinformation", title: "Misinformation, deepfakes, and fairness", resourceUrl: "", transcriptUrl: "", notes: "How to detect; how to respond." },
-          { id: "careers", title: "Careers in AI and future opportunities", resourceUrl: "", transcriptUrl: "", notes: "Roles, skills, pathways; local examples." }
+          { kind:"video", id:"eth-61", title:"6.1 — When Systems are Easy to Fool", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1DZtfDEtIEWAzxOS_4Bvj2DXCwg_hqzD3",
+            transcriptUrl:"", notes:"Adversarial examples + brittleness." },
+          { kind:"video", id:"eth-62", title:"6.2 — Bias: When Data Freezes Inequality", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1QoYrg4WBjiuUerYTusPr9_tIY29Q93DP",
+            transcriptUrl:"", notes:"Bias sources and mitigation intuition." },
+          { kind:"video", id:"eth-63", title:"6.3 — From Technical Risk to Social Harm", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1dGcYxYiRFuRcXJAhnwF1iymVk-tNKD8X",
+            transcriptUrl:"", notes:"How failures scale into real harm." },
+          { kind:"video", id:"eth-64", title:"6.4 — Responsible AI", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1zyuEyZw3MYVDAkzRmfVRF80FdUAyiS0H",
+            transcriptUrl:"", notes:"Human-in-the-loop, transparency, accountability." },
+          { kind:"video", id:"eth-65", title:"6.5 — When AI is Confident but Wrong", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1gQ8allGpDUDPziVYWNx61xJWYhQxKG1M",
+            transcriptUrl:"", notes:"Verification habits + failure modes." }
+        ],
+        themes: [
+          "Technical: hallucinations, bias & fairness, adversarial weaknesses, dataset quality problems",
+          "Societal: misinformation, privacy, surveillance, over-automation",
+          "Responsible AI: human-in-the-loop design, transparency, accountability",
+          "Reflection: one-page ethical position statement"
         ],
         activities: [
-          "Roleplay an AI ethics board deciding if a facial-recognition app should be deployed."
+          "Case study debate: “Should AI be used in school grading / hiring / policing?”",
+          "Write a one-page ethical position statement."
         ]
       },
 
       {
-        id: "capstone",
-        number: 8,
-        title: "Capstone Project",
-        goal: "Let them apply everything they learned.",
-        tags: ["Demo", "Poster", "Presentation"],
-        examples: [
-          "AI that helps sort recycling",
-          "Chatbot tutor for students",
-          "AI plant monitor for school garden",
-          "Emotion detection using webcam"
-        ],
+        id: "symbolic-ai",
+        number: 7,
+        title: "Symbolic AI / Knowledge Graphs / Reasoning",
+        goal: "Introduce logic-based AI: rules, relationships, and explainable reasoning.",
+        tags: ["Knowledge Graphs", "Ontologies", "Logic", "Reasoning"],
         lessons: [
-          { id: "capstone-structure", title: "Capstone structure + rubric", resourceUrl: "", transcriptUrl: "", notes: "Define milestones: data, model, evaluation, ethics, presentation." }
+          { kind:"video", id:"sym-71", title:"7.1 — Knowledge Graphs", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1cRyxfv_2lSiMLpVF1QtFgW9E2t9neb14",
+            transcriptUrl:"", notes:"Entities + relationships + queries." },
+          { kind:"video", id:"sym-72", title:"7.2 — Ontologies: Machine Vocabulary", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1d8o12JnRYVI8kgJL9b_sgkqugftwZc5_",
+            transcriptUrl:"", notes:"Shared meaning + constraints." },
+          { kind:"video", id:"sym-73", title:"7.3 — Reasoning with Knowledge: Constraints and Causality", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1Me9-2AHimNOF3AgZda94DRNWyb88qX1o",
+            transcriptUrl:"", notes:"Rules + constraints; causal intuition." },
+          { kind:"video", id:"sym-74", title:"7.4 — Logic Rules and Machine Reasoning", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1Sp4UW4MZGXg1K-_Ma6IfwqXD6Ab1HRqI",
+            transcriptUrl:"", notes:"Rule chaining + inference." },
+          { kind:"video", id:"sym-75", title:"7.5 — Two Ways to Think: Symbolic AI vs Neural AI", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1cLSehazHJ8GKM_l3GCULDnqGXLUugdvj",
+            transcriptUrl:"", notes:"Interpretability vs perception; why hybrid helps." }
+        ],
+        themes: [
+          "Core: symbolic vs neural systems, logic rules, ontologies, knowledge graphs",
+          "Why it matters: interpretability, rule constraints, domain governance",
+          "Topics: causal reasoning intuition, rule chaining, constraints in decision-making",
+          "Mini-project: rule-based recommendation engine"
         ],
         activities: [
-          "Students present their work as posters or demos."
+          "Build a tiny knowledge graph: “Student → Course → Teacher”, then add reasoning rules.",
+          "Mini-project: design a rule-based recommendation engine."
+        ]
+      },
+
+      {
+        id: "neuro-symbolic-c3an",
+        number: 8,
+        title: "Neuro-Symbolic AI + Intro to C3AN",
+        goal: "Show how neural models + symbolic reasoning work together (safer, more aligned AI).",
+        tags: ["Neuro-Symbolic", "Constraints", "Explainability", "C3AN"],
+        lessons: [
+          { kind:"video", id:"nesy-81", title:"8.1 — Symbolic Knowledge as Control", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1-l1eFUN_1-6_c7F_vEbJBdRWKSmAzmWM",
+            transcriptUrl:"", notes:"Rules as guardrails and controllers." },
+          { kind:"video", id:"nesy-82", title:"8.2 — Neuro-Symbolic Reasoning", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1y0cQB-STOrKp6EewCQP08aDR0WJ7N8Pl",
+            transcriptUrl:"", notes:"Perception + reasoning = best of both." },
+          { kind:"video", id:"nesy-83", title:"8.3 — Explainability, Attribution, and Accountability", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1upb77piNUKNDsnjrE_FA9EyODdqoT3IO",
+            transcriptUrl:"", notes:"Why explanations matter, and what attribution looks like." },
+          { kind:"video", id:"nesy-84", title:"8.4 — The C3AN AI Architecture", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1FpQpJbkz7L9OjWWmWBlOrEAtdkLzDhXq",
+            transcriptUrl:"", notes:"Custom • Compact • Context-Aligned • Neuro-Symbolic (C3AN)." },
+          { kind:"video", id:"nesy-85", title:"8.5 — Why Neuro-Symbolic AI Exists", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1bZnWAl5bgDstDF0Nja91p_ZNkQGzBN-w",
+            transcriptUrl:"", notes:"Motivation: safety, governance, reliability." }
+        ],
+        themes: [
+          "Key ideas: neural = perception, symbolic = logic, neuro-symbolic = hybrid",
+          "Concepts: constraints for safer AI, role-aware reasoning, context alignment",
+          "Demo: LLM answer → rule filter → refined output",
+          "Mini-project: apply symbolic constraints to improve an LLM decision"
+        ],
+        activities: [
+          "Demo: show a neural output corrected by rules (LLM answer → rule filter → refined output).",
+          "Mini-project: apply symbolic constraints to improve an LLM decision."
+        ]
+      },
+
+      {
+        id: "enterprise-ai",
+        number: 9,
+        title: "AI for Enterprise (Causality + Reasoning Applications)",
+        goal: "Teach why enterprise AI needs reliability, explainability, safety constraints, and governance.",
+        tags: ["Enterprise", "Causality", "Humans-in-Loop", "Governance", "Reliability"],
+        lessons: [
+          { kind:"video", id:"ent-91", title:"9.1 — Data Pipelines and Decision Flows", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1hDcexIMdIP0Rl5KTziKAhUEiNQ_cy9dJ",
+            transcriptUrl:"", notes:"How data becomes decisions in real systems." },
+          { kind:"video", id:"ent-92", title:"9.2 — Safety Constraints and Humans in the Loop", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1Lxw9CbQcJu4BGD9X0N4SgubyCG6VBFOx",
+            transcriptUrl:"", notes:"Oversight, approvals, and guardrails." },
+          { kind:"video", id:"ent-93", title:"9.3 — Causal Thinking for Better Decisions", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1hxibkXSv61DF67iPckWb1zeCBkK9JSaT",
+            transcriptUrl:"", notes:"Intuition for causality vs correlation." },
+          { kind:"video", id:"ent-94", title:"9.4 — Why Enterprise AI is Different", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1AX8NCUSj7DrbhIn2OieNcH1iawBU5AL_",
+            transcriptUrl:"", notes:"Constraints: regulation, risk, auditability." },
+          { kind:"video", id:"ent-95", title:"9.5 — Reliability and Explainability as Requirements", duration:"",
+            resourceUrl:"https://drive.google.com/open?id=1pwGNFHiIUnm9l7ukN3q5kUueR_T6DEHK",
+            transcriptUrl:"", notes:"Why “it usually works” is not enough." }
+        ],
+        themes: [
+          "Use cases: healthcare triage, finance risk, education personalization, fraud detection, recommendation systems",
+          "Enterprise needs: reliability, explainability, safety constraints, audit trails",
+          "Teach: causal inference (intuition), data pipelines, decision governance, humans-in-loop workflows"
+        ],
+        activities: [
+          "Case study: redesign an AI workflow to reduce bias, improve reasoning, and ensure accountability."
+        ]
+      },
+
+      {
+        id: "hands-on-applied",
+        number: 10,
+        title: "Hands-On / Applied Projects",
+        goal: "Students complete at least one applied project, with an ethics reflection and improvement ideas.",
+        tags: ["Projects", "Applied", "Deliverables"],
+        lessons: [
+          { kind:"section", id:"proj-menu", title:"Project menu (choose at least one)", note:"Image classification • Text classification • Chatbot reasoning assistant • KG-powered Q&A • Simple RAG assistant • AI for education/health scenario" },
+          { kind:"section", id:"deliverables", title:"Deliverable expectations", note:"Notebook implementation • model behavior explanation • ethics reflection • future improvements" },
+        ],
+        activities: [
+          "Build one applied project and present: what you built, how it works, and what could go wrong (ethics/safety)."
+        ]
+      },
+
+      {
+        id: "notebooklm-capstone-lab",
+        number: 11,
+        title: "NotebookLM Tutorial (Capstone Lab)",
+        goal: "A guided capstone lab: from data → model → reasoning layer → reflection on safety and interpretability.",
+        tags: ["NotebookLM", "Capstone Lab", "Pipeline", "Reflection"],
+        lessons: [
+          { kind:"section", id:"nlm-topics", title:"Notebook topics", note:"Data preprocessing • training vs inference • interpreting predictions • prompt engineering basics • rule-guided AI pipeline" },
+          { kind:"section", id:"nlm-flow", title:"Suggested final lab flow", note:"1) Load dataset 2) Train small ML model 3) Compare deep learning 4) Add retrieval/reasoning 5) Reflect: accuracy, safety, fairness, interpretability" },
+        ],
+        activities: [
+          "Run the full lab flow and deliver a short write-up with screenshots + reflection."
         ]
       }
     ];
 
+    // ---- UI helpers ----
     function safeDomain(url){
       try { return new URL(url).hostname.replace("www.",""); }
       catch { return ""; }
@@ -665,11 +827,24 @@
     }
 
     function iconSvg(kind){
-      // simple inline icons (no external libs)
+      const stroke = "rgba(15,23,42,.65)";
       const icons = {
-        book: `<svg viewBox="0 0 24 24" fill="none"><path d="M4 19a2 2 0 0 0 2 2h13" stroke="rgba(255,255,255,.75)" stroke-width="2" stroke-linecap="round"/><path d="M6 3h13v18H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="rgba(255,255,255,.75)" stroke-width="2"/></svg>`,
-        sparkle: `<svg viewBox="0 0 24 24" fill="none"><path d="M12 2l1.2 5.2L18 9l-4.8 1.8L12 16l-1.2-5.2L6 9l4.8-1.8L12 2Z" stroke="rgba(255,255,255,.75)" stroke-width="2" stroke-linejoin="round"/></svg>`,
-        shield: `<svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4Z" stroke="rgba(255,255,255,.75)" stroke-width="2"/></svg>`,
+        book: `<svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 19a2 2 0 0 0 2 2h13" stroke="${stroke}" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6 3h13v18H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="${stroke}" stroke-width="2"/>
+        </svg>`,
+        sparkle: `<svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 2l1.2 5.2L18 9l-4.8 1.8L12 16l-1.2-5.2L6 9l4.8-1.8L12 2Z" stroke="${stroke}" stroke-width="2" stroke-linejoin="round"/>
+        </svg>`,
+        shield: `<svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4Z" stroke="${stroke}" stroke-width="2"/>
+        </svg>`,
+        nodes: `<svg viewBox="0 0 24 24" fill="none">
+          <path d="M6 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="${stroke}" stroke-width="2"/>
+          <path d="M18 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="${stroke}" stroke-width="2"/>
+          <path d="M6 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="${stroke}" stroke-width="2"/>
+          <path d="M8 5l8 6M8 19l8-6" stroke="${stroke}" stroke-width="2" stroke-linecap="round"/>
+        </svg>`,
       };
       return icons[kind] || icons.book;
     }
@@ -688,13 +863,49 @@
       if(!url){
         return el("button",{class:`btn ${primary?'primary':''}`, disabled:"true", type:"button"}, label);
       }
-      const b = el("a",{
+      return el("a",{
         class:`btn ${primary?'primary':''}`,
         href:url,
         target:"_blank",
         rel:"noreferrer"
       }, label);
-      return b;
+    }
+
+    function previewBtn(resourceUrl, itemId){
+      if(!resourceUrl) return el("button",{class:"btn", disabled:"true", type:"button"}, "Preview");
+      const p = drivePreviewUrl(resourceUrl);
+      if(!p) return el("button",{class:"btn", disabled:"true", type:"button"}, "Preview");
+      return el("button",{
+        class:"btn",
+        type:"button",
+        onclick:()=>togglePreview(itemId, p)
+      }, "Preview");
+    }
+
+    function togglePreview(itemId, previewUrl){
+      const holder = document.getElementById(`preview-${itemId}`);
+      if(!holder) return;
+
+      const isOpen = holder.getAttribute("data-open") === "true";
+      if(isOpen){
+        holder.innerHTML = "";
+        holder.setAttribute("data-open","false");
+        return;
+      }
+
+      holder.setAttribute("data-open","true");
+      holder.innerHTML = "";
+      holder.appendChild(
+        el("div",{class:"preview"},[
+          el("iframe",{src: previewUrl, title:"Lesson preview", loading:"lazy", allow:"autoplay"}),
+          el("div",{class:"preview-note"}, "Preview window (Google Drive embed). If it doesn’t load, use “Open lesson”.")
+        ])
+      );
+      holder.scrollIntoView({behavior:"smooth", block:"nearest"});
+    }
+
+    function countVideos(items){
+      return (items||[]).filter(x=>x.kind === "video").length;
     }
 
     function renderModules(list){
@@ -725,8 +936,11 @@
 
         const icon = el("div",{class:"icon"},(()=>{
           const d=document.createElement("div");
-          // vary icon slightly by module number
-          d.innerHTML = (m.number === 7 ? iconSvg("shield") : (m.number === 4 ? iconSvg("sparkle") : iconSvg("book")));
+          const kind =
+            (m.number === 6 ? "shield" :
+            (m.number === 7 || m.number === 8 ? "nodes" :
+            (m.number === 4 ? "sparkle" : "book")));
+          d.innerHTML = iconSvg(kind);
           return [d.firstChild];
         })());
 
@@ -748,23 +962,11 @@
         if(m.themes?.length){
           body.appendChild(el("div",{class:"section"},[
             el("div",{class:"section-head"},[
-              el("h4",{}, "Themes"),
+              el("h4",{}, "Themes / Notes"),
               el("span",{class:"tag"}, `${m.themes.length}`)
             ]),
             el("div",{class:"section-body"},[
               el("ul",{}, m.themes.map(x=>el("li",{}, x)))
-            ])
-          ]));
-        }
-
-        if(m.examples?.length){
-          body.appendChild(el("div",{class:"section"},[
-            el("div",{class:"section-head"},[
-              el("h4",{}, "Capstone Examples"),
-              el("span",{class:"tag"}, `${m.examples.length}`)
-            ]),
-            el("div",{class:"section-body"},[
-              el("div",{class:"tags"}, m.examples.map(x=>el("span",{class:"tag"}, x)))
             ])
           ]));
         }
@@ -786,33 +988,50 @@
           ]));
         }
 
-        // Lessons section (accordion via <details>)
+        // Lessons section
+        const videoCount = countVideos(m.lessons||[]);
         const lessonsWrap = el("div",{class:"section", id:jumpId},[
           el("div",{class:"section-head"},[
             el("h4",{}, "Lessons & Resources"),
-            el("span",{class:"tag"}, `${(m.lessons||[]).length} lesson${(m.lessons||[]).length===1?'':'s'}`)
+            el("span",{class:"tag"}, `${videoCount} video${videoCount===1?'':'s'}`)
           ]),
           el("div",{class:"section-body", style:"padding:0;"},[
-            ...((m.lessons||[]).map(l=>{
-              const details = el("details",{class:"lesson"},[
+            ...((m.lessons||[]).map(item=>{
+              // Subsection header (NOT a video, no buttons)
+              if(item.kind === "section"){
+                return el("div",{class:"subsection", id:`sub-${item.id}`},[
+                  el("div",{class:"left"},[
+                    el("div",{class:"title"}, item.title),
+                    el("div",{class:"note"}, item.note || "")
+                  ]),
+                  el("span",{class:"badge-mini"}, "Subsection")
+                ]);
+              }
+
+              // Video lesson
+              const metaLeft = [
+                item.resourceUrl ? safeDomain(item.resourceUrl) : "Resource pending",
+                item.duration ? `• ${item.duration}` : ""
+              ].filter(Boolean).join(" ");
+
+              return el("details",{class:"lesson"},[
                 el("summary",{},[
                   el("div",{},[
-                    el("div",{class:"lesson-title"}, l.title),
-                    el("div",{class:"lesson-meta"},
-                      l.resourceUrl ? safeDomain(l.resourceUrl) : "Resource pending"
-                    )
+                    el("div",{class:"lesson-title"}, item.title),
+                    el("div",{class:"lesson-meta"}, metaLeft || " ")
                   ]),
                   el("div",{class:"lesson-meta"}, "View")
                 ]),
                 el("div",{class:"lesson-content"},[
-                  el("div",{class:"lesson-notes"}, l.notes || ""),
+                  el("div",{class:"lesson-notes"}, item.notes || ""),
                   el("div",{class:"lesson-actions"},[
-                    linkBtn(l.resourceUrl, "Open lesson", true),
-                    linkBtn(l.transcriptUrl, l.transcriptUrl ? "Open transcript" : "Add transcript", false)
-                  ])
+                    linkBtn(item.resourceUrl, "Open lesson", true),
+                    previewBtn(item.resourceUrl, item.id),
+                    linkBtn(item.transcriptUrl, item.transcriptUrl ? "Open transcript" : "Add transcript", false)
+                  ]),
+                  el("div",{id:`preview-${item.id}`, "data-open":"false"}, "")
                 ])
               ]);
-              return details;
             }))
           ])
         ]);
@@ -838,15 +1057,24 @@
     function filterModules(q){
       const s = (q||"").trim().toLowerCase();
       if(!s) return MODULES;
+
       return MODULES.filter(m=>{
         const inModule =
           m.title.toLowerCase().includes(s) ||
           m.goal.toLowerCase().includes(s) ||
           (m.tags||[]).join(" ").toLowerCase().includes(s);
-        const inLessons = (m.lessons||[]).some(l=> (l.title||"").toLowerCase().includes(s));
+
+        const inItems = (m.lessons||[]).some(x=>{
+          const hay = [
+            x.title || "",
+            x.note || "",
+            x.notes || ""
+          ].join(" ").toLowerCase();
+          return hay.includes(s);
+        });
+
         const inThemes = (m.themes||[]).join(" ").toLowerCase().includes(s);
-        const inExamples = (m.examples||[]).join(" ").toLowerCase().includes(s);
-        return inModule || inLessons || inThemes || inExamples;
+        return inModule || inItems || inThemes;
       });
     }
 
@@ -856,10 +1084,6 @@
 
     document.getElementById("searchInput").addEventListener("input", (e)=>{
       renderModules(filterModules(e.target.value));
-    });
-
-    document.getElementById("backToTopBtn").addEventListener("click", ()=>{
-      window.scrollTo({top:0, behavior:"smooth"});
     });
   </script>
 </body>
